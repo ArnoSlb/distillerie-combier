@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './Map.css'
 import video from "../../assets/fingers.mp4"
@@ -9,18 +9,20 @@ const Map = () => {
     // lower numbers = faster playback
     const playbackConst = 1000;
 
-
     React.useEffect(() => {
 
         // get page height from video duration
         const setHeight = document.getElementById("set-height");
 
         // select video element     
-        let vid = document.getElementById("v0"); 
+        let vid = document.getElementById("v0");
 
+        // console.log(map.offsetTop) 
+        // We get the distance in pxl between the top of the document and the component
+        // setDistComponentFromTop(map.offsetTop)
 
         // We select every elements with the class .anim
-        const ElementsToAnimate = document.querySelectorAll('.anim')
+        const ElementsToAnimate = document.querySelectorAll('.anim');
 
         //We create an intersection observer to know when the element is in the viewport
         // More details here : https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API
@@ -49,7 +51,6 @@ const Map = () => {
         ElementsToAnimate.forEach(Element => {
             observer.observe(Element)
         })
-        
 
         // dynamically set the page height according to video length
         const setPageHeight = () => {
@@ -91,11 +92,20 @@ const Map = () => {
     // With the empty array we tell the useEffect hook to only run when the component first renders.
     }, []);
 
+    
     // Use requestAnimationFrame for smooth playback
     // We're creating a loop to make the video frame number update every screen refresh (ex:60Hz for my screen) so 60times/sec
     const scrollPlay = () => {  
-        let frameNumber  = window.pageYOffset/playbackConst;
+        
+        const map = document.getElementById('map');
+
+        // We get the distance in pxl between the top of the document and the component with map.offsetTop
+        // We get the distance where we are in the document from the top with window.pageYOffset
+        // We get the speed of play of the video with playbackConst
+        let frameNumber  = (window.pageYOffset - map.offsetTop)/playbackConst;
+
         let vid = document.getElementById("v0"); 
+        // console.log(vid)
 
         vid.currentTime = frameNumber;
 
@@ -105,7 +115,7 @@ const Map = () => {
     window.requestAnimationFrame(scrollPlay);
 
     return (
-        <div className="Map">
+        <div className="Map" id="map">
 
             <section className="Map__container">
                 <div className="Map__container__content">

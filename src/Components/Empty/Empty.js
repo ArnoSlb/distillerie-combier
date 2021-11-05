@@ -1,9 +1,11 @@
 import React from "react";
 import "./Empty.css"
 
-const Empty = () => {
+
+const Empty = ({randomColor}) => {
+
     return(
-        <div className="Empty"></div>
+        <div className="Empty" style={{ backgroundColor: randomColor }}></div>
     )
 }
 

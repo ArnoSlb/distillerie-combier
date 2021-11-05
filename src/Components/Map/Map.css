@@ -45,7 +45,7 @@
     font-size: 1.5em;
 }
 
-/* ALL YOUR ELEMENT COMBINE MUST BE EQUAL TO setHeight.style.height */
+/* ALL YOUR ELEMENTS COMBINE MUST BE EQUAL TO setHeight.style.height */
 /* if you want them to be stop a the end of the video */
 
 .Map__container:nth-of-type(1){

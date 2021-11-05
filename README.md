@@ -1,5 +1,6 @@
 # Distillerie Combier
 
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -47,26 +48,57 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-#### Analyzing the Bundle Size
+## MAP (Video play on Scrolling with Text Sticky on it with animation appearance)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### SetPageHeight
 
-#### Making a Progressive Web App
+The First things you need to know is the height of the componant.
+To do this you will need two parameters which are the video duration and the value of the playBackConst.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The playBackConst is a value that will determine how fast the video will go depend on the scroll.
+Bigger the number and more scroll you will need to go to the end of the video.
+example of value for the playBackConst : 500 or 1000. 1000 is a good ratio speed/scrolling.
 
-#### Advanced Configuration
+the SetPageHeight is determined like this :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    setHeight.style.height = Math.floor(vid.duration) * playbackConst
 
-#### Deployment
+You can console.log it to know you're value. For example 5000px.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-#### `npm run build` fails to minify
+### Select Video Html
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Then you need to select the HTML Element video use QuerySelector or GetElementById.
+
+The most important is you need to do it after the component was mounted at the first render. Otherwise IT WILL NOT BE FIND and you will have a an error issue !!
+To do so you will to use the Hook UseEffect with an empty array at the end. like this :
+
+    React.useEffect(() => {
+        }, []);
+
+
+### ScrollToPlay
+
+It's thanks to this function that the video is playing based on the scroll.
+
+The function scrollToPlay is called everytime the screen view is refreshed. It depends on your screen monitor, it could be 60hz so 60times per seconds or 120hz...
+
+We get the distance in pxl between the top of the document and the component with map.offsetTop
+We get the distance where we are in the document from the top with window.pageYOffset
+We get the speed of play of the video with playbackConst
+
+    let frameNumber  = (window.pageYOffset - map.offsetTop)/playbackConst;
+
+
+### Sticky Text
+
+The text you want to stcik must have the postion: sticky on the css page.
+ALL YOUR ELEMENTS COMBINE MUST BE EQUAL TO setHeight.style.height
+if you want them to be stop a the end of the video.
+For exemple: if SetHeight = 5000px; 5 texts sticky they could be 1000px each
+
+
+For the animation: 
+We are using the native function IntersectionObserver(), and we add a class when the element is visible on user viewport.
