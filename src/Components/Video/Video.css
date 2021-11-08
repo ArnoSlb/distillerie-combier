@@ -1,0 +1,13 @@
+.Video{
+    position: relative;
+    width: 100vw;
+    height: 220vh;
+}
+
+.Video__file{
+    width: 100%;
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+    right: 0;
+}

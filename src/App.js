@@ -1,6 +1,6 @@
 import Map from './Components/Map/Map';
-// import Video from './Components/Video/Video';
-import Empty from './Components/Empty/Empty'
+import Video from './Components/Video/Video';
+import Empty from './Components/Empty/Empty';
 
 import './App.css';
 
@@ -19,6 +19,8 @@ function App() {
     <div className="App">
       <Empty randomColor={getRandomColor()}/>
       <Map/>
+      <Empty randomColor={getRandomColor()}/>
+      <Video/>
       <Empty randomColor={getRandomColor()}/>
     </div>
   );
