@@ -18,11 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Map/> */}
+      <Map/>
       <Scene360/>
-      {/* <Empty randomColor={getRandomColor()}/>
+      <Empty randomColor={getRandomColor()}/>
       <Video/>
-      <Empty randomColor={getRandomColor()}/> */}
+      <Empty randomColor={getRandomColor()}/>
     </div>
   );
 }

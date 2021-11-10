@@ -1,3 +1,11 @@
 .Scene360{
     position: relative;
+    height: 180vh;
+}
+
+.Scene360__player{
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+    right: 0;
 }
