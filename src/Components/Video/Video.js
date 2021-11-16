@@ -16,10 +16,10 @@ const Video = () => {
         const observer = new IntersectionObserver((entry) => {
 
             if (entry[0].isIntersecting){
-                console.log('Lancer la vidéo')
+                // console.log('Lancer la vidéo')
                 videoFile.play()
             } else {
-                console.log('Mettre en pause')
+                // console.log('Mettre en pause')
                 videoFile.pause()
             }
         })
