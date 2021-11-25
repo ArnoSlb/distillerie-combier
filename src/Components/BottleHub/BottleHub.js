@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 // Components
 import BottleCard from "../BottleCard/BottleCard";
+import BottleStory from "../BottleStory/BottleStory";
 // Pictures
 import LogoCombier from "../../assets/Combier_logo.png";
 import OriginalCombierImg from "../../assets/bottle/original_combier.jpeg"
@@ -69,6 +70,7 @@ const BottleHub = () => {
                 <BottleCard id="blanchette" setBottle={modifyStateBottle}/>
                 <BottleCard id="meridor" setBottle={modifyStateBottle}/> */}
             </div>
+            <BottleStory bottle={bottle}/>
         </div>
     )
 }
