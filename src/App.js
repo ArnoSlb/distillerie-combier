@@ -19,13 +19,11 @@ function App() {
       return color;
   }
 
-  const [bottle, setBottle] = useState(1);
-
   return (
     <div className="App">
       <Map/>
       <Scene360/>
-      <BottleHub setBottle={setBottle}/>
+      <BottleHub/>
       <Empty randomColor={getRandomColor()}/>
       <Video/>
       <Empty randomColor={getRandomColor()}/>

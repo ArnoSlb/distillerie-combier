@@ -32,7 +32,8 @@ const BottleCard =(props) => {
                     // we need to remove the class 
                     // if we want the naimation to only play ONE time
                     // let the "else" instrcution empty
-                    entry.target.classList.remove('slide-right')
+
+                    // entry.target.classList.remove('slide-right')
                 }
             })
         })
@@ -43,7 +44,7 @@ const BottleCard =(props) => {
         })
 
         document.querySelector('.BottleHub__bottleContainer').firstChild.classList.add('BottleCard--selected')
-    })
+    },[])
 
     const bottleSelected = (e) => {
 
@@ -56,7 +57,9 @@ const BottleCard =(props) => {
         e.target.parentNode.classList.add('BottleCard--selected')
         
         let targetCard = e.target.parentNode;
-        // props.setBottle = targetCard.getAttribute("id")
+        let idBottle = targetCard.getAttribute("id")
+
+        props.setBottle(idBottle)
     }
 
 
