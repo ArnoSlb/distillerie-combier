@@ -5,6 +5,8 @@ import Picture from '../../assets/original_combier.jpg'
 
 const BottleCard =(props) => {
 
+    console.log(props)
+
     React.useEffect(() => {
 
         // We select every elements with the class .anim
@@ -43,12 +45,15 @@ const BottleCard =(props) => {
             observer.observe(Element)
         })
 
-        document.querySelector('.BottleHub__bottleContainer').firstChild.classList.add('BottleCard--selected')
+        document.querySelector('.BottleHub__bottleContainer').firstChild.classList.add('BottleCard--selected');
+        
     },[])
 
     const bottleSelected = (e) => {
 
         let BottleHubContainer = e.target.parentNode.parentNode
+        let targetCard = e.target.parentNode;
+        let idBottle = targetCard.getAttribute("id")
 
         // console.log(BottleHubContainer.childNodes)
         BottleHubContainer.childNodes.forEach(card => {
@@ -56,19 +61,27 @@ const BottleCard =(props) => {
         })
         e.target.parentNode.classList.add('BottleCard--selected')
         
-        let targetCard = e.target.parentNode;
-        let idBottle = targetCard.getAttribute("id")
+        if(idBottle == "elixir"){
+            document.querySelector('.BottleCard--selected').style.borderColor = "#dc3545"
+        }else if (idBottle == "meridor") {
+            document.querySelector('.BottleCard--selected').style.borderColor = "#74b6ff"
+        } else if (idBottle == "blanchette"){
+            document.querySelector('.BottleCard--selected').style.borderColor = "#adaaa2"
+        }else {
+            document.querySelector('.BottleCard--selected').style.borderColor = "rgb(255, 165, 47)"
+        }
 
         props.setBottle(idBottle)
     }
 
 
     return (
-        <div className="BottleCard BottleCard__anim" id={props.id}>
-            <img className="BottleCard__picture" src={Picture} alt="" />
-            <h3 className="BottleCard__title">L'Original Combier</h3>
-            <p className="BottleCard__description">À l’origine de la Distillerie Combier, on trouve cette célèbre liqueur d’oranges élaborée grâce à un alambic situé dans l’arrière-boutique de la confiserie Combier-Destre. </p>
+        <div className="BottleCard BottleCard__anim" id={props.data.id}>
+            <img className="BottleCard__picture" src={props.data.img} alt="" />
+            <h3 className="BottleCard__title">{props.data.title}</h3>
+            <p className="BottleCard__description">{props.data.description}</p>
             <div className="BottleCard__discover" onClick={bottleSelected}>Découvrir</div>
+            <img src="../../assets/Combier_logo.png" alt="" />
         </div>
     )
 }
