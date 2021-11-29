@@ -3,9 +3,10 @@ import Video from './Components/Video/Video';
 import Empty from './Components/Empty/Empty';
 import Scene360 from './Components/Scene360/Scene360';
 import BottleHub from './Components/BottleHub/BottleHub';
-
+import Header from './Components/Header/Header';
 
 import { useState } from 'react';
+
 
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       <Map/>
       <Scene360/>
       <BottleHub/>

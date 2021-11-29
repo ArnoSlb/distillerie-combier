@@ -1,0 +1,55 @@
+.Header{
+    position: fixed;
+    top: 0;
+    background-color: rgba(16, 16, 29, 0.993);
+    z-index: 100;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.Header__img{
+    height: 40px;
+    margin-left: 50px;
+}
+
+.Header__container{
+    display: flex;
+    margin-right: 80px;
+    height: 40px;
+    align-items: center;
+}
+
+.Header__container__eshop{
+    background-color: white;
+    padding: 6px 12px;
+    color: rgba(17, 17, 26, 0.973);
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.Header__container__eshop:hover{
+    cursor: pointer;
+}
+
+.Header__container__lang{
+    margin: 0 30px;
+    padding: 0 10px;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.Header__container__lang:hover{
+    cursor: pointer;
+}
+
+.Header__container__lang__img{
+    height: 20px;
+    margin: 0 10px 0 0;
+}
