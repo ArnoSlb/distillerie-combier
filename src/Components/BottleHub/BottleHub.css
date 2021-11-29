@@ -12,7 +12,7 @@
     font-size: 13px;
     color: #e53e30;
     font-weight: 200;
-    margin-bottom: 30px;
+    margin: 60px;
 }
 
 .BottleHub__title__logo{
@@ -25,4 +25,5 @@
     flex-wrap: wrap;
     width: 100vw;
     margin: 30px;
+    margin-bottom: 200px;
 }

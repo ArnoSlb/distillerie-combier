@@ -55,7 +55,6 @@ const BottleHub = () => {
     return (
         <div className="BottleHub">
             <div className="BottleHub__title">
-                <h2>La gamme de la</h2>
                 <img className="BottleHub__title__logo" src={LogoCombier} alt="" />
             </div> 
             <p className="BottleHub__description">Cliquez sur une bouteille pour découvrir sa fabrication</p>
