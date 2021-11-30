@@ -36,9 +36,14 @@
 
 .Header__container__lang{
     margin: 0 30px;
-    padding: 0 10px;
+    padding-right: 10px;
     border: 1px solid white;
+    display: flex;
+    align-items: center;
     border-radius: 8px;
+}
+
+.Header__container__lang__FR, .Header__container__lang__EN{
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -51,5 +56,5 @@
 
 .Header__container__lang__img{
     height: 20px;
-    margin: 0 10px 0 0;
+    margin: 0 10px;
 }
