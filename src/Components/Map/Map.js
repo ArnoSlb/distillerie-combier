@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 
 import './Map.css'
-import video from "../../assets/fingers.mp4"
+import video from "../../assets/ZoomOSMShort720.mp4"
 
 
 const Map = () => {
 
     // lower numbers = faster playback
-    const playbackConst = 1000;
+    const playbackConst = 780;
 
     React.useEffect(() => {
 

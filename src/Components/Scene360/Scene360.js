@@ -33,11 +33,17 @@ const Scene360 = () => {
         }, function (error){
             console.log(error)
         } );
+
+        window.addEventListener('nom_de_l_event', () => {
+            console.log('jouvre la fenetre dans la scene 360')
+            document.querySelector('.Scene360__popin').style.display = "flex"
+        })
     },[])
 
     return(
         <div className="Scene360">
             <div className="Scene360__player"></div>
+            <div className="Scene360__popin" onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, repellendus! Repudiandae reprehenderit et sint quam natus quae molestias placeat illum, numquam ex deserunt? Nesciunt, dignissimos nemo minima nihil ex porro!</div>
         </div>
     )
 }
