@@ -4,9 +4,11 @@ import styled from 'styled-components';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 
-import "./SectionWipes2.css"
+import OriginalManufacturing from './OriginalManufacturing/OriginalManufacturing';
 
-const SectionWipes2 = () => {
+import "./SectionWipesOriginal.css"
+
+const SectionWipesOriginal = () => {
   return (
     <div className="SectionWipes2Styled">
     <Controller>
@@ -18,7 +20,9 @@ const SectionWipes2 = () => {
         <Timeline
           wrapper={<div id="pinContainer" />}
         >
-          <section className="panel blue"><span>Panel</span></section>
+          <section className="panel">
+            <OriginalManufacturing/>
+          </section>
           <Tween
             from={{ x: '-100%' }}
             to={{ x: '0%' }}
@@ -44,4 +48,4 @@ const SectionWipes2 = () => {
   )
 };
 
-export default SectionWipes2;
+export default SectionWipesOriginal;

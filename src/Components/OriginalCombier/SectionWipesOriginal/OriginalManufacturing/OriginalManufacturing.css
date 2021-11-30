@@ -1,0 +1,49 @@
+.OriginalManufacturing{
+    height: 100vh;
+    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+
+.OriginalManufacturing__left{
+    width: 40%;
+}
+
+.OriginalManufacturing__right{
+    background-color: rgba(16, 16, 29, 0.993);
+    width: 45%;
+    padding: 5vw;
+}
+
+.OriginalManufacturing__right__title{
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 6vw;
+    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.OriginalManufacturing__right__description{
+    color: black;
+    font-weight: bold;
+    font-size: 1.5vw;
+    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 255, 255, 0.459);
+}

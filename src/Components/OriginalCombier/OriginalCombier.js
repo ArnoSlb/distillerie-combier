@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { Controller, Scene } from 'react-scrollmagic';
-import SectionWipes2 from "../SectionWipes2/SectionWipes2";
+import SectionWipesOriginal from "./SectionWipesOriginal/SectionWipesOriginal";
 
 import originalCombierPresentation from "../../assets/LOriginalCombier652_HD.jpg"
 import OriginalCombierOrange from "../../assets/orange.png"
@@ -104,7 +104,7 @@ const OriginalCombier = () => {
                 <img className="OriginalCombier__title__img OriginalCombier__anim" src={originalCombierPresentation} alt="picture of the original combier" />
             </div>
             <div className="OriginalCombier__made__container">
-                <SectionWipes2 />
+                <SectionWipesOriginal />
             </div>
         </div>
     )

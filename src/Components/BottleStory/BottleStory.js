@@ -1,5 +1,6 @@
 import React from "react";
 import OriginalCombier from "../OriginalCombier/OriginalCombier";
+import SectionWipesOriginal from "../SectionWipesOriginal/SectionWipesOriginal";
 
 import "./BottleStory.css";
 
