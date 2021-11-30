@@ -27,7 +27,9 @@ const SectionWipesOriginal = () => {
             from={{ x: '-100%' }}
             to={{ x: '0%' }}
           >
-            <section className="panel turqoise"><span>Panel</span></section>
+            <section className="panel turqoise">
+              <span>Panel</span>
+            </section>
           </Tween>
           <Tween
             from={{ x: '100%' }}
