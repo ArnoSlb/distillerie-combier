@@ -27,8 +27,8 @@ function App() {
       <Map/>
       <Scene360/>
       <BottleHub/>
-      <Video/>
-      <Empty randomColor={getRandomColor()}/>
+      {/* <Video/>
+      <Empty randomColor={getRandomColor()}/> */}
     </div>
   );
 }
