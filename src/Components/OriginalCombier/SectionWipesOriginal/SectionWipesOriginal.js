@@ -6,6 +6,8 @@ import { Tween, Timeline } from 'react-gsap';
 
 import OriginalManufacturing from './OriginalManufacturing/OriginalManufacturing';
 import OriginalManufacturing2 from './OriginalManufacturing2/OriginalManufacturing2';
+import OriginalHistory from './OriginalHistory/OriginalHistory';
+import OriginalCocktail from './OriginalCocktail/OriginalCocktail';
 
 import "./SectionWipesOriginal.css"
 
@@ -36,13 +38,17 @@ const SectionWipesOriginal = () => {
             from={{ x: '100%' }}
             to={{ x: '0%' }}
           >
-            <section className="panel green"><span>Panel</span></section>
+            <section className="panel">
+              <OriginalHistory/>
+            </section>
           </Tween>
           <Tween
             from={{ y: '-100%' }}
             to={{ y: '0%' }}
           >
-            <section className="panel bordeaux"><span>Panel</span></section>
+            <section className="panel">
+              <OriginalCocktail/>
+            </section>
           </Tween>
         </Timeline>
       </Scene>

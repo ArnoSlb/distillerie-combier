@@ -19,7 +19,7 @@ const OriginalManufacturing2 = () => {
 
             // we can see all the details available
             // console.log(entries)
-            let delay = 2;
+            let delay = 1;
 
             entries.forEach(entry => {
 

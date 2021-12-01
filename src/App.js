@@ -21,8 +21,13 @@ function App() {
       return color;
   }
 
+  const scrollCount = () => {
+    console.log(window.scrollY)
+  }
+  
+
   return (
-    <div className="App">
+    <div className="App" onChange={scrollCount}>
       <Header/>
       <Map/>
       <Scene360/>

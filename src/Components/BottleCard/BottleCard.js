@@ -5,7 +5,7 @@ import Picture from '../../assets/original_combier.jpg'
 
 const BottleCard =(props) => {
 
-    console.log(props)
+    // console.log(props)
 
     React.useEffect(() => {
 

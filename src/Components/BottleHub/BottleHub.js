@@ -1,6 +1,7 @@
 // React tools
 import React from "react";
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 // Components
 import BottleCard from "../BottleCard/BottleCard";
 import BottleStory from "../BottleStory/BottleStory";
@@ -53,7 +54,7 @@ const BottleHub = () => {
     }
     
     return (
-        <div className="BottleHub">
+        <div className="BottleHub" id="BottleHub">
             <div className="BottleHub__title">
                 <img className="BottleHub__title__logo" src={LogoCombier} alt="" />
             </div> 
@@ -61,7 +62,7 @@ const BottleHub = () => {
             <div className="BottleHub__bottleContainer">
                 {bottlesData.map((bottleData, index) => {
                     return (
-                        <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle}/>
+                        <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle} key={uuidv4()}/>
                     )
                 })}
                 {/* <BottleCard id="original" setBottle={modifyStateBottle}/>
