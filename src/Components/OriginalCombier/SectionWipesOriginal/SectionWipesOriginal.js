@@ -5,6 +5,7 @@ import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 
 import OriginalManufacturing from './OriginalManufacturing/OriginalManufacturing';
+import OriginalManufacturing2 from './OriginalManufacturing2/OriginalManufacturing2';
 
 import "./SectionWipesOriginal.css"
 
@@ -27,8 +28,8 @@ const SectionWipesOriginal = () => {
             from={{ x: '-100%' }}
             to={{ x: '0%' }}
           >
-            <section className="panel turqoise">
-              <span>Panel</span>
+            <section className="panel">
+              <OriginalManufacturing2/>
             </section>
           </Tween>
           <Tween
