@@ -15,18 +15,23 @@
     display: block;
 }
 
+.Map_salledesalembics{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
 .Map__container {
-    z-index: 1;
+    z-index: 2;
     position: relative;
-    margin: 0 10px 0px 10px;
-    
+    margin: 0 10px 0px 30px;
 }
 
 .Map__container__content{
     position: sticky;
     position: -webkit-sticky;
     width: 100%;
-    top: 33.3%;
+    top: 60%;
     margin-bottom: 25px;
 }
 
@@ -39,21 +44,28 @@
     margin: 0;
 }
 
-
+.Map__container__content img {
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.575);
+  border-radius: 10px;
+}
 
 .Map__container__content p {
     font-size: 1.5em;
+    color: white;
+    margin-left: 35px;
+    margin-top: 10px;
 }
 
 /* ALL YOUR ELEMENTS COMBINE MUST BE EQUAL TO setHeight.style.height */
 /* if you want them to be stop a the end of the video */
 
 .Map__container:nth-of-type(1){
-    height: 1000px;
+    height: 1170px;
 }
 
 .Map__container:nth-of-type(2){
-    height: 1000px;
+    height: 800px;
 }
 
 .Map__container:nth-of-type(3){

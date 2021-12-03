@@ -62,7 +62,7 @@ const BottleHub = () => {
             <div className="BottleHub__bottleContainer">
                 {bottlesData.map((bottleData, index) => {
                     return (
-                        <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle} key={uuidv4()}/>
+                        <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle}/>
                     )
                 })}
                 {/* <BottleCard id="original" setBottle={modifyStateBottle}/>

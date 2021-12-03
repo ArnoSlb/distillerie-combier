@@ -12,11 +12,11 @@
     font-size: 13px;
     color: #e53e30;
     font-weight: 200;
-    margin: 60px;
+    margin: 60px 0 2vh;
 }
 
 .BottleHub__title__logo{
-    width: 300px;
+    width: 30vh;
 }
 
 .BottleHub__bottleContainer{
@@ -25,5 +25,16 @@
     flex-wrap: wrap;
     width: 100vw;
     margin: 30px;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
+}
+
+@media screen and (min-height: 850px) {
+
+    .BottleHub__title__logo{
+        width: 300px;
+    }
+
+    .BottleHub__title{
+        margin: 60px 0 50px;
+    }
 }

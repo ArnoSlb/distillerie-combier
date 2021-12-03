@@ -55,7 +55,8 @@ const BottleCard =(props) => {
         let targetCard = e.target.parentNode;
         let idBottle = targetCard.getAttribute("id")
 
-        // console.log(BottleHubContainer.childNodes)
+        console.log(BottleHubContainer.childNodes)
+
         BottleHubContainer.childNodes.forEach(card => {
             card.classList.remove('BottleCard--selected')
         })
