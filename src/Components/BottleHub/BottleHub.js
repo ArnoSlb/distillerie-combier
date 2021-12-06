@@ -54,24 +54,27 @@ const BottleHub = () => {
     }
     
     return (
-        <div className="BottleHub" id="BottleHub">
-            <div className="BottleHub__title">
-                <img className="BottleHub__title__logo" src={LogoCombier} alt="" />
-            </div> 
-            <p className="BottleHub__description">Cliquez sur une bouteille pour découvrir sa fabrication</p>
-            <div className="BottleHub__bottleContainer">
-                {bottlesData.map((bottleData, index) => {
-                    return (
-                        <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle}/>
-                    )
-                })}
-                {/* <BottleCard id="original" setBottle={modifyStateBottle}/>
-                <BottleCard id="elixir" setBottle={modifyStateBottle}/>
-                <BottleCard id="blanchette" setBottle={modifyStateBottle}/>
-                <BottleCard id="meridor" setBottle={modifyStateBottle}/> */}
+        <div className="BottleHub__container">
+            <div className="BottleHub" id="BottleHub">
+                <div className="BottleHub__title">
+                    <img className="BottleHub__title__logo" src={LogoCombier} alt="" />
+                </div> 
+                <p className="BottleHub__description">Cliquez sur une bouteille pour découvrir sa fabrication</p>
+                <div className="BottleHub__bottleContainer">
+                    {bottlesData.map((bottleData, index) => {
+                        return (
+                            <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle}/>
+                        )
+                    })}
+                    {/* <BottleCard id="original" setBottle={modifyStateBottle}/>
+                    <BottleCard id="elixir" setBottle={modifyStateBottle}/>
+                    <BottleCard id="blanchette" setBottle={modifyStateBottle}/>
+                    <BottleCard id="meridor" setBottle={modifyStateBottle}/> */}
+                </div>
             </div>
             <BottleStory bottle={bottle}/>
         </div>
+
     )
 }
 

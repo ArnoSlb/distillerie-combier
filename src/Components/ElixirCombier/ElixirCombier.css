@@ -1,0 +1,46 @@
+.ElixirCombier{
+    height: 100vw;
+    width: 100vh;
+    position: relative;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    /* overflow-x: hidden; */
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.ElixirCombier__HorizontalBlock{
+    /* padding-top: 100px; */
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.ElixirCombier__HorizontalBlock__slide{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.one {
+    background-color: #b1f8f2;
+}
+.two{
+    background-color: #fffc99;
+}
+.three{
+    background-color: #eafdcf;
+}
+.four{
+    background-color: #8e8358;
+}

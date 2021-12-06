@@ -13,7 +13,7 @@
 
 .OriginalCombier__title{
     color: white;
-    font-size: 90px;
+    font-size: 10vh;
     font-family: 'Estonia', cursive;
     color: rgb(126 41 8)
 }
@@ -37,9 +37,9 @@
 
 .OriginalCombier__title__container__left__whitecontainer__orange{
     position: absolute;
-    width: 300px;
-    top: -160px;
-    right: -90px;
+    width: 23vh;
+    top: -5vh;
+    right: -5vh;
 }
 
 .OriginalCombier__made__container{
@@ -55,7 +55,18 @@
     opacity: 0;
 }
 
+@media screen and (min-height: 850px) {
 
+  .OriginalCombier__title{
+    font-size: 90px;
+  }
+
+  .OriginalCombier__title__container__left__whitecontainer__orange{
+    width: 300px;
+    top: -160px;
+    right: -90px;
+  }
+}
 
 .slide-in-bottom {
 	-webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;

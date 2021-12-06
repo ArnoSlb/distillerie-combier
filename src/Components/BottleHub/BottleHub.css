@@ -1,3 +1,7 @@
+.BottleHub__container{
+    height: 100vh;
+}
+
 .BottleHub{
     padding: 2em;
     display: flex;

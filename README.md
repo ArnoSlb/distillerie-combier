@@ -106,3 +106,15 @@ For exemple: if SetHeight = 5000px; 5 texts sticky they could be 1000px each
 
 For the animation: 
 We are using the native function IntersectionObserver(), and we add a class when the element is visible on user viewport.
+
+## SectionWipesOriginal
+
+https://www.npmjs.com/package/react-scrollmagic
+
+exemples :
+https://bitworking.github.io/react-scrollmagic/
+
+
+## Scroll Horizontal
+
+https://www.npmjs.com/package/react-scroll-horizontal
