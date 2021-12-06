@@ -1,0 +1,50 @@
+.OriginalCocktail{
+    height: 100vh;
+    background-color: rgb(33, 98, 109);
+}
+
+.OriginalCocktail__container{
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.OriginalCocktail__container__left__img{
+    height: 100vh;
+}
+
+.OriginalCocktail__container__right{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.OriginalCocktail__container__right__title{
+    font-family: 'Estonia', cursive;
+    font-size: 4vw;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 30px;
+}
+
+.OriginalCocktail__container__right__description{
+    font-size: 1vw;
+    padding: 0 5vw;
+}
+
+.OriginalCocktail__footer{
+    width: 100vw;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.OriginalCocktail__footer:hover{
+    cursor: pointer;
+}

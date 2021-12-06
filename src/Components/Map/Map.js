@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
 
 import './Map.css'
-import video from "../../assets/fingers.mp4"
+import video from "../../assets/ZoomOSMShort960.mp4"
+import LogoCombierTransparent from "../../assets/Combier_logo_transparent.png";
+import SalledesAlembics from "../../assets/salle_des_alembic.jpg";
 
 
 const Map = () => {
 
     // lower numbers = faster playback
-    const playbackConst = 1000;
+    const playbackConst = 780;
 
     React.useEffect(() => {
 
@@ -119,41 +121,45 @@ const Map = () => {
 
             <section className="Map__container">
                 <div className="Map__container__content">
-                    <h1>Distillerie Combier</h1>
-                    <p>Scroller vers le bas pour commencer</p>
+                    <div className="Map__container__content__title">
+                        <img src={LogoCombierTransparent} alt="" />
+                        <p>Scroller vers le bas pour commencer</p>
+                    </div>
                 </div>
             </section>
 
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>Step 1</h1>
-                    <p>Start it like this</p>
+                    <h1>France</h1>
+                    {/* <p>Start it like this</p> */}
                 </div>
             </section> 
 
             <section className="Map__container">
                 {/* <div className="Map__container__content" ref={ref}> */}
                 <div className="Map__container__content anim">
-                    <h1>Step 2</h1>
-                    <p>Start it like this</p>
+                    <h1>Saumur</h1>
+                    {/* <p>Start it like this</p> */}
                 </div>
             </section> 
 
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>Step 3</h1>
-                    <p>Start it like this</p>
+                    <h1>la Distillerie Combier</h1>
+                    {/* <p>Start it like this</p> */}
                 </div>
             </section>
 
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>Step 4</h1>
-                    <p>Start it like this</p>
+                    {/* <h1>Step 4</h1>
+                    <p>Start it like this</p> */}
                 </div>
             </section> 
 
             <div id="set-height"></div>
+            
+            <img className="Map_salledesalembics" src={SalledesAlembics} alt="salle des alembics" />
 
             <video id="v0" tabIndex="0" autobuffer="true" preload="true" src={video}></video>
         </div>

@@ -1,0 +1,84 @@
+.OriginalHistory{
+    background-color: burlywood;
+    height: 100vh;
+    height: 100vh;
+    background: url(../../../../assets/oldpaper.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.OriginalHistory__title{
+    font-family: 'Abril Fatface', cursive;
+    margin-top: calc(60px + 2vh);
+    font-size: 5vh;
+    letter-spacing: .2rem;
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.OriginalHistory__container{
+    display: flex;
+    justify-content: space-around;
+    height: 75%;
+}
+
+.OriginalHistory__container__left{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8vw;
+}
+
+.OriginalHistory__container__left__title{
+    font-family: 'Special Elite', cursive;
+    font-size: 3vh;
+}
+
+.OriginalHistory__container__left__description{
+    font-family: 'Special Elite', cursive;
+    font-size: 2.7vh;
+}
+
+.OriginalHistory__container__right{
+    width: 50vw;
+    position: relative;
+    
+}
+
+.OriginalHistory__container__right_OriginalHistoryBottle{
+    position: absolute;
+    width: 20vw;
+    right: 7vw;
+    top: 5vh;
+    border: 5px solid white;
+    z-index: 1;
+}
+
+.OriginalHistory__container__right_OriginalHistoryArchive{
+    position: absolute;
+    width: 10vw;
+    right: 2vw;
+    border: 5px solid white;
+    z-index: 2;
+    top: 10vh;
+}
+
+.OriginalHistory__container__right_OriginalHistoryBeaurepaire{
+    position: absolute;
+    width: 18vw;
+    right: 26vw;
+    bottom: 0;
+    border: 5px solid white;
+    z-index: 4;
+}
+
+.OriginalHistory__container__right_OriginalHistoryPub{
+    position: absolute;
+    width: 16vw;
+    right: 23vw;
+    top: 1vh;
+    border: 5px solid white;
+    z-index: 2;
+}

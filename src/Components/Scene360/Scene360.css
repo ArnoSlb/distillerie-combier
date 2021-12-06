@@ -9,3 +9,15 @@
     top: 0;
     right: 0;
 }
+
+.Scene360__popin{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    display: none;
+    padding: 30px;
+    align-items: center;
+}

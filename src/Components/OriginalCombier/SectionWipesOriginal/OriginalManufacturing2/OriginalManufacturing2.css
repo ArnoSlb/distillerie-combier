@@ -1,0 +1,66 @@
+.OriginalManufacturing2{
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(16, 16, 29, 0.993);
+}
+
+.OriginalManufacturing2__1{
+    margin-top: 70px;
+    height: 57vh;
+}
+
+.OriginalManufacturing2__2{
+    margin-top: 16vh;
+    height: 66vh;
+}
+
+.OriginalManufacturing2__3{
+    margin-top: 31vh;
+    height: 57vh;
+}
+
+.OriginalManufacturing2__1, .OriginalManufacturing2__2, .OriginalManufacturing2__3{
+    width: 25%;
+    background: linear-gradient(#ffffffc9, #ffffff);
+    padding: 2em 0;
+    border-radius: 15px;
+    opacity: 0;
+}
+
+.OriginalManufacturing2__1 img, .OriginalManufacturing2__2 img, .OriginalManufacturing2__3 img {
+    height: 40vh;
+}
+
+.OriginalManufacturing2__1 p, .OriginalManufacturing2__2 p, .OriginalManufacturing2__3 p{
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+@media screen and (min-height: 960px) {
+    .OriginalManufacturing2__1 img, .OriginalManufacturing2__2 img, .OriginalManufacturing2__3 img {
+        height: 50vh;
+    }
+
+    .OriginalManufacturing2__1{
+        margin-top: 70px;
+        height: 60vh;
+    }
+    
+    .OriginalManufacturing2__2{
+        margin-top: 16vh;
+        height: 66vh;
+    }
+    
+    .OriginalManufacturing2__3{
+        margin-top: 31vh;
+        height: 61vh;
+    }
+
+    .OriginalManufacturing2__1 p, .OriginalManufacturing2__2 p, .OriginalManufacturing2__3 p{
+        font-size: 16px;
+    }
+}
