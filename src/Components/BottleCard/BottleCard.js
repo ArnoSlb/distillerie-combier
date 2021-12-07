@@ -27,7 +27,7 @@ const BottleCard =(props) => {
                 if (entry.isIntersecting){
                     // console.log(entry)
                     // console.log(delay)
-                    entry.target.classList.add('slide-right'),
+                    entry.target.classList.add('slide-right-bar'),
                     entry.target.style.animationDelay = delay + "s"
                 } else {
                     // if we want the animation to play over and over again
@@ -46,43 +46,62 @@ const BottleCard =(props) => {
         })
 
         document.querySelector('.BottleHub__bottleContainer').firstChild.classList.add('BottleCard--selected');
+        document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.firstChild.classList.add('targetCardTitle--selected');
+        document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.classList.add('targetCardContainer--selected');
+        document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__description').classList.add('targetCardDescription--selected');
         
     },[])
 
     const bottleSelected = (e) => {
 
-        let BottleHubContainer = e.target.parentNode.parentNode
-        let targetCard = e.target.parentNode;
+        let BottleHubContainer = e.target.parentNode.parentNode.parentNode
+        let targetCard = e.target.parentNode.parentNode;
+        let targetCardTitle = e.target.parentNode.firstChild;
+        let targetCardContainer = e.target.parentNode;
+        let targetCardDescription = e.target.parentNode.querySelector('.BottleCard__description');
+        let targetCardPicture = e.target.parentNode.parentNode.querySelector('.BottleCard__picture');
         let idBottle = targetCard.getAttribute("id")
 
-        console.log(BottleHubContainer.childNodes)
+        // console.log(e.target.parentNode.parentNode.querySelector('.BottleCard__picture'))
 
         BottleHubContainer.childNodes.forEach(card => {
             card.classList.remove('BottleCard--selected')
+            card.firstChild.firstChild.classList.remove('targetCardTitle--selected')
+            card.firstChild.classList.remove('targetCardContainer--selected')
+            card.firstChild.querySelector('.BottleCard__description').classList.remove('targetCardDescription--selected')
+            card.querySelector('.BottleCard__picture').classList.remove('slide-right-bar')
+            // console.log(card.firstChild)
         })
-        e.target.parentNode.classList.add('BottleCard--selected')
-        
-        if(idBottle == "elixir"){
-            document.querySelector('.BottleCard--selected').style.borderColor = "#dc3545"
-        }else if (idBottle == "meridor") {
-            document.querySelector('.BottleCard--selected').style.borderColor = "#74b6ff"
-        } else if (idBottle == "blanchette"){
-            document.querySelector('.BottleCard--selected').style.borderColor = "#adaaa2"
-        }else {
-            document.querySelector('.BottleCard--selected').style.borderColor = "rgb(255, 165, 47)"
-        }
+
+        // console.log(targetCard)
+        targetCard.classList.add('BottleCard--selected')
+        targetCardTitle.classList.add('targetCardTitle--selected')
+        targetCardContainer.classList.add('targetCardContainer--selected')
+        targetCardDescription.classList.add('targetCardDescription--selected')
+        targetCardPicture.classList.add('slide-right-bar')
+
+        // if(idBottle == "elixir"){
+        //     document.querySelector('.BottleCard--selected').style.borderColor = "#dc3545"
+        // }else if (idBottle == "meridor") {
+        //     document.querySelector('.BottleCard--selected').style.borderColor = "#74b6ff"
+        // } else if (idBottle == "blanchette"){
+        //     document.querySelector('.BottleCard--selected').style.borderColor = "#adaaa2"
+        // }else {
+        //     document.querySelector('.BottleCard--selected').style.borderColor = "rgb(255, 165, 47)"
+        // }
 
         props.setBottle(idBottle)
     }
 
 
     return (
-        <div className="BottleCard BottleCard__anim" id={props.data.id}>
-            <img className="BottleCard__picture" src={props.data.img} alt="" />
-            <h3 className="BottleCard__title">{props.data.title}</h3>
-            <p className="BottleCard__description">{props.data.description}</p>
-            <div className="BottleCard__discover" onClick={bottleSelected}>Découvrir</div>
-            <img src="../../assets/Combier_logo.png" alt="" />
+        <div className="BottleCard" id={props.data.id}>
+            <div className="BottleCard__container">
+                <h3 className="BottleCard__title">{props.data.title}</h3>
+                <p className="BottleCard__description">{props.data.description}</p>
+                <div className="BottleCard__discover" onClick={bottleSelected}>Découvrir</div>
+            </div>
+            <img className="BottleCard__picture" src={props.data.img} alt="" />      
         </div>
     )
 }

@@ -7,10 +7,10 @@ import BottleCard from "../BottleCard/BottleCard";
 import BottleStory from "../BottleStory/BottleStory";
 // Pictures
 import LogoCombier from "../../assets/Combier_logo.png";
-import OriginalCombierImg from "../../assets/bottle/original_combier.jpeg"
-import ElixirCombierImg from "../../assets/bottle/elixir_combier.jpeg"
-import GinMeridorImg from "../../assets/bottle/gin_meridor.jpeg"
-import AbsintheBlanchetteImg from "../../assets/bottle/absinthe_blanchette.jpeg"
+import OriginalCombierImg from "../../assets/bottle/original_combier.png"
+import ElixirCombierImg from "../../assets/bottle/elixir_combier.png"
+import GinMeridorImg from "../../assets/bottle/gin_meridor.png"
+import AbsintheBlanchetteImg from "../../assets/bottle/absinthe_blanchette.png"
 
 import './BottleHub.css';
 
@@ -55,21 +55,23 @@ const BottleHub = () => {
     
     return (
         <div className="BottleHub__container">
-            <div className="BottleHub" id="BottleHub">
-                <div className="BottleHub__title">
-                    <img className="BottleHub__title__logo" src={LogoCombier} alt="" />
-                </div> 
-                <p className="BottleHub__description">Cliquez sur une bouteille pour découvrir sa fabrication</p>
-                <div className="BottleHub__bottleContainer">
-                    {bottlesData.map((bottleData, index) => {
-                        return (
-                            <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle}/>
-                        )
-                    })}
-                    {/* <BottleCard id="original" setBottle={modifyStateBottle}/>
-                    <BottleCard id="elixir" setBottle={modifyStateBottle}/>
-                    <BottleCard id="blanchette" setBottle={modifyStateBottle}/>
-                    <BottleCard id="meridor" setBottle={modifyStateBottle}/> */}
+            <div className="BottleHub__container__split">
+                <div className="BottleHub__container__left">
+                    <div className="BottleHub" id="BottleHub">
+                        {/* <div className="BottleHub__title">
+                            <img className="BottleHub__title__logo" src={LogoCombier} alt="" />
+                        </div> 
+                        <p className="BottleHub__description">Cliquez sur une bouteille pour découvrir sa fabrication</p> */}
+                    </div>
+                </div>
+                <div className="BottleHub__container__right">
+                    <div className="BottleHub__bottleContainer">
+                            {bottlesData.map((bottleData, index) => {
+                                return (
+                                    <BottleCard id={bottleData.id} data={bottleData} setBottle={modifyStateBottle}/>
+                                )
+                            })}
+                    </div>
                 </div>
             </div>
             <BottleStory bottle={bottle}/>
