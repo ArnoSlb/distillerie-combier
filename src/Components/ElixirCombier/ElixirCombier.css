@@ -206,6 +206,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    margin-top: 60px;
 }
 
 .ElixirCombier__History__2__Raspail{
@@ -227,6 +228,10 @@
 .ElixirCombier__History__2__Testament{
     height: 55%;
     max-height: 500px;
+}
+
+.ElixirCombier__History__2__Gigi{
+    height: 75%;
 }
 
 .board{
