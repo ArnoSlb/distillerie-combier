@@ -1,7 +1,8 @@
 .Header{
     position: fixed;
     top: 0;
-    background-color: rgba(16, 16, 29, 0.993);
+    /* background-color: rgba(16, 16, 29, 0.993); */
+    background-color: rgb(126, 9, 9);
     z-index: 100;
     width: 100vw;
     display: flex;
@@ -38,16 +39,19 @@
     margin: 0 30px;
     padding-right: 10px;
     border: 1px solid white;
+    background-color: white;
     display: flex;
     align-items: center;
     border-radius: 8px;
 }
 
 .Header__container__lang__FR, .Header__container__lang__EN{
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     height: 30px;
+    color: black;
+    font-weight: bold;
 }
 
 .Header__container__lang:hover{
