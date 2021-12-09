@@ -18,7 +18,7 @@
     /* padding-top: 100px; */
     display: flex;
     flex-direction: row;
-    width: 400vw;
+    width: 750vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
@@ -34,26 +34,310 @@
 
 .one {
     background-color: black;
+    background: url(../../../src/assets/Elixir_HD.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 25vh;
+    color: thistle;
     display: flex;
-}
-
-.one p {
-    position: absolute;
-    z-index: 1;
-    color: white;
-    right: 80%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Crimson Pro', serif;
+    max-height: 100vh;
 }
 
 .one img{
     max-width: 100%;
     max-height: 100%;
 }
+
+.ElixirCombier__WhatIsIt {
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    opacity: 0;
+}
+
+.ElixirCombier__WhatIsIt__Left{
+    height: 70vh;
+    width: 30vw;
+    background-color: rgba(0, 0, 0, 0.493);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.ElixirCombier__WhatIsIt__Left__title{
+    font-size: 7vh;
+    padding: 0 35px ;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    
+}
+
+.ElixirCombier__WhatIsIt__Left__text{
+    font-size: 2.5vh;
+    padding: 0 35px;
+    font-family: 'Raleway', sans-serif; 
+    margin: 0;
+}
+
+.ElixirCombier__WhatIsIt__Right{
+    height: 70vh;
+    width: 30vw;
+    margin-top: 80px;
+    background-color: rgba(0, 0, 0, 0.774);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ElixirCombier__WhatIsIt__Right__Img{
+    height: 85%;
+}
+
 .two{
     background-color: #fffc99;
 }
+
+.ElixirCombier__WhatIsIt__Two{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.ElixirCombier__WhatIsIt__Two_container{
+    max-width: 25vw;
+    background-color: rgba(0, 0, 0, 0.849);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ElixirCombier__WhatIsIt__Two__text{
+    font-size: 2.5vh;
+    padding: 1vh  35px;
+    font-family: 'Raleway', sans-serif; 
+    margin: 0;
+    color: white;
+}
+
+.ElixirCombier__WhatIsIt__Two__Img{
+    width: 25vw;
+}
+
 .three{
     background-color: #eafdcf;
+    background-color: black;
+    background: url(../../../src/assets/28-01-COMBIER_02352.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
 }
+
+.Elixir__Combier__Manufacturing{
+    background-color: rgba(255, 255, 255, 0.562);
+    width: 17%;
+    max-height: 100%;
+    position: absolute;
+    left: 5vw;
+    padding: 30px;
+    border: 4px solid white;
+}
+
+.Elixir__Combier__Manufacturing__title{
+    font-size: 35px;
+    margin: 0;
+}
+
+.Elixir__Combier__Manufacturing__description{
+    font-size: 20px;
+    margin: 0;
+}
+
 .four{
     background-color: #8e8358;
+    background: url(../../../src/assets/elixir_combier_pour_toute_famille_1900_4bfi79.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+.ElixirCombier__History{
+    background-color: rgba(255, 255, 255, 0.781);
+    padding: 30px;
+    width: 40%;
+    height: 50%;  
+}
+
+.ElixirCombier__History__title{
+    font-size: 3vw;
+    margin: 20px 0;
+    font-family: 'Crimson Pro', serif;
+}
+
+.ElixirCombier__History__description{
+    font-size: 1vw;
+}
+
+.five{
+    background: linear-gradient( rgb(235, 222, 188), #695d42);
+    width: 250vw;
+}
+
+.ElixirCombier__History__2{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ElixirCombier__History__2__Raspail{
+    height: 70%;
+}
+
+.ElixirCombier__History__2__Colette{
+    height: 61%;
+}
+
+.ElixirCombier__History__2__Affiche{
+    height: 65%;
+}
+
+.ElixirCombier__History__2__Affiche01{
+    height: 75%;
+}
+
+.ElixirCombier__History__2__Testament{
+    height: 55%;
+    max-height: 500px;
+}
+
+.board{
+    border: 25px solid rgba(0, 0, 0, 0.795);
+    margin: 20px;
+}
+
+.six{
+    background-color: palegreen;
+}
+
+.ElixirCocktail{
+    height: 100vh;
+    background-color: #b61b00;
+}
+
+.ElixirCocktail__container{
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.ElixirCocktail__container__left__img{
+    height: 100%;
+}
+
+.ElixirCocktail__container__right{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.ElixirCocktail__container__right__title{
+    font-family: 'Vast Shadow', cursive;
+    font-size: 4vw;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 30px;
+}
+
+.ElixirCocktail__container__right__description{
+    font-size: 1vw;
+    padding: 0 5vw;
+}
+
+.ElixirCocktail__footer{
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.ElixirCocktail__footer:hover{
+    cursor: pointer;
+}
+
+.ElixirCombier__firstslide__anim {
+    -webkit-animation: zoom-text 4.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
+            animation: zoom-text 4.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
+}
+.ElixirCombier__opacity__anim {
+    -webkit-animation: opacity-text 1.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
+            animation: opacity-text 1.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
+}
+
+  @-webkit-keyframes zoom-text {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(50);
+              transform: scale(50);
+      opacity: 0;
+    }
+  }
+  @keyframes zoom-text {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(50);
+              transform: scale(50);
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes opacity-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+
+    }
+  }
+  @keyframes opacity-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

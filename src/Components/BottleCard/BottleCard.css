@@ -6,9 +6,10 @@
     align-items: center;
     justify-content: space-around;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 2px;
+    border: 2px solid black;
     margin: 0 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.363);
 }
 
 .BottleCard__container {
@@ -49,12 +50,13 @@
   /* border: 3px solid rgb(255, 165, 47); */
   position: absolute;
   left: 4vw;
-  bottom: 0;
+  bottom: 1.5vh;
   width: 50vw;
   height: 90vh;
   background-color: transparent;
   box-shadow: none;
   filter: drop-shadow(0px 8px 4px #000000bb);
+  border: none;
 }
 
 .targetCardTitle--selected{

@@ -93,7 +93,6 @@ const BottleCard =(props) => {
         props.setBottle(idBottle)
     }
 
-
     return (
         <div className="BottleCard" id={props.data.id}>
             <div className="BottleCard__container">
