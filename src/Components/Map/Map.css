@@ -15,12 +15,59 @@
     display: block;
 }
 
-.Map_salledesalembics{
+.Map_coin{
   position: absolute;
   z-index: 1;
   top: 0;
   width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.Map_coin p{
+  color: white;
+}
+
+.Map_coin__arrow{
+  width: 30px;
+  margin-top: 10px;
+}
+
+
+.coin {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  transform-style: preserve-3d;
+  animation: rotate3d 8s linear infinite;
+  transition: all .3s;
+}
+
+.coin__front,
+.coin__back {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+ }
+
+.coin__front {
+  background-image: url("../../assets/Embleme_coin.png");
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+.coin__back {
+  background-image: url("../../assets/Embleme_coin_pile.png");
+  background-size: cover;
+  transform: translateZ(1px) rotateY(0);
+}
+
 
 .Map__container {
     z-index: 2;
@@ -162,5 +209,15 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
   }
 }

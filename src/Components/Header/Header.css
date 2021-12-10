@@ -37,7 +37,7 @@
 
 .Header__container__lang{
     margin: 0 30px;
-    padding-right: 10px;
+    padding: 0 10px;
     border: 1px solid white;
     background-color: white;
     display: flex;

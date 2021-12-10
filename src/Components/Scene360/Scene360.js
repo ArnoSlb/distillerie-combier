@@ -12,7 +12,7 @@ const Scene360 = () => {
 
         var loader = new THREE.FileLoader();
         
-        loader.load( 'https://blinkldev.blinkl.com/poc/Combier/app.json', function ( text ) {
+        loader.load( 'https://landings.blinkl.com/combier/expe3D/combier.json', function ( text ) {
 
             var player = new THREE.App();
             player.load( JSON.parse(text) );

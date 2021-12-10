@@ -26,14 +26,14 @@ const Header = () => {
             if(lang == 'FR'){
                 return (
                     <div className="Header__container__lang__FR">
-                        <img className="Header__container__lang__img" src={FranceFlag} alt="" />
+                        {/* <img className="Header__container__lang__img" src={FranceFlag} alt="" /> */}
                         <p>FR</p>
                     </div>
                 )
             } else if (lang == 'EN'){
                 return (
                     <div className="Header__container__lang__EN">
-                        <img className="Header__container__lang__img" src={EnglishFlag} alt="" />
+                        {/* <img className="Header__container__lang__img" src={EnglishFlag} alt="" /> */}
                         <p>EN</p>
                     </div>
                 )
@@ -43,11 +43,11 @@ const Header = () => {
             return (
             <>
                 <div className="Header__container__lang__FR" onClick={selectFR}>
-                    <img className="Header__container__lang__img" src={FranceFlag} alt="" />
+                    {/* <img className="Header__container__lang__img" src={FranceFlag} alt="" /> */}
                     <p>FR</p>
                 </div>
                 <div className="Header__container__lang__EN" onClick={selectEN}>
-                    <img className="Header__container__lang__img" src={EnglishFlag} alt="" />
+                    {/* <img className="Header__container__lang__img" src={EnglishFlag} alt="" /> */}
                     <p>EN</p>
                 </div>
             </>

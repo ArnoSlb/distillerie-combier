@@ -4,7 +4,7 @@ import { Controller, Scene } from 'react-scrollmagic';
 import SectionWipesOriginal from "./SectionWipesOriginal/SectionWipesOriginal";
 
 import originalCombierPresentation from "../../assets/LOriginalCombier652_HD.jpg"
-import OriginalCombierOrange from "../../assets/orange.png"
+import OriginalCombierOrange from "../../assets/Orange_HD.png"
 
 import "./OriginalCombier.css";
 
@@ -92,7 +92,6 @@ const OriginalCombier = () => {
         <div id="OriginalCombier" className="OriginalCombier">
             <div className="OriginalCombier__title__container">
                 <div className="OriginalCombier__title__container__left">
-                    <h1 className="OriginalCombier__title">L'Original Combier triple sec</h1>
                     <div className="OriginalCombier__title__container__left__whitecontainer">
                         <img className="OriginalCombier__title__container__left__whitecontainer__orange OriginalCombier__anim" src={OriginalCombierOrange} alt="Orange picture" />
                         <h2>Qu'est ce c'est ?</h2>
@@ -101,7 +100,7 @@ const OriginalCombier = () => {
                         <p className="OriginalCombier__anim2"><strong>En bouche : </strong> Complexité épicée, safranée, persistance aromatique hors du commun. Allure : À l'oeil scintillant et cristallin au joli gras fluide et léger, L'Original Combier concentre au nez toute la richesse de la fleur d'oranger. En bouche : Il allie la fraîcheur du zeste d''orange amère à la rondeur de l'orange douce pour une finale gourmande. </p>
                     </div>
                 </div>
-                <img className="OriginalCombier__title__img OriginalCombier__anim" src={originalCombierPresentation} alt="picture of the original combier" />
+                <h1 className="OriginalCombier__title">L'Original Combier triple sec</h1>
             </div>
             <div className="OriginalCombier__made__container">
                 <SectionWipesOriginal />

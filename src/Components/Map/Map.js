@@ -4,6 +4,8 @@ import './Map.css'
 import video from "../../assets/ZoomOSMShort960.mp4"
 import LogoCombierTransparent from "../../assets/Combier_logo_transparent.png";
 import SalledesAlembics from "../../assets/salle_des_alembic.jpg";
+import ArrowDown from "../../assets/Bottom_Arrow.png"
+import EmblemeCoin from "../../assets/Embleme_coin.png"
 
 
 const Map = () => {
@@ -121,10 +123,10 @@ const Map = () => {
 
             <section className="Map__container">
                 <div className="Map__container__content">
-                    <div className="Map__container__content__title">
+                    {/* <div className="Map__container__content__title">
                         <img src={LogoCombierTransparent} alt="" />
                         <p>Scroller vers le bas pour commencer</p>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
@@ -159,7 +161,15 @@ const Map = () => {
 
             <div id="set-height"></div>
             
-            <img className="Map_salledesalembics" src={SalledesAlembics} alt="salle des alembics" />
+            <div className="Map_coin">
+                <div class="coin">
+                    <div class="coin__front"></div>
+                    <div class="coin__back"></div>
+                </div>
+                <p className="Map_coin__">Bienvenue à la Distillerie Combier pour une visite immersive pleine de surprises. </p>
+                <p>Scroller pour commencer l’expérience. </p>
+                <img className="Map_coin__arrow" src={ArrowDown} alt="" />
+            </div>
 
             <video id="v0" tabIndex="0" autobuffer="true" preload="true" src={video}></video>
         </div>
