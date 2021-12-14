@@ -42,11 +42,13 @@ const ElixirCombier = () => {
 
                      var delayInMilliseconds = 8000; //1 second
 
-                    setTimeout(function() {
+                    const ElixirTransitionText = () => {
                         document.querySelector('.zoom-text').style.display = "none"
                         document.querySelector('.ElixirCombier__WhatIsIt').style.display = "flex"
                         document.querySelector('.ElixirCombier__WhatIsIt').classList.add('ElixirCombier__opacity__anim')
-                    }, delayInMilliseconds);
+                    }
+
+                    setTimeout(ElixirTransitionText, delayInMilliseconds);
 
                  } else {
                      // if we want the animation to play over and over again
@@ -161,7 +163,7 @@ const ElixirCombier = () => {
                             </div>
                             <div className="ElixirCocktail__container__right">
                                 <h2 className="ElixirCocktail__container__right__title">Savourez-le ...</h2>
-                                <p className="ElixirCocktail__container__right__description">Savourez-le pur pour terminer un repas en douceur ou dans un des grands classiques du cocktail où l’Original Combier apporte toute sa vivacité : la Margarita, le Long Island, le Cosmopolitan, le Sidecar. La liste est longue. En cuisine, il apporte la note gastronomique aux préparations et aux flambages : soufflés, génoises, confitures, salades de fruits ou les fameuses crêpes Suzette.</p>
+                                <p className="ElixirCocktail__container__right__description">Pour savourez au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
                             </div>
                         </div>
                         <Link to="#BottleHub"><div className="ElixirCocktail__footer">Découvrir un autre produit de la Distillerie Combier</div></Link>

@@ -37,7 +37,7 @@
     flex-direction: column;
     position: absolute;
     right: 10vw;
-    top: 120px;
+    /* top: 120px; */
 }
 
 .OriginalCombier__title__container__left__whitecontainer{
@@ -50,7 +50,7 @@
 .OriginalCombier__title__container__left__whitecontainer__orange{
     position: absolute;
     width: 26vh;
-    top: -5vh;
+    top: -100px !important;
     right: -5vh;
 }
 
