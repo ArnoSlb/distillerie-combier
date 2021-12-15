@@ -48,7 +48,7 @@ const ElixirCombier = () => {
                         document.querySelector('.ElixirCombier__WhatIsIt').classList.add('ElixirCombier__opacity__anim')
                     }
 
-                    setTimeout(ElixirTransitionText, delayInMilliseconds);
+                    var myTimeOut = setTimeout(ElixirTransitionText, delayInMilliseconds);
 
                  } else {
                      // if we want the animation to play over and over again
@@ -87,7 +87,8 @@ const ElixirCombier = () => {
         window.addEventListener('scroll', scrollToRight)
         
         return () => {
-            window.removeEventListener('scroll', scrollToRight)
+            window.removeEventListener('scroll', scrollToRight);
+            // clearTimeout(myTimeOut)
             }
     },[]);
 

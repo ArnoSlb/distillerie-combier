@@ -26,7 +26,7 @@ const Meridor = () => {
 
             entries.forEach(entry => {
 
-                delay = delay + 0.4;
+                // delay = delay + 0.4;
                 // When the element.s are in the user browser we add the class reponsible for the animation
                 if (entry.isIntersecting){
                     // console.log(entry)
@@ -101,7 +101,7 @@ const Meridor = () => {
                 <div className="Meridor__First__text__right Meridor__anim">
                     <div className="Meridor__First__empty"></div>
                     <div className="Meridor__First__text__right__content">
-                        <p>Gin Meridor doit son nom à la dame de Montsoreau devenue Diane de Meridor sous la plume d’Alexandre Dumas. conte autour de Méridor (cf. cocktail "Le Jardin secret"). Passage « Dame de Montsoreau » d'Alexandre Dumas qui avait été immortalisée dans une oeuvre d'Alexandre Dumas.</p>
+                        <p>Gin Meridor doit son nom à la dame de Monsoreau devenue Diane de Meridor sous la plume d’Alexandre Dumas. conte autour de Méridor (cf. cocktail "Le Jardin secret"). Passage « Dame de Montsoreau » d'Alexandre Dumas qui avait été immortalisée dans une oeuvre d'Alexandre Dumas.</p>
                     </div> 
                 </div>
                 <div className="Meridor__First__text Meridor__anim">
