@@ -2,7 +2,7 @@ import React,{ useState, useRef, useEffect } from "react";
 
 import "./Header.css";
 
-import CombierLogo from "../../assets/Combier_Distil_W.png"
+import CombierLogo from "../../assets/Combier_Distil_P179.png"
 import FranceFlag from "../../assets/france-flag-round-small.png"
 import EnglishFlag from "../../assets/english-flag-round-small.png"
 
