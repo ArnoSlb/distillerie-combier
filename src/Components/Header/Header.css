@@ -1,8 +1,7 @@
 .Header{
     position: fixed;
     top: 0;
-    /* background-color: rgba(16, 16, 29, 0.993); */
-    background-color: rgb(126, 9, 9);
+    background-color: rgb(229, 226, 226);
     z-index: 100;
     width: 100vw;
     display: flex;
@@ -24,9 +23,9 @@
 }
 
 .Header__container__eshop{
-    background-color: white;
+    background-color: #c02d23;
     padding: 6px 12px;
-    color: rgba(17, 17, 26, 0.973);
+    color: rgb(229, 226, 226);
     border-radius: 8px;
     font-weight: bold;
 }
@@ -38,8 +37,8 @@
 .Header__container__lang{
     margin: 0 30px;
     padding: 0 10px;
-    border: 1px solid white;
-    background-color: white;
+    background-color: #c02d23;
+    color: rgb(229, 226, 226);
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -50,7 +49,6 @@
     display: flex;
     align-items: center;
     height: 30px;
-    color: black;
     font-weight: bold;
     padding: 0 5px
 }
