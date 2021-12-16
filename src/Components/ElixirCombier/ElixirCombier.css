@@ -46,6 +46,7 @@
     justify-content: center;
     font-family: 'Crimson Pro', serif;
     max-height: 100vh;
+    overflow: hidden;
 }
 
 .one img{

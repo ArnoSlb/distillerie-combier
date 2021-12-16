@@ -2,6 +2,7 @@ import React from "react";
 import OriginalCombier from "../OriginalCombier/OriginalCombier";
 import ElixirCombier from "../ElixirCombier/ElixirCombier";
 import Meridor from "../Meridor/Meridor";
+import AbsintheBlanchette from "../AbsintheBlanchette/AbsintheBlanchette";
 
 import "./BottleStory.css";
 
@@ -13,6 +14,8 @@ const BottleStory = (props) => {
         return (<ElixirCombier/>)
     } else if(props.bottle == "meridor"){
         return (<Meridor/>)
+    } else if(props.bottle == "blanchette"){
+        return (<AbsintheBlanchette/>)
     } else {
         return (<h1>{props.bottle}</h1>)
     }  
