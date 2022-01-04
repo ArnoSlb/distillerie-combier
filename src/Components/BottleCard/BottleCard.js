@@ -95,11 +95,19 @@ const BottleCard =(props) => {
 
     return (
         <div className="BottleCard" id={props.data.id}>
+            {props.langSelected == 'FR' ? 
             <div className="BottleCard__container">
                 <h3 className="BottleCard__title">{props.data.title}</h3>
                 <p className="BottleCard__description">{props.data.description}</p>
                 <div className="BottleCard__discover" onClick={bottleSelected}>Découvrir</div>
             </div>
+            :
+            <div className="BottleCard__container">
+                <h3 className="BottleCard__title">{props.data.titleEn}</h3>
+                <p className="BottleCard__description">{props.data.descriptionEn}</p>
+                <div className="BottleCard__discover" onClick={bottleSelected}>Discover</div>
+            </div>
+            }
             <img className="BottleCard__picture" src={props.data.img} alt="" />      
         </div>
     )

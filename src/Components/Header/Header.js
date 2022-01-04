@@ -7,9 +7,8 @@ import FranceFlag from "../../assets/france-flag-round-small.png"
 import EnglishFlag from "../../assets/english-flag-round-small.png"
 
 
-const Header = () => {
+const Header = (props) => {
     
-
     const [lang, setLang] = useState('FR')
     const [langToggle, setLangToggle] = useState(false)
 
@@ -57,10 +56,12 @@ const Header = () => {
 
     const selectFR = () => {
         setLang('FR')
+        props.func('FR')
     }
 
     const selectEN = () => {
         setLang('EN')
+        props.func('EN')
     }
 
     return (
@@ -70,7 +71,12 @@ const Header = () => {
                 <div className="Header__container__lang" onClick={ChangeLangToggle}>
                     {showLang()}
                 </div>
+                {lang=='FR' ? 
                 <div className="Header__container__eshop" onClick={eshopRedirection}>Acheter</div>
+                : 
+                <div className="Header__container__eshop" onClick={eshopRedirection}>Shop</div>
+                }
+                
             </div>
         </div>
     )

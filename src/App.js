@@ -24,14 +24,19 @@ function App() {
   const scrollCount = () => {
     console.log(window.scrollY)
   }
-  
+
+  const [langSelected, setLangSelected] = useState('FR')
+
+  const modifySetLangSelected = (lang) => {
+    setLangSelected(lang)
+  }
 
   return (
     <div className="App" onChange={scrollCount}>
-      <Header/>
-      <Map/>
-      <Scene360/>
-      <BottleHub/>
+      <Header func={modifySetLangSelected}/>
+      <Map langSelected={langSelected}/>
+      <Scene360 langSelected={langSelected}/>
+      <BottleHub langSelected={langSelected}/>
       {/* <Video/>
       <Empty randomColor={getRandomColor()}/> */}
     </div>

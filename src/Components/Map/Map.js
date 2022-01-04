@@ -8,7 +8,7 @@ import ArrowDown from "../../assets/Bottom_Arrow.png"
 import EmblemeCoin from "../../assets/Embleme_coin.png"
 
 
-const Map = () => {
+const Map = (props) => {
 
     // lower numbers = faster playback
     const playbackConst = 780;
@@ -144,13 +144,22 @@ const Map = () => {
                     {/* <p>Start it like this</p> */}
                 </div>
             </section> 
-
+            {props.langSelected == 'FR' ? 
             <section className="Map__container">
                 <div className="Map__container__content anim">
                     <h1>la Distillerie Combier</h1>
                     {/* <p>Start it like this</p> */}
                 </div>
             </section>
+            :
+            <section className="Map__container">
+                <div className="Map__container__content anim">
+                    <h1>The Distillerie Combier</h1>
+                    {/* <p>Start it like this</p> */}
+                </div>
+            </section>
+            }
+            
 
             <section className="Map__container">
                 <div className="Map__container__content anim">
@@ -161,6 +170,7 @@ const Map = () => {
 
             <div id="set-height"></div>
             
+            {props.langSelected == 'FR' ? 
             <div className="Map_coin">
                 <div class="coin">
                     <div class="coin__front"></div>
@@ -170,6 +180,17 @@ const Map = () => {
                 <p>Scroller pour commencer l’expérience. </p>
                 <img className="Map_coin__arrow" src={ArrowDown} alt="" />
             </div>
+            :
+            <div className="Map_coin">
+                <div class="coin">
+                    <div class="coin__front"></div>
+                    <div class="coin__back"></div>
+                </div>
+                <p className="Map_coin__">Welcome to the Distillerie Combier  for an immersive visit full of surprises. </p>
+                <p>Scroll to start </p>
+                <img className="Map_coin__arrow" src={ArrowDown} alt="" />
+            </div>
+            }
 
             <video id="v0" tabIndex="0" autobuffer="true" preload="true" src={video}></video>
         </div>

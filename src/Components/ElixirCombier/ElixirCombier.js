@@ -19,6 +19,16 @@ const ElixirCombier = () => {
 
     React.useEffect(() => {
 
+        var delayInMilliseconds = 8000; //1 second
+
+        const ElixirTransitionText = () => {
+            document.querySelector('.zoom-text').style.display = "none"
+            document.querySelector('.ElixirCombier__WhatIsIt').style.display = "flex"
+            document.querySelector('.ElixirCombier__WhatIsIt').classList.add('ElixirCombier__opacity__anim')
+        }
+
+        var myTimeOut = setTimeout(ElixirTransitionText, delayInMilliseconds);
+
          // We select every elements with the class .anim
          const ElementsToAnimate = document.querySelectorAll('.ElixirCombier__firstslide__anim');
 
@@ -40,15 +50,6 @@ const ElixirCombier = () => {
                      entry.target.classList.add('zoom-text'),
                      entry.target.style.animationDelay = delay + "s"
 
-                     var delayInMilliseconds = 8000; //1 second
-
-                    const ElixirTransitionText = () => {
-                        document.querySelector('.zoom-text').style.display = "none"
-                        document.querySelector('.ElixirCombier__WhatIsIt').style.display = "flex"
-                        document.querySelector('.ElixirCombier__WhatIsIt').classList.add('ElixirCombier__opacity__anim')
-                    }
-
-                    var myTimeOut = setTimeout(ElixirTransitionText, delayInMilliseconds);
 
                  } else {
                      // if we want the animation to play over and over again
@@ -88,7 +89,7 @@ const ElixirCombier = () => {
         
         return () => {
             window.removeEventListener('scroll', scrollToRight);
-            // clearTimeout(myTimeOut)
+            clearTimeout(myTimeOut)
             }
     },[]);
 
