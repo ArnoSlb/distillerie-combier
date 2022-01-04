@@ -1,0 +1,267 @@
+.AbsintheBlanchette{
+    width: 100vw;
+    position: relative;
+}
+
+.AbsintheBlanchette__bg{
+    width: 100vw;
+    height: 100vh;
+    background: url(../../../src/assets/Blanchette709_BD.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AbsintheBlanchette__bg__part{
+    color: white;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    padding: 0 10vw;
+    text-shadow: black 4px 0 30px, black 1px 0 10px;
+}
+
+.AbsintheBlanchette__bg__part--full{
+    width: 50vw;
+    padding: 0 0 0 5vw;
+    height: auto;
+}
+
+.AbsintheBlanchette__whitecontainer{
+    width: 100%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 7px solid black;
+    padding: 40px;
+}
+
+
+
+.AbsintheBlanchette__whatisit__title__whitecontainer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+    text-align: center;
+    padding: 0px 0 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 1vw;
+    text-shadow: none;
+    color: black;
+}
+
+.AbsintheBlanchette__whatisit__description__whitecontainer{
+    text-shadow: none;
+    font-size: 1vw;
+    color: black;
+}
+
+.absinthe__flex{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+}
+
+.section {
+    height: 100vh;
+  }
+  
+.event2 {
+    transition: width 0.3s ease-out;
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+    margin: 0 !important;
+}
+
+.event2 yellow {
+    background-color: yellow;
+}
+
+.zap {
+width: 100%;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.pinSection {
+   height: 100%; 
+   width: 100%;
+}
+
+.image {
+    /* top: -47%;
+    right: -1%;
+    transform: translate(-50%, -50%);
+    position: absolute; */
+    background-size: cover;
+    height: 70vh;
+    width: 50vh;
+}
+
+.bg {
+    top: -100vh;
+    /* transform: translate(-50%, -50%); */
+    position: absolute;
+    background: url(../../../src/assets/Blanchette709_BD.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+/* Pour réveler l image du dessous */
+/* On le force à afficher l image dans rectangle */
+.scrollmagic-pin-spacer {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.event1 .image{
+    top: 50%;
+    background-image: url('../../assets/LOriginalCombier652_HD.jpg');
+}
+
+.AbsintheBlanchette__whatisit__title{
+    font-size: 4vw;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.AbsintheBlanchette__whatisit__descritpion{
+    font-size: 1.5vw;
+    padding: 20px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.349);
+    margin-top: 60px;
+}
+
+.event2 .bg{
+    background-image: url(../../assets/Blanchette709_BD.jpg);
+}
+
+.event2 .image{
+    background-image: url('../../assets/Meridor460.jpg');
+}
+
+.event3{
+    background-color: #000000;
+}
+
+.event3 .bg{
+    background: none !important;
+    background: linear-gradient(#178488, #131313) !important;
+}
+
+.event4 .bg{
+    background: linear-gradient(#178488, #131313);
+}
+.event4 .image{
+    background-image: url('../../assets/Blanchette2607_BD.jpg');
+}
+
+.event5 .bg{
+    background: linear-gradient(#178488, #131313);
+}
+.event5 .image{
+    background-image: url('../../assets/Absinthe.jpg');
+}
+
+.event6 .bg{
+    background: linear-gradient(#178488, #131313);
+}
+
+.bg iframe{
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.event7 .bg{
+    background-image: url(../../assets/image_beraud_jean_au_cafe_dit_labsinthe_p2683_380296.jpg);
+}
+.event7 .image{
+    background-image: url('../../assets/image_michelet_lheure_de_labsinthe_g.30752_1261262.jpg');
+}
+
+.BlanchetteCocktail{
+    height: 100vh;
+    background-color: #c02d23;
+}
+
+.BlanchetteCocktail__container{
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.BlanchetteCocktail__container__left__img{
+    height: 100%;
+}
+
+.BlanchetteCocktail__container__right{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.BlanchetteCocktail__container__right__title{
+    font-family: 'Vast Shadow', cursive;
+    font-size: 4vw;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 30px;
+}
+
+.BlanchetteCocktail__container__right__description{
+    font-size: 1vw;
+    padding: 0 5vw;
+}
+
+.BlanchetteCocktail__footer{
+    width: 100vw;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.BlanchetteCocktail__footer:hover{
+    cursor: pointer;
+}

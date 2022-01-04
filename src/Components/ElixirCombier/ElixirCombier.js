@@ -163,8 +163,8 @@ const ElixirCombier = () => {
                                 <img className="ElixirCocktail__container__left__img" src={Elixir2482HD} alt="" />
                             </div>
                             <div className="ElixirCocktail__container__right">
-                                <h2 className="ElixirCocktail__container__right__title">Savourez-le ...</h2>
-                                <p className="ElixirCocktail__container__right__description">Pour savourez au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
+                                <h2 className="ElixirCocktail__container__right__title">Pour savourer ...</h2>
+                                <p className="ElixirCocktail__container__right__description">au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
                             </div>
                         </div>
                         <Link to="#BottleHub"><div className="ElixirCocktail__footer">Découvrir un autre produit de la Distillerie Combier</div></Link>

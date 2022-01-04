@@ -1,7 +1,7 @@
 .Header{
     position: fixed;
     top: 0;
-    background-color: rgb(229, 226, 226);
+    background-color: rgb(255, 255, 255);
     z-index: 100;
     width: 100vw;
     display: flex;
@@ -25,7 +25,7 @@
 .Header__container__eshop{
     background-color: #c02d23;
     padding: 6px 12px;
-    color: rgb(229, 226, 226);
+    color: rgb(255, 255, 255);
     border-radius: 8px;
     font-weight: bold;
 }
@@ -38,7 +38,7 @@
     margin: 0 30px;
     padding: 0 10px;
     background-color: #c02d23;
-    color: rgb(229, 226, 226);
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     border-radius: 8px;
