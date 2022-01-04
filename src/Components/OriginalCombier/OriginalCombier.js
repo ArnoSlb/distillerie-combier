@@ -97,7 +97,7 @@ const OriginalCombier = () => {
                         <h2>Qu'est ce c'est ?</h2>
                         <p className="OriginalCombier__anim2">La première liqueur d’oranges triple sec, parfaitement transparente, telle fût l’innovation majeure du fondateur de la distillerie, Jean-Baptiste Combier. Obtenue en distillant les écorces d’oranges douces et amères avec de l’eau et du sucre sans aucun ajout d’arôme, la recette et le procédé sont resté inchangés depuis 1834.</p>
                         <p className="OriginalCombier__anim2"><strong>Allure : </strong> À l’oeil scintillant et cristallin au joli gras fluide et léger, L’Original Combier concentre au nez toute la richesse de la fleur d’oranger. En bouche : Il allie la fraîcheur du zeste d’orange amère à la rondeur de l’orange douce pour une finale gourmande.</p>
-                        <p className="OriginalCombier__anim2"><strong>En bouche : </strong> Complexité épicée, safranée, persistance aromatique hors du commun. Allure : À l'oeil scintillant et cristallin au joli gras fluide et léger, L'Original Combier concentre au nez toute la richesse de la fleur d'oranger. En bouche : Il allie la fraîcheur du zeste d''orange amère à la rondeur de l'orange douce pour une finale gourmande. </p>
+                        <p className="OriginalCombier__anim2"><strong>En bouche : </strong> Complexité épicée, safranée, persistance aromatique hors du commun. </p>
                     </div>
                 </div>
                 <h1 className="OriginalCombier__title">L'Original Combier triple sec</h1>
