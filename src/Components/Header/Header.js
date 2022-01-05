@@ -45,6 +45,7 @@ const Header = (props) => {
                     {/* <img className="Header__container__lang__img" src={FranceFlag} alt="" /> */}
                     <p>FR</p>
                 </div>
+                <div>|</div>
                 <div className="Header__container__lang__EN" onClick={selectEN}>
                     {/* <img className="Header__container__lang__img" src={EnglishFlag} alt="" /> */}
                     <p>EN</p>

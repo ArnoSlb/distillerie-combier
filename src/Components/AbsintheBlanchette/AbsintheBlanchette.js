@@ -30,7 +30,7 @@ const AbsintheBlanchette = () => {
                         <div className="pinSection">
                             <div className="bg">
                                 <div className="AbsintheBlanchette__bg__part">
-                                    <h2 className="AbsintheBlanchette__whatisit__title">Qu'est ce que c'est ?</h2>
+                                    <h2 className="AbsintheBlanchette__whatisit__title">Qu'est-ce que c'est ?</h2>
                                 </div>
                                 <div className="AbsintheBlanchette__bg__part">
                                     <p className="AbsintheBlanchette__whatisit__descritpion">Produite par la Distillerie Combier entre 1899 et 1915, et de nouveau
@@ -40,7 +40,7 @@ const AbsintheBlanchette = () => {
                                     Associant grandes et petites absinthes à l’anis vert, au fenouil et à
                                     l’hysope, elle est très rafraîchissante. La
                                     Blanchette se consomme allongée d’eau fraîche, sans sucre, car elle
-                                    n’est pas amère. </p>
+                                    n’est pas amère.</p>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ const AbsintheBlanchette = () => {
                         <div className="pinSection">
                             <div className="bg black">
                                 <div className="AbsintheBlanchette__bg__part">
-                                    <h2 className="AbsintheBlanchette__whatisit__title">Qu'est ce que c'est ?</h2>
+                                    <h2 className="AbsintheBlanchette__whatisit__title">Qu'est-ce que c'est ?</h2>
                                 </div>
                                 <div className="AbsintheBlanchette__bg__part">
                                     <p className="AbsintheBlanchette__whatisit__descritpion">Produite par la Distillerie Combier entre 1899 et 1915, et de nouveau
@@ -61,7 +61,7 @@ const AbsintheBlanchette = () => {
                                     Associant grandes et petites absinthes à l’anis vert, au fenouil et à
                                     l’hysope, elle est très rafraîchissante. La
                                     Blanchette se consomme allongée d’eau fraîche, sans sucre, car elle
-                                    n’est pas amère. </p>
+                                    n’est pas amère.</p>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ const AbsintheBlanchette = () => {
                             <div className="bg black">
                                 <div className="AbsintheBlanchette__bg__part AbsintheBlanchette__bg__part--full">
                                     <div className="AbsintheBlanchette__whitecontainer">
-                                        <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">Qu'est ce que c'est ?</h2>
+                                        <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">Qu'est-ce que c'est ?</h2>
                                         <div className="AbsintheBlanchette__whatisit__description__whitecontainer">
                                             <p><strong>Allure :</strong>  Translucide, elle s'habille d'un trouble lacté et givré avec un peu d'eau - d'où son nom de "Blanchette".</p>
                                             <p><strong>En bouche :</strong>  Avec un nez empli de fraîcheur ou l’on capte d’abord l’anis vert, la Blanchette est herbacée et très parfumée. L’anis vert d’Espagne et le
@@ -96,7 +96,10 @@ const AbsintheBlanchette = () => {
                                     <div className="AbsintheBlanchette__whitecontainer">
                                         <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">La Fabrication</h2>
                                         <div className="AbsintheBlanchette__whatisit__description__whitecontainer">
-                                            <p>Trois plantes essentielles entrent dans la composition de ce spiritueux fameux dont la distillation demande un grand savoir-faire : l’anis, le fenouil et la plante d’absinthe elle-même, qui donne son nom à la boisson. 1. Pesée des botaniques. 2. Remplissage des alambics avec les botaniques et l'alcool à 96%. 3. Distillation </p> 
+                                            <p>Trois plantes essentielles entrent dans la composition de ce spiritueux fameux dont la distillation demande un grand savoir-faire : l’anis, le fenouil et la plante d’absinthe elle-même, qui donne son nom à la boisson. </p>
+                                            <p> 1. Pesée des botaniques. </p>
+                                            <p>2. Remplissage des alambics avec les botaniques et l'alcool à 96%.</p>
+                                            <p> 3. Et bien sûr, la distillation. </p> 
                                         </div>
                                     </div>
                                 </div>
@@ -124,8 +127,11 @@ const AbsintheBlanchette = () => {
                                     <div className="AbsintheBlanchette__whitecontainer">
                                         <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">L'Histoire</h2>
                                         <div className="AbsintheBlanchette__whatisit__description__whitecontainer">
-                                            <p>Commercialisée à l'origine entre 1899 et 1915 - c'était même la référence la mieux vendue à l’époque - Blanchette est une reproduction de la recette de l'époque et fait partie des absinthes élaborées par l'historien Ted Breaux.  - Ce dont on a besoin : carte des emplacements précis. NB: Absinthe Entêtée à mentionner dans Carte région producteur (Grande Absinthe) - petite absinthe achetée ailleurs. 
-                                            - Insister sur "produits" - pas producteurs. Plus sur l'approvisionnement.</p> 
+                                            <p>C'est en 1895 que James, le fils de Jean-Baptiste Combier, fait planter les premiers plants d’anis au sein de son domaine agricole du Ruau, au sud-ouest de Saumur. Quatre ans plus tard, la maison Combier commercialise la Blanchette.</p> 
+
+                                            <p>Bien moins coûteuse que le vin, l’absinthe est, de manière générale, consommée dans tous les cafés. On en produisait 700 000 litres en 1874, puis 36 millions de litres en 1910. Elle atteint alors des hauts degrés d'alcool aux alentours de 70°. </p> 
+
+                                            <p>La boisson que l’on surnomme “fée verte” évoque à chaque esprit les tableaux de Degas, Manet, Picasso. Son immense popularité n’empêchera pas son injuste interdiction en France en 1915, avant d’être à nouveau officiellement autorisée à être produite en 2001. </p> 
                                         </div>
                                     </div>
                                 </div>
