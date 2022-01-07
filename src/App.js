@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="App" onChange={scrollCount}>
+    <div className="App" onScroll={scrollCount}>
       <Header func={modifySetLangSelected}/>
       <Map langSelected={langSelected}/>
       <Scene360 langSelected={langSelected}/>

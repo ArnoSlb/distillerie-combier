@@ -6,7 +6,7 @@ import ImgOriginalManufacturing1 from "../../../../assets/original_manufacturing
 import ImgOriginalManufacturing2 from "../../../../assets/original_manufacturing_2.jpg"
 import ImgOriginalManufacturing3 from "../../../../assets/original_manufacturing_3.jpg"
 
-const OriginalManufacturing2 = () => {
+const OriginalManufacturing2 = (props) => {
 
     React.useEffect(() => {
 
@@ -51,15 +51,27 @@ const OriginalManufacturing2 = () => {
         <div className="OriginalManufacturing2">
             <div className="OriginalManufacturing2__1 Original__manufacturing__anim">
                 <img src={ImgOriginalManufacturing1} alt="" />
+                {props.langSelected == 'FR' ? 
                 <p>1. Les écorces sont réhydratées dans l'eau durant 24h pour leur rendre leur forme initiale.</p>
+                :
+                <p>1. The barks are rehydrated in water for 24 hours to return them to their initial shape.</p>
+                }       
             </div>
             <div className="OriginalManufacturing2__2 Original__manufacturing__anim">
                 <img src={ImgOriginalManufacturing2} alt="" />
+                {props.langSelected == 'FR' ?
                 <p>2. Zestage des écorces : on sépare la partie intérieure la plus amère, le ziste, de la partie extérieure, le zeste, en les passant une à une à la main dans une zesteuse, une machine à enlever le zeste. Cette étape primordiale et traditionnelle assure une liqueur ronde des plus aromatiques.</p>
+                :
+                <p>2. Zesting the peels: the bitterest inner part, the ziste, is separated from the outer part, the zest, by passing them one by one by hand through a zester, a machine to remove the zest. This primordial and traditional step ensures a round liquor of the most aromatic.</p>
+                }
             </div>
             <div className="OriginalManufacturing2__3 Original__manufacturing__anim">
                 <img src={ImgOriginalManufacturing3} alt="" />
+                {props.langSelected == 'FR' ?
                 <p>3. Les écorces zestées sont ensuite mise à macérer dans de l'alcool neutre durant 24h et commencent ici à exprimer tout leur parfum.</p>
+                :
+                <p>3. The zested rinds are then macerated in neutral alcohol for 24 hours and here begin to express all their fragrance. </p>
+                }
             </div>
         </div>
     )

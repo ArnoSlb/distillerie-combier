@@ -17,6 +17,8 @@ import './BottleHub.css';
 
 const BottleHub = (props) => {
 
+    console.log(props)
+
     const bottlesData = [
         {
         id: `original`,
@@ -61,6 +63,11 @@ const BottleHub = (props) => {
     const modifyStateBottle = (alcool) => {
       setBottle(alcool)
     }
+
+    const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+    console.log(scrollTop, clientHeight, scrollHeight, window.pageYOffset)
+    window.pageYOffset
     
     return (
         <div className="BottleHub__container">
@@ -92,7 +99,7 @@ const BottleHub = (props) => {
                     </div>
                 </div>
             </div>
-            <BottleStory bottle={bottle}/>
+            <BottleStory bottle={bottle} langSelected={props.langSelected}/>
         </div>
 
     )

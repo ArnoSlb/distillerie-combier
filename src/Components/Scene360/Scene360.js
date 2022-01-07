@@ -4,7 +4,9 @@ import { VRButton } from './VRButton.js';
 
 import './Scene360.css';
 
-const Scene360 = () => {
+import Logo360Sphere from "../../assets/360-Logo-sphere.png"
+
+const Scene360 = (props) => {
 
     React.useEffect(() => {
         window.THREE = THREE; // Used by APP Scripts.
@@ -42,7 +44,22 @@ const Scene360 = () => {
 
     return(
         <div className="Scene360">
-            <div className="Scene360__player"></div>
+            {props.langSelected == 'FR' ? 
+                <div className="Scene360__intro">
+                    <p>Vous arrivez dans la Salle des Alambics, à visiter en 360 °</p>
+                    <p>Déplacez vous en orientant votre téléphone ou en utilisant votre souris sur ordinateur</p>
+                    <img src={Logo360Sphere} alt="" />
+                </div>
+            : 
+                <div className="Scene360__intro">
+                    <p>You arrive in the Alambics Room, to visit in 360 °</p>
+                    <p>Move around by pointing your phone or using your mouse on the computer</p>
+                    <img src={Logo360Sphere} alt="" />
+                </div>
+            }
+            <div className="Scene360__player">
+                <img src={Logo360Sphere} alt="" />
+            </div>
             <div className="Scene360__popin" onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, repellendus! Repudiandae reprehenderit et sint quam natus quae molestias placeat illum, numquam ex deserunt? Nesciunt, dignissimos nemo minima nihil ex porro!</div>
         </div>
     )

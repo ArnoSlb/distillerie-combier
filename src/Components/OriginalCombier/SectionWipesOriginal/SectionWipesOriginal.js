@@ -10,7 +10,7 @@ import OriginalCocktail from './OriginalCocktail/OriginalCocktail';
 
 import "./SectionWipesOriginal.css"
 
-const SectionWipesOriginal = () => {
+const SectionWipesOriginal = (props) => {
   return (
     <div className="SectionWipes2Styled">
     <Controller>
@@ -23,14 +23,14 @@ const SectionWipesOriginal = () => {
           wrapper={<div id="pinContainer" />}
         >
           <section className="panel">
-            <OriginalManufacturing/>
+            <OriginalManufacturing langSelected={props.langSelected}/>
           </section>
           <Tween
             from={{ x: '-100%' }}
             to={{ x: '0%' }}
           >
             <section className="panel">
-              <OriginalManufacturing2/>
+              <OriginalManufacturing2 langSelected={props.langSelected}/>
             </section>
           </Tween>
           <Tween
@@ -38,7 +38,7 @@ const SectionWipesOriginal = () => {
             to={{ x: '0%' }}
           >
             <section className="panel">
-              <OriginalHistory/>
+              <OriginalHistory langSelected={props.langSelected}/>
             </section>
           </Tween>
           <Tween
@@ -46,7 +46,7 @@ const SectionWipesOriginal = () => {
             to={{ y: '0%' }}
           >
             <section className="panel">
-              <OriginalCocktail/>
+              <OriginalCocktail langSelected={props.langSelected}/>
             </section>
           </Tween>
         </Timeline>

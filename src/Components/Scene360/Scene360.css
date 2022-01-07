@@ -10,6 +10,17 @@
     right: 0;
 }
 
+.Scene360__player img{
+    position: absolute;
+    width: 70px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.Scene360__player:hover{
+    cursor: grab;
+}
+
 .Scene360__popin{
     height: 300px;
     width: 300px;
@@ -20,4 +31,20 @@
     display: none;
     padding: 30px;
     align-items: center;
+}
+
+.Scene360__intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    color: white;
+    padding: 40px 0 80px;
+    height: 40vh;
+}
+
+.Scene360__intro img {
+    width: 25vh;
+    margin-top: 20px;
 }

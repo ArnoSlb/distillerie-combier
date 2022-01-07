@@ -17,6 +17,21 @@ import ElixirGigi from "../../assets/gigi-italian-movie-poster.jpeg"
 
 const ElixirCombier = () => {
 
+    const GotoBottleHub = () => {
+
+        const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+
+        const pixelToHub = 4680 +  (clientHeight * 3.23)
+
+        window.scrollTo({
+            top: pixelToHub,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+
     React.useEffect(() => {
 
         var delayInMilliseconds = 8000; //1 second
@@ -168,7 +183,7 @@ const ElixirCombier = () => {
                                 <p className="ElixirCocktail__container__right__description">au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
                             </div>
                         </div>
-                        <Link to="#BottleHub"><div className="ElixirCocktail__footer">Découvrir un autre produit de la Distillerie Combier</div></Link>
+                        <div className="ElixirCocktail__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,21 @@ import BlanchetteCoktailImg from "../../assets/Blanchette2600_BD.jpg"
 
 const AbsintheBlanchette = () => {
 
+    const GotoBottleHub = () => {
+
+        const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+
+        const pixelToHub = 4680 +  (clientHeight * 3.23)
+
+        window.scrollTo({
+            top: pixelToHub,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+
     return (
         <div className="AbsintheBlanchette">
             {/* <div className="AbsintheBlanchette__bg">
@@ -97,9 +112,9 @@ const AbsintheBlanchette = () => {
                                         <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">La Fabrication</h2>
                                         <div className="AbsintheBlanchette__whatisit__description__whitecontainer">
                                             <p>Trois plantes essentielles entrent dans la composition de ce spiritueux fameux dont la distillation demande un grand savoir-faire : l’anis, le fenouil et la plante d’absinthe elle-même, qui donne son nom à la boisson. </p>
-                                            <p> 1. Pesée des botaniques. </p>
+                                            <p>1. Pesée des botaniques. </p>
                                             <p>2. Remplissage des alambics avec les botaniques et l'alcool à 96%.</p>
-                                            <p> 3. Et bien sûr, la distillation. </p> 
+                                            <p>3. Et bien sûr, la distillation. </p> 
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +168,7 @@ const AbsintheBlanchette = () => {
                         <p className="BlanchetteCocktail__container__right__description">Si vous avez la chance d'être équipé d'une fontaine à absinthe, versez 3 cl d’absinthe dans un verre à pied, puis positionnez sur ce dernier la cuillère plate à absinthe. Et ouvrez le robinet de la fontaine pour y faire couler l'eau goutte à goutte sur le sucre. Sans fontaine, il y a toujours un salut : une carafe d’eau fraîche avec une cuillère de tous les jours ! Pour préparer l'un des plus vieux cocktails connus, le Sazerac, on utilise l'absinthe pour lui donner un peps herbacé. L'absinthe se révèle un excellent arôme pour les crèmes glacées maisons, les gâteaux, mais aussi pour flamber vos gambas, vos filets de truite ou en gelée avec vos huîtres !</p>
                     </div>
                 </div>
-                <Link to="#BottleHub"><div className="BlanchetteCocktail__footer">Découvrir un autre produit de la Distillerie Combier</div></Link>
+                <div className="BlanchetteCocktail__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
             </div>
         </div>
     )

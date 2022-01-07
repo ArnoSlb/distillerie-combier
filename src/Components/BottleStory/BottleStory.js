@@ -9,13 +9,13 @@ import "./BottleStory.css";
 const BottleStory = (props) => {
 
     if(props.bottle == "original"){
-        return (<OriginalCombier/>)
+        return (<OriginalCombier langSelected={props.langSelected}/>)
     } else if(props.bottle == "elixir"){
-        return (<ElixirCombier/>)
+        return (<ElixirCombier langSelected={props.langSelected}/>)
     } else if(props.bottle == "meridor"){
-        return (<Meridor/>)
+        return (<Meridor langSelected={props.langSelected}/>)
     } else if(props.bottle == "blanchette"){
-        return (<AbsintheBlanchette/>)
+        return (<AbsintheBlanchette langSelected={props.langSelected}/>)
     } else {
         return (<h1>{props.bottle}</h1>)
     }  

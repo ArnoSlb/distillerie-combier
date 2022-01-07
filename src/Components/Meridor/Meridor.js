@@ -50,6 +50,21 @@ const Meridor = () => {
         })  
     },[])
 
+    const GotoBottleHub = () => {
+
+        const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+
+        const pixelToHub = 4680 +  (clientHeight * 3.23)
+
+        window.scrollTo({
+            top: pixelToHub,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+
     return (
         <div className="Meridor">
             <div className="Meridor__First">
@@ -119,7 +134,7 @@ const Meridor = () => {
                         <p className="Meridor__container__right__description">au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
                     </div>
                 </div>
-                <Link to="#BottleHub"><div className="Meridor__footer">Découvrir un autre produit de la Distillerie Combier</div></Link>
+                <div className="Meridor__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
             </div>
         </div>
     )

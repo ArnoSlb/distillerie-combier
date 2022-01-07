@@ -60,7 +60,12 @@ const BottleCard =(props) => {
         let targetCardContainer = e.target.parentNode;
         let targetCardDescription = e.target.parentNode.querySelector('.BottleCard__description');
         let targetCardPicture = e.target.parentNode.parentNode.querySelector('.BottleCard__picture');
+        let targetCardDiscover = e.target.parentNode.parentNode.querySelector('.BottleCard__discover');
         let idBottle = targetCard.getAttribute("id")
+
+        // let {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+        console.log(document.documentElement.scrollTop, document.documentElement.clientHeight, document.documentElement.scrollHeight, window.screen.availHeight)
 
         // console.log(e.target.parentNode.parentNode.querySelector('.BottleCard__picture'))
 
