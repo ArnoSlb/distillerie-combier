@@ -15,7 +15,7 @@ import ElixirAffiche02 from "../../assets/affiche02_elixir.jpg"
 import ElixirTestament from "../../assets/archive_petit_courrier_elixir_01-1912.jpg"
 import ElixirGigi from "../../assets/gigi-italian-movie-poster.jpeg"
 
-const ElixirCombier = () => {
+const ElixirCombier = (props) => {
 
     const GotoBottleHub = () => {
 
@@ -114,10 +114,17 @@ const ElixirCombier = () => {
                 <div className="ElixirCombier__HorizontalBlock__slide one">
                     <p className="ElixirCombier__WhatIsIt__Title ElixirCombier__firstslide__anim">ELIXIR COMBIER</p>
                     <div className="ElixirCombier__WhatIsIt">
+                    {props.langSelected == 'FR' ?
                         <div className="ElixirCombier__WhatIsIt__Left">
                             <h4 className="ElixirCombier__WhatIsIt__Left__title">Qu'est ce que c'est ?</h4>
                             <p className="ElixirCombier__WhatIsIt__Left__text">Cet élixir, liqueur hygiénique est composée d’une quinzaine d’épices et de plantes infusées avant distillation. Ses ingrédients proviennent de la vallée de la Loire et de contrées beaucoup plus lointaines telles que l’Afrique, l’Inde et l’Asie. Cardamome, muscade, myrrhe, girofle, cannelle, safran, aloès, orange, citron viennent combiner leurs saveurs pour offrir une incroyable persistance aromatique en bouche. </p>
                         </div>
+                    :
+                        <div className="ElixirCombier__WhatIsIt__Left">
+                            <h4 className="ElixirCombier__WhatIsIt__Left__title">What is it ?</h4>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">This elixir, a hygienic liquor, is made up of around fifteen spices and plants infused before distillation. Its ingredients come from the Loire Valley and much further afield such as Africa, India and Asia. Cardamom, nutmeg, myrrh, cloves, cinnamon, saffron, aloe, orange, lemon combine their flavors to offer an incredible aromatic persistence in the mouth.</p>
+                        </div>
+                    }
                         <div className="ElixirCombier__WhatIsIt__Right">
                             <img className="ElixirCombier__WhatIsIt__Right__Img" src={ElixirTrain} alt="Affiche Elixir Combier" />
                         </div>
@@ -128,16 +135,25 @@ const ElixirCombier = () => {
                         <div className="ElixirCombier__WhatIsIt__Two_container">
                             <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirHD} alt="Photo Elixir" />
                         </div>  
-                        <div className="ElixirCombier__WhatIsIt__Two_container">
-                            <p className="ElixirCombier__WhatIsIt__Two__text"><strong>Allure : </strong>Une limpidité jaune dorée éclatante.</p>
-                            <p className="ElixirCombier__WhatIsIt__Two__text"><strong>En bouche : </strong>Sa complexité épicée offre une persistance en bouche, qui peut rappeler, pour les amateurs du genre, celle d’une chartreuse.</p>
-                        </div> 
+                        {props.langSelected == 'FR' ?
+                            <div className="ElixirCombier__WhatIsIt__Two_container">
+                                <p className="ElixirCombier__WhatIsIt__Two__text"><strong>Allure : </strong>Une limpidité jaune dorée éclatante.</p>
+                                <p className="ElixirCombier__WhatIsIt__Two__text"><strong>En bouche : </strong>Sa complexité épicée offre une persistance en bouche, qui peut rappeler, pour les amateurs du genre, celle d’une chartreuse.</p>
+                            </div> 
+                        :
+                            <div className = "ElixirCombier__WhatIsIt__Two_container">
+                                <p className = "ElixirCombier__WhatIsIt__Two__text"> <strong> Allure: </strong> Bright golden yellow clarity. </p>
+                                <p className = "ElixirCombier__WhatIsIt__Two__text"> <strong> In the mouth: </strong> Its spicy complexity offers a persistence in the mouth, which for fans of the genre may recall that of a chartreuse. </p>
+                            </div>
+                        }
+                        
                         <div className="ElixirCombier__WhatIsIt__Two_container">
                             <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirCartonBleu} alt="Veille pancarte bleu Elixir" />
                         </div>   
                     </div>
                 </div>
                 <div className="ElixirCombier__HorizontalBlock__slide three">
+                {props.langSelected == 'FR' ?
                     <div className="Elixir__Combier__Manufacturing">
                         <h4 className="Elixir__Combier__Manufacturing__title">La Fabrication</h4>
                         <div className="Elixir__Combier__Manufacturing__description">
@@ -146,8 +162,19 @@ const ElixirCombier = () => {
                             <p>3. L’ensemble est distillé pour obtenir un esprit des plus aromatiques.</p>
                         </div>
                     </div>
+                :
+                    <div className = "Elixir__Combier__Manufacturing">
+                        <h4 className = "Elixir__Combier__Manufacturing__title"> The Manufacturing </h4>
+                        <div className = "Elixir__Combier__Manufacturing__description">
+                            <p> 1. Selection and weighing of ingredients before maceration in the tank. </p>
+                            <p> 2. The spices, plants and citrus will infuse for several weeks. </p>
+                            <p> 3. The whole is distilled for the most aromatic spirit. </p>
+                        </div>
+                    </div>
+                }
                 </div>
                 <div className="ElixirCombier__HorizontalBlock__slide four">
+                {props.langSelected == 'FR' ?
                     <div className="ElixirCombier__History">
                         <h3 className="ElixirCombier__History__title">Un peu d'histoire</h3>
                         <p className="ElixirCombier__History__description">
@@ -159,6 +186,20 @@ const ElixirCombier = () => {
                             Le distillateur décide d’envoyer son élixir revu et modifié à Raspail. Opposant notoire au régime, ce dernier est alors emprisonné à la citadelle de Doullens. Il goûte la liqueur et répond aussitôt à Jean-Baptiste. Il la déclare fameuse. Sa lettre de louanges est conservée par la distillerie dans ses archives.
                         </p>
                     </div>
+                :
+                    <div className = "ElixirCombier__History">
+                        <h3 className = "ElixirCombier__History__title"> A little history </h3>
+                        <p className = "ElixirCombier__History__description">
+                            It was in 1852 that Jean-Baptiste Combier finalized the recipe for this elixir, inspired by the work of the famous Doctor Raspail.
+                            Chemist and botanist, François-Vincent Raspail is a philanthropist who wants to work for the good of his contemporaries. He wrote and published in 1845 a "Manual of health". Among its many recipes, a medicinal liqueur - "The Hygienic Dessert Elixir" - believed to provide long life, soothe stomach aches and aid digestion.
+
+                            Its recipe contains camphor, which the botanist uses and abuses in his preparations. Therapeutic of course, but with a pronounced taste that does not appeal to the majority. Jean-Baptiste Combier seeks to preserve the virtues of this drink, while making it delicious. With his experience as a confectioner and distiller, he tested several recipes. After many attempts, he arrives at an exotic composition of herbs and aromatic plants, daring of course, but the alchemy works.
+
+                            The distiller decides to send his revised and modified elixir to Raspail. Notorious opponent of the regime, the latter was then imprisoned in the citadel of Doullens. He tastes the liquor and immediately responds to Jean-Baptiste. He declares it famous. His letter of praise is kept by the distillery in its archives.
+                        </p>
+                    </div>
+                }
+    
                 </div>
                 <div className="ElixirCombier__HorizontalBlock__slide five">
                     <div className="ElixirCombier__History__2">
@@ -178,12 +219,23 @@ const ElixirCombier = () => {
                             <div className="ElixirCocktail__container__left">
                                 <img className="ElixirCocktail__container__left__img" src={Elixir2482HD} alt="" />
                             </div>
+                            {props.langSelected == 'FR' ?
                             <div className="ElixirCocktail__container__right">
                                 <h2 className="ElixirCocktail__container__right__title">Pour savourer ...</h2>
                                 <p className="ElixirCocktail__container__right__description">au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
                             </div>
-                        </div>
+                            :
+                            <div className = "ElixirCocktail__container__right">
+                                <h2 className = "ElixirCocktail__container__right__title"> To savor ... </h2>
+                                <p className = "ElixirCocktail__container__right__description"> at best all the qualities of Elixir Combier, serve it at the end of a meal, chilled or on ice, where it will reveal all its complexity. For the more adventurous, make good use of it to revisit and reinvigorate great cocktail classics: Crusta, Mule, Swizzle, Sazerac ... </p>
+                            </div>
+                            }
+                        </div>  
+                        {props.langSelected == 'FR' ?
                         <div className="ElixirCocktail__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
+                        :           
+                        <div className = "ElixirCocktail__footer" onClick = {GotoBottleHub}> Discover another product from the Distillerie Combier </div>
+                        }                              
                     </div>
                 </div>
             </div>
