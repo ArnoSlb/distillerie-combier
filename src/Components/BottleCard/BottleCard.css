@@ -79,8 +79,25 @@
   font-size: 18px !important;
 }
 
-.targetCardSelected--selected{
+.targetCardDiscover--selected{
   display: none;
+}
+
+.BottleCard__scroll__container--selected{
+  display: flex !important;
+}
+
+.BottleCard__scroll__container {
+  bottom: 5vh;
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.BottleCard__scroll__img {
+  width: 30px;
 }
 
 #elixir .BottleCard__discover{

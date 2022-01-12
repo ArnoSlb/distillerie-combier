@@ -51,20 +51,6 @@
     margin: 60px 0 2vh;
 }
 
-.BottleHub__description__container {
-    position: absolute;
-    bottom: 5vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.BottleHub__description__img {
-    width: 30px;
-}
-
 .BottleHub__title__logo{
     width: 30vh;
 }

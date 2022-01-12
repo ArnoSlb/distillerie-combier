@@ -11,7 +11,7 @@ import OriginalCombierImg from "../../assets/bottle/original_combier.png"
 import ElixirCombierImg from "../../assets/bottle/elixir_combier.png"
 import GinMeridorImg from "../../assets/bottle/gin_meridor.png"
 import AbsintheBlanchetteImg from "../../assets/bottle/absinthe_blanchette.png"
-import ArrowDown from "../../assets/Bottom_Arrow.png"
+
 
 import './BottleHub.css';
 
@@ -78,14 +78,6 @@ const BottleHub = (props) => {
                             <img className="BottleHub__title__logo" src={LogoCombier} alt="" />
                         </div> 
                         <p className="BottleHub__description">Cliquez sur une bouteille pour découvrir sa fabrication</p> */}
-                        <div className="BottleHub__description__container">
-                            {props.langSelected == 'FR' ? 
-                                <p className="BottleHub__description">Scrollez vers le bas pour découvrir sa fabrication</p>
-                            :
-                                <p className="BottleHub__description">Scroll down to see how it is made</p>
-                            }
-                            <img className="BottleHub__description__img slide-bottom" src={ArrowDown} alt="" />
-                        </div>
                         
                     </div>
                 </div>

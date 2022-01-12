@@ -1,11 +1,12 @@
 import React from "react";
 
 import './BottleCard.css';
-import Picture from '../../assets/original_combier.jpg'
+
+import ArrowDown from "../../../src/assets/Bottom_Arrow.png"
 
 const BottleCard =(props) => {
 
-    // console.log(props)
+    console.log(props)
 
     React.useEffect(() => {
 
@@ -49,6 +50,8 @@ const BottleCard =(props) => {
         document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.firstChild.classList.add('targetCardTitle--selected');
         document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.classList.add('targetCardContainer--selected');
         document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__description').classList.add('targetCardDescription--selected');
+        document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__discover').classList.add('targetCardDiscover--selected');
+        document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__scroll__container').classList.add('BottleCard__scroll__container--selected');
         
     },[])
 
@@ -61,6 +64,7 @@ const BottleCard =(props) => {
         let targetCardDescription = e.target.parentNode.querySelector('.BottleCard__description');
         let targetCardPicture = e.target.parentNode.parentNode.querySelector('.BottleCard__picture');
         let targetCardDiscover = e.target.parentNode.parentNode.querySelector('.BottleCard__discover');
+        let targetCardScroll = e.target.parentNode.parentNode.querySelector('.BottleCard__scroll__container');
         let idBottle = targetCard.getAttribute("id")
 
         // let {scrollTop, scrollHeight, clientHeight} = document.documentElement
@@ -74,8 +78,10 @@ const BottleCard =(props) => {
             card.firstChild.firstChild.classList.remove('targetCardTitle--selected')
             card.firstChild.classList.remove('targetCardContainer--selected')
             card.firstChild.querySelector('.BottleCard__description').classList.remove('targetCardDescription--selected')
+            card.firstChild.querySelector('.BottleCard__discover').classList.remove('targetCardDiscover--selected')
+            card.firstChild.querySelector('.BottleCard__scroll__container').classList.remove('BottleCard__scroll__container--selected')
             card.querySelector('.BottleCard__picture').classList.remove('slide-right-bar')
-            // console.log(card.firstChild)
+            console.log(card.firstChild)
         })
 
         // console.log(targetCard)
@@ -83,7 +89,9 @@ const BottleCard =(props) => {
         targetCardTitle.classList.add('targetCardTitle--selected')
         targetCardContainer.classList.add('targetCardContainer--selected')
         targetCardDescription.classList.add('targetCardDescription--selected')
+        targetCardDiscover.classList.add('targetCardDiscover--selected')
         targetCardPicture.classList.add('slide-right-bar')
+        targetCardScroll.classList.add('BottleCard__scroll__container--selected')
 
         // if(idBottle == "elixir"){
         //     document.querySelector('.BottleCard--selected').style.borderColor = "#dc3545"
@@ -104,13 +112,21 @@ const BottleCard =(props) => {
             <div className="BottleCard__container">
                 <h3 className="BottleCard__title">{props.data.title}</h3>
                 <p className="BottleCard__description">{props.data.description}</p>
-                <div className="BottleCard__discover" onClick={bottleSelected}>Découvrir</div>
+                <div className="BottleCard__discover" onClick={bottleSelected}>Sélectionner</div>
+                    <div className=" BottleCard__scroll__container">
+                        <p className="BottleCard__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
+                        <img className="BottleCard__scroll__img slide-bottom" src={ArrowDown} alt="" />
+                    </div>
             </div>
             :
             <div className="BottleCard__container">
                 <h3 className="BottleCard__title">{props.data.titleEn}</h3>
                 <p className="BottleCard__description">{props.data.descriptionEn}</p>
-                <div className="BottleCard__discover" onClick={bottleSelected}>Discover</div>
+                <div className="BottleCard__discover" onClick={bottleSelected}>Select</div>
+                <div className=" BottleCard__scroll__container">
+                        <p className="BottleCard__scroll__description">Scroll down to see how it is made</p>
+                        <img className="BottleCard__scroll__img slide-bottom" src={ArrowDown} alt="" />
+                </div>
             </div>
             }
             <img className="BottleCard__picture" src={props.data.img} alt="" />      
