@@ -5,7 +5,7 @@ import { Controller, Scene } from 'react-scrollmagic';
 import "./AbsintheBlanchette.css"
 import BlanchetteCoktailImg from "../../assets/Blanchette2600_BD.jpg"
 
-const AbsintheBlanchette = () => {
+const AbsintheBlanchette = (props) => {
 
     const GotoBottleHub = () => {
 
@@ -32,17 +32,25 @@ const AbsintheBlanchette = () => {
                 <Scene duration={'100%'} indicators={false} triggerElement={".event2"} triggerHook={"onEnter"} pin={'.event1 .pinSection'}>
                         <div className="box event1">
                             <div className="pinSection">
-                                {/* <div className="image"></div> */}
+                            {props.langSelected == 'FR' ?
                                 <div className="AbsintheBlanchette__bg">
                                     <div className="AbsintheBlanchette__bg__part">L'Absinthe</div>
                                     <div className="AbsintheBlanchette__bg__part">Blanchette</div>
                                 </div>
+                            :
+                                <div className="AbsintheBlanchette__bg">
+                                    <div className="AbsintheBlanchette__bg__part">The Absinthe</div>
+                                    <div className="AbsintheBlanchette__bg__part">Blanchette</div>
+                                </div>
+                            }
+                                
                             </div>
                         </div>
                 </Scene>
                 <Scene duration={'200%'} indicators={false} triggerElement={".event2"} triggerHook={"onEnter"} pin={'.event2 .pinSection'}>
                     <div className="box event2">
                         <div className="pinSection">
+                        {props.langSelected == 'FR' ?
                             <div className="bg">
                                 <div className="AbsintheBlanchette__bg__part">
                                     <h2 className="AbsintheBlanchette__whatisit__title">Qu'est-ce que c'est ?</h2>
@@ -58,12 +66,30 @@ const AbsintheBlanchette = () => {
                                     n’est pas amère.</p>
                                 </div>
                             </div>
+                        :
+                            <div className = "bg">
+                                <div className = "AbsintheBlanchette__bg__part">
+                                    <h2 className = "AbsintheBlanchette__whatisit__title"> What is it ? </h2>
+                                </div>
+                                <div className = "AbsintheBlanchette__bg__part">
+                                    <p className = "AbsintheBlanchette__whatisit__descritpion"> Produced by the Distillerie Combier between 1899 and 1915, and again
+                                    in the same stills since 2006, the Blanchette is an authentic white absinthe with a “Swiss” style predominantly aniseed. Ingredients: green anise from Spain, grand wormwood
+                                    small absinthe, fennel from Provence and
+                                    hyssop.
+                                    Combining large and small absinthes with green anise, fennel and
+                                    hyssop, it is very refreshing. The
+                                    Blanchette is consumed with fresh water, without sugar, because it
+                                    is not bitter. </p>
+                                </div>
+                            </div>
+                        }      
                         </div>
                     </div>
                 </Scene>
                 <Scene duration={'200%'} indicators={false} triggerElement={".event3"} triggerHook={"onEnter"} pin={'.event3 .pinSection'}>
                     <div className="box event3">
                         <div className="pinSection">
+                        {props.langSelected == 'FR' ?
                             <div className="bg black">
                                 <div className="AbsintheBlanchette__bg__part">
                                     <h2 className="AbsintheBlanchette__whatisit__title">Qu'est-ce que c'est ?</h2>
@@ -79,6 +105,23 @@ const AbsintheBlanchette = () => {
                                     n’est pas amère.</p>
                                 </div>
                             </div>
+                        :
+                            <div className = "bg black">
+                                <div className = "AbsintheBlanchette__bg__part">
+                                    <h2 className = "AbsintheBlanchette__whatisit__title"> What is it ? </h2>
+                                </div>
+                                <div className = "AbsintheBlanchette__bg__part">
+                                    <p className = "AbsintheBlanchette__whatisit__descritpion"> Produced by the Distillerie Combier between 1899 and 1915, and again
+                                    in the same stills since 2006, the Blanchette is an authentic white absinthe with a “Swiss” style predominantly aniseed. Ingredients: green anise from Spain, grand wormwood
+                                    small absinthe, fennel from Provence and
+                                    hyssop.
+                                    Combining large and small absinthes with green anise, fennel and
+                                    hyssop, it is very refreshing. The
+                                    Blanchette is consumed with fresh water, without sugar, because it
+                                    is not bitter. </p>
+                                </div>
+                            </div>
+                        }      
                         </div>
                     </div>
                 </Scene>
@@ -87,6 +130,7 @@ const AbsintheBlanchette = () => {
                         <div className="pinSection">
                             <div className="bg black">
                                 <div className="AbsintheBlanchette__bg__part AbsintheBlanchette__bg__part--full">
+                                {props.langSelected == 'FR' ?
                                     <div className="AbsintheBlanchette__whitecontainer">
                                         <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">Qu'est-ce que c'est ?</h2>
                                         <div className="AbsintheBlanchette__whatisit__description__whitecontainer">
@@ -95,6 +139,17 @@ const AbsintheBlanchette = () => {
                                             fenouil de Provence lui confèrent naturellement une note sucrée. Sensation soyeuse en bouche et dépourvue en amertume garantie.</p> 
                                         </div>
                                     </div>
+                                :
+                                    <div className = "AbsintheBlanchette__whitecontainer">
+                                        <h2 className = "AbsintheBlanchette__whatisit__title__whitecontainer"> What is it? </h2>
+                                        <div className = "AbsintheBlanchette__whatisit__description__whitecontainer">
+                                            <p> <strong> Allure: </strong> Translucent, it dresses in a milky cloudy and frosted with a little water - hence its name of "Blanchette". </p>
+                                            <p> <strong> In the mouth: </strong> With a nose full of freshness where we first capture the green anise, the Blanchette is herbaceous and very fragrant. Spanish green anise and
+                                            Provence fennel naturally gives it a sweet note. Silky sensation in the mouth and devoid of bitterness guaranteed. </p>
+                                        </div>
+                                    </div>
+                                }
+                                    
                                 </div>
                                 <div className="AbsintheBlanchette__bg__part">
                                     <div className="image"></div>
@@ -108,6 +163,7 @@ const AbsintheBlanchette = () => {
                         <div className="pinSection">
                             <div className="bg">
                                 <div className="AbsintheBlanchette__bg__part AbsintheBlanchette__bg__part--full">
+                                {props.langSelected == 'FR' ?
                                     <div className="AbsintheBlanchette__whitecontainer">
                                         <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">La Fabrication</h2>
                                         <div className="AbsintheBlanchette__whatisit__description__whitecontainer">
@@ -117,6 +173,18 @@ const AbsintheBlanchette = () => {
                                             <p>3. Et bien sûr, la distillation. </p> 
                                         </div>
                                     </div>
+                                :
+                                    <div className = "AbsintheBlanchette__whitecontainer">
+                                        <h2 className = "AbsintheBlanchette__whatisit__title__whitecontainer"> The Manufacturing </h2>
+                                        <div className = "AbsintheBlanchette__whatisit__description__whitecontainer">
+                                            <p> Three essential plants go into the composition of this famous spirit whose distillation requires great skill: anise, fennel and the wormwood plant itself, which gives the drink its name. </p>
+                                            <p> 1. Botanical weighing. </p>
+                                            <p> 2. Filling the stills with botanicals and 96% alcohol. </p>
+                                            <p> 3. And of course, the distillation. </p>
+                                        </div>
+                                    </div>
+                                }
+                                    
                                 </div>
                                 <div className="AbsintheBlanchette__bg__part">
                                     <div className="image"></div>
@@ -139,6 +207,7 @@ const AbsintheBlanchette = () => {
                         <div className="pinSection">
                         <div className="bg">
                                 <div className="AbsintheBlanchette__bg__part AbsintheBlanchette__bg__part--full">
+                                {props.langSelected == 'FR' ?
                                     <div className="AbsintheBlanchette__whitecontainer">
                                         <h2 className="AbsintheBlanchette__whatisit__title__whitecontainer">L'Histoire</h2>
                                         <div className="AbsintheBlanchette__whatisit__description__whitecontainer">
@@ -149,6 +218,19 @@ const AbsintheBlanchette = () => {
                                             <p>La boisson que l’on surnomme “fée verte” évoque à chaque esprit les tableaux de Degas, Manet, Picasso. Son immense popularité n’empêchera pas son injuste interdiction en France en 1915, avant d’être à nouveau officiellement autorisée à être produite en 2001. </p> 
                                         </div>
                                     </div>
+                                :
+                                    <div className = "AbsintheBlanchette__whitecontainer">
+                                        <h2 className = "AbsintheBlanchette__whatisit__title__whitecontainer"> History </h2>
+                                        <div className = "AbsintheBlanchette__whatisit__description__whitecontainer">
+                                            <p> It was in 1895 that James, the son of Jean-Baptiste Combier, had the first anise plants planted on his agricultural estate in Ruau, south-west of Saumur. Four years later, the Combier house marketed the Blanchette. </p>
+
+                                            <p> Much less expensive than wine, absinthe is generally consumed in all cafes. 700,000 liters were produced in 1874, then 36 million liters in 1910. It then reached high levels of alcohol around 70 °. </p>
+
+                                            <p> The drink which we nickname "green fairy" evokes to every mind the paintings of Degas, Manet, Picasso. Its immense popularity did not prevent its unfair ban in France in 1915, before being officially authorized for production again in 2001. </p>
+                                        </div>
+                                    </div>
+                                }
+                                    
                                 </div>
                                 <div className="AbsintheBlanchette__bg__part">
                                     <div className="image"></div>
@@ -163,12 +245,23 @@ const AbsintheBlanchette = () => {
                     <div className="BlanchetteCocktail__container__left">
                         <img className="BlanchetteCocktail__container__left__img" src={BlanchetteCoktailImg} alt="" />
                     </div>
-                    <div className="BlanchetteCocktail__container__right">
-                        <h2 className="BlanchetteCocktail__container__right__title">Note Gourmande</h2>
-                        <p className="BlanchetteCocktail__container__right__description">Si vous avez la chance d'être équipé d'une fontaine à absinthe, versez 3 cl d’absinthe dans un verre à pied, puis positionnez sur ce dernier la cuillère plate à absinthe. Et ouvrez le robinet de la fontaine pour y faire couler l'eau goutte à goutte sur le sucre. Sans fontaine, il y a toujours un salut : une carafe d’eau fraîche avec une cuillère de tous les jours ! Pour préparer l'un des plus vieux cocktails connus, le Sazerac, on utilise l'absinthe pour lui donner un peps herbacé. L'absinthe se révèle un excellent arôme pour les crèmes glacées maisons, les gâteaux, mais aussi pour flamber vos gambas, vos filets de truite ou en gelée avec vos huîtres !</p>
-                    </div>
+                    {props.langSelected == 'FR' ?
+                        <div className="BlanchetteCocktail__container__right">
+                            <h2 className="BlanchetteCocktail__container__right__title">Note Gourmande</h2>
+                            <p className="BlanchetteCocktail__container__right__description">Si vous avez la chance d'être équipé d'une fontaine à absinthe, versez 3 cl d’absinthe dans un verre à pied, puis positionnez sur ce dernier la cuillère plate à absinthe. Et ouvrez le robinet de la fontaine pour y faire couler l'eau goutte à goutte sur le sucre. Sans fontaine, il y a toujours un salut : une carafe d’eau fraîche avec une cuillère de tous les jours ! Pour préparer l'un des plus vieux cocktails connus, le Sazerac, on utilise l'absinthe pour lui donner un peps herbacé. L'absinthe se révèle un excellent arôme pour les crèmes glacées maisons, les gâteaux, mais aussi pour flamber vos gambas, vos filets de truite ou en gelée avec vos huîtres !</p>
+                        </div>
+                    :
+                        <div className = "BlanchetteCocktail__container__right">
+                            <h2 className = "BlanchetteCocktail__container__right__title"> Greedy Touch </h2>
+                            <p className = "BlanchetteCocktail__container__right__description"> If you are lucky enough to have an absinthe fountain, pour 3 cl of absinthe into a stemmed glass, then place the flat absinthe spoon on it. And open the fountain tap to let the water run drip over the sugar. Without a fountain, there is always a salvation: a carafe of fresh water with an everyday spoon! To prepare one of the oldest known cocktails, Sazerac, we use absinthe to give it a grassy flavor. Absinthe is an excellent aroma for homemade ice creams, cakes, but also to flambé your prawns, your trout fillets or in jelly with your oysters! </p>
+                        </div>
+                    }  
                 </div>
-                <div className="BlanchetteCocktail__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
+                {props.langSelected == 'FR' ?
+                <div className="ElixirCocktail__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
+                :           
+                <div className = "ElixirCocktail__footer" onClick = {GotoBottleHub}> Discover another product from the Distillerie Combier </div>
+                }    
             </div>
         </div>
     )

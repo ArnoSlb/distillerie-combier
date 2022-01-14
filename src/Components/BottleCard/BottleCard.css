@@ -160,6 +160,48 @@
   }
 }
 
+@media screen and (orientation:portrait) {
+  .BottleCard--selected{
+    bottom: inherit;
+    top: 20vh;
+    left: 20vw;
+}
+
+  .targetCardContainer--selected{
+      position: absolute;
+      top: 0;
+      font-size: 3vw !important;
+      width: 75vw;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2vh 0;
+  }
+
+  .targetCardDescription--selected{
+      display: none;
+  }
+
+  .targetCardTitle--selected{
+      font-size: 7vw !important;
+      text-align: center;
+  }
+
+  .BottleCard__scroll__container--selected{
+      display: none !important;
+  }
+
+  .BottleCard__description{
+    display: none;
+  }
+
+  .BottleCard__title{
+    font-size: 8vw;
+    padding-bottom: 2vh;
+  }
+}
+
 .slide-right-bar {
 	-webkit-animation: slide-right-bar 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-right-bar 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

@@ -37,8 +37,8 @@ function App() {
       <Map langSelected={langSelected}/>
       <Scene360 langSelected={langSelected}/>
       <BottleHub langSelected={langSelected}/>
-      {/* <Video/>
-      <Empty randomColor={getRandomColor()}/> */}
+      {/* <Video/> */}
+      {/* <Empty randomColor={getRandomColor()}/> */}
     </div>
   );
 }

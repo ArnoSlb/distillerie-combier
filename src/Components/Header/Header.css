@@ -2,10 +2,11 @@
     position: fixed;
     top: 0;
     background-color: rgb(255, 255, 255);
-    z-index: 100;
+    z-index: 1000;
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     color: white;
 }
@@ -60,4 +61,26 @@
 .Header__container__lang__img{
     height: 20px;
     margin: 0 10px;
+}
+
+/* Responsive Change */
+
+@media screen and (orientation:portrait) {
+
+    .Header{
+        padding: 2px;
+    }
+
+    .Header__container{
+        margin-right: 5vw;
+    }
+
+    .Header__container__lang {
+        margin: 0 10px;
+    }
+
+    .Header__img{
+        margin-left: 5vw;
+        height: 4vh;
+    }
 }
