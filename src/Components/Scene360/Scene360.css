@@ -4,6 +4,7 @@
 }
 
 .Scene360__player{
+    display: none;
     position:sticky;
     position: -webkit-sticky;
     top: 0;
@@ -15,6 +16,13 @@
     width: 70px;
     bottom: 20px;
     right: 20px;
+}
+
+.Scene360__intro img {
+    position: relative;
+    width: auto;
+    bottom: auto;
+    right: auto;
 }
 
 .Scene360__player:hover{
@@ -42,11 +50,32 @@
     color: white;
     padding: 40px 0 80px;
     height: 40vh;
+    width: 800px;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.863);
+    border: 2px solid white;
 }
 
 .Scene360__intro img {
     width: 25vh;
     margin-top: 20px;
+}
+
+#button_scene_intro{
+    color: black;
+    background-color: whitesmoke;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#button_scene_intro:hover{
+    cursor: pointer;
 }
 
 /* Responsive Change  */

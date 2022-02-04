@@ -90,7 +90,7 @@
     }
 
     .BottleHub__container__split{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .BottleHub__container__left, .BottleHub__container__right{
