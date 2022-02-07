@@ -1,5 +1,5 @@
 .BottleHub__container{
-    height: 100vh;
+    height: calc(100vh - 40px);
 }
 
 .BottleHub__container__split{
@@ -7,13 +7,13 @@
     justify-content: space-between;
     width: 100vw;
     position: relative;
-   
+    height: calc(100vh - 40px);
 }
 
 .BottleHub__container__left{
     width: 60vw;
-    height: 100vh;
-    background: url(../../assets/iStock-624494724.jpg) no-repeat center center; 
+    max-height: 100%;
+    background: url(../../assets/iStock-624494724-NB.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -26,12 +26,59 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 110px;
-    background: url(../../assets/iStock-996149750.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: #FEFEF7;
+
+}
+
+.BottleHub__bottleContainer__borderOut{
+    border: 2px solid rgb(19, 23, 29);
+    width: 95%;
+    max-width: 40vw;
+    max-height: calc(95vh - 60px);
+    height: 115%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+}
+
+.BottleHub__bottleContainer__borderIn{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(19, 23, 29);
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Zilla Slab', serif;
+    color: rgb(19, 23, 29);
+}
+
+.BottleHub__bottleContainer__borderIn h1{
+    font-family: 'Limelight', cursive;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin:2vh 0 0;
+}
+
+.BottleHub__bottleContainer__borderIn h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+}
+
+.BottleHub__bottleContainer__borderIn__titleBottom{
+    border-top: 1px solid rgb(19, 23, 29);
+    width: 60%;
+    margin: 2vh auto 0;
+}
+
+.BottleHub__bottleContainer__bottleList{
+    max-width: 100%;
+    height: calc(100vh - 210px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .BottleHub{
@@ -40,7 +87,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 100vh;
+    max-height: calc(100vh - 40px);
 }
 
 .BottleHub__title{
@@ -63,8 +110,6 @@
     flex-wrap: wrap;
     width: 100vw;
     height: 100%;
-    margin-bottom: 40px;
-   
 }
 
 .slide-bottom {

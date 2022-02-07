@@ -1,46 +1,51 @@
 .BottleCard{
     width: 80%;
-    height: 25vh;
-    box-shadow: 5px 5px 25px rgb(46, 0, 0);
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 15px;
     border-radius: 2px;
-    border: 2px solid black;
     margin: 0 10px;
-    background-color: rgba(255, 255, 255, 0.603);
 }
 
 .BottleCard__container {
-  width: 50%;
+  width: 75%;
 }
 
 .BottleCard__picture{
     height: 80%;
+    display: none;
 }
 
 .BottleCard__title{
-  color: rgb(255, 165, 47);
+  /* color: rgb(255, 165, 47); */
+  color: rgb(19, 23, 29);
   font-size: 2.3vh;
   margin: 0;
 }
 
 .BottleCard__description{
   font-size: 1.7vh;
-  margin: 2vh auto;
+  margin: 1vh auto;
 }
 
 .BottleCard__discover{
-    padding: 10px;
-    max-width: 100px;
-    background-color: rgb(255, 165, 47);
+    padding:7px  10px;
+    width: 100px;
+    background-color: rgb(19, 23, 29);
     border-radius: 10px;
     font-weight: bold;
     color: white;
     text-align: center;
     margin: 0 auto;
     display: block;
+}
+
+.BottleCard__discover--selected{
+    background-color: rgba(255, 228, 196, 0);
+    border: 2px solid rgb(19, 23, 29);
+    color: rgb(19, 23, 29);
 }
 
 .BottleCard__discover:hover{
@@ -63,6 +68,7 @@
 .targetCardTitle--selected{
   font-size: 80px !important;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .targetCardContainer--selected{
@@ -87,20 +93,8 @@
   display: flex !important;
 }
 
-.BottleCard__scroll__container {
-  bottom: 5vh;
-  color: white;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-.BottleCard__scroll__img {
-  width: 30px;
-}
-
-#elixir .BottleCard__discover{
+/* #elixir .BottleCard__discover{
   background-color: #dc3545;
 }
 
@@ -122,7 +116,7 @@
 
 #blanchette .BottleCard__title{
   color: #adaaa2;
-}
+} */
 
 .BottleCard__anim{
   opacity: 0;

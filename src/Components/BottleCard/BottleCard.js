@@ -6,7 +6,7 @@ import ArrowDown from "../../../src/assets/Bottom_Arrow.png"
 
 const BottleCard =(props) => {
 
-    console.log(props)
+    // console.log(props)
 
     React.useEffect(() => {
 
@@ -46,12 +46,20 @@ const BottleCard =(props) => {
             observer.observe(Element)
         })
 
-        document.querySelector('.BottleHub__bottleContainer').firstChild.classList.add('BottleCard--selected');
-        document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.firstChild.classList.add('targetCardTitle--selected');
-        document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.classList.add('targetCardContainer--selected');
-        document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__description').classList.add('targetCardDescription--selected');
-        document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__discover').classList.add('targetCardDiscover--selected');
-        document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__scroll__container').classList.add('BottleCard__scroll__container--selected');
+        // console.log(document.querySelector('.BottleHub__bottleContainer__bottleList').firstChild.firstChild.querySelector('.BottleCard__discover').textContent)
+        {props.langSelected == 'FR' ?
+        document.querySelector('.BottleHub__bottleContainer__bottleList').firstChild.firstChild.querySelector('.BottleCard__discover').textContent = "Sélectionné"
+        : 
+        document.querySelector('.BottleHub__bottleContainer__bottleList').firstChild.firstChild.querySelector('.BottleCard__discover').textContent = "Selected"
+        }
+        
+        document.querySelector('.BottleHub__bottleContainer__bottleList').firstChild.firstChild.querySelector('.BottleCard__discover').classList.add('BottleCard__discover--selected')
+        // document.querySelector('.BottleHub__bottleContainer__bottleList').firstChild.classList.add('BottleCard--selected');
+        // document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.firstChild.classList.add('targetCardTitle--selected');
+        // document.querySelector('.BottleHub__bottleContainer').firstChild.firstChild.classList.add('targetCardContainer--selected');
+        // document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__description').classList.add('targetCardDescription--selected');
+        // document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__discover').classList.add('targetCardDiscover--selected');
+        // document.querySelector('.BottleHub__bottleContainer').firstChild.querySelector('.BottleCard__scroll__container').classList.add('BottleCard__scroll__container--selected');
         
     },[])
 
@@ -69,29 +77,43 @@ const BottleCard =(props) => {
 
         // let {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-        console.log(document.documentElement.scrollTop, document.documentElement.clientHeight, document.documentElement.scrollHeight, window.screen.availHeight)
-
-        // console.log(e.target.parentNode.parentNode.querySelector('.BottleCard__picture'))
+        // console.log(document.documentElement.scrollTop, document.documentElement.clientHeight, document.documentElement.scrollHeight, window.screen.availHeight)
+        console.log('je clique sur cette bouteille :')
+        console.log(e.target.parentNode.parentNode.querySelector('.BottleCard__discover'))
 
         BottleHubContainer.childNodes.forEach(card => {
-            card.classList.remove('BottleCard--selected')
-            card.firstChild.firstChild.classList.remove('targetCardTitle--selected')
-            card.firstChild.classList.remove('targetCardContainer--selected')
-            card.firstChild.querySelector('.BottleCard__description').classList.remove('targetCardDescription--selected')
-            card.firstChild.querySelector('.BottleCard__discover').classList.remove('targetCardDiscover--selected')
-            card.firstChild.querySelector('.BottleCard__scroll__container').classList.remove('BottleCard__scroll__container--selected')
-            card.querySelector('.BottleCard__picture').classList.remove('slide-right-bar')
-            console.log(card.firstChild)
+            card.querySelector('.BottleCard__discover').classList.remove('BottleCard__discover--selected');
+            {props.langSelected == 'FR' ? 
+            card.querySelector('.BottleCard__discover').textContent = "Séléctionner"
+            :
+            card.querySelector('.BottleCard__discover').textContent = "Select"
+        }
+        //     card.classList.remove('BottleCard--selected')
+        //     card.firstChild.firstChild.classList.remove('targetCardTitle--selected')
+        //     card.firstChild.classList.remove('targetCardContainer--selected')
+        //     card.firstChild.querySelector('.BottleCard__description').classList.remove('targetCardDescription--selected')
+        //     card.firstChild.querySelector('.BottleCard__discover').classList.remove('targetCardDiscover--selected')
+        //     card.firstChild.querySelector('.BottleCard__scroll__container').classList.remove('BottleCard__scroll__container--selected')
+        //     card.querySelector('.BottleCard__picture').classList.remove('slide-right-bar')
+        //     console.log(card.firstChild)
         })
 
         // console.log(targetCard)
-        targetCard.classList.add('BottleCard--selected')
-        targetCardTitle.classList.add('targetCardTitle--selected')
-        targetCardContainer.classList.add('targetCardContainer--selected')
-        targetCardDescription.classList.add('targetCardDescription--selected')
-        targetCardDiscover.classList.add('targetCardDiscover--selected')
-        targetCardPicture.classList.add('slide-right-bar')
-        targetCardScroll.classList.add('BottleCard__scroll__container--selected')
+        
+        targetCardDiscover.classList.add('BottleCard__discover--selected')
+        {props.langSelected == 'FR' ?
+        targetCardDiscover.textContent = "Sélectionné"
+        : 
+        targetCardDiscover.textContent = "Selected"
+        }
+        
+        // targetCard.classList.add('BottleCard--selected')
+        // targetCardTitle.classList.add('targetCardTitle--selected')
+        // targetCardContainer.classList.add('targetCardContainer--selected')
+        // targetCardDescription.classList.add('targetCardDescription--selected')
+        // targetCardDiscover.classList.add('targetCardDiscover--selected')
+        // targetCardPicture.classList.add('slide-right-bar')
+        // targetCardScroll.classList.add('BottleCard__scroll__container--selected')
 
         // if(idBottle == "elixir"){
         //     document.querySelector('.BottleCard--selected').style.borderColor = "#dc3545"
@@ -113,20 +135,12 @@ const BottleCard =(props) => {
                 <h3 className="BottleCard__title">{props.data.title}</h3>
                 <p className="BottleCard__description">{props.data.description}</p>
                 <div className="BottleCard__discover" onClick={bottleSelected}>Sélectionner</div>
-                    <div className=" BottleCard__scroll__container">
-                        <p className="BottleCard__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
-                        <img className="BottleCard__scroll__img slide-bottom" src={ArrowDown} alt="" />
-                    </div>
             </div>
             :
             <div className="BottleCard__container">
                 <h3 className="BottleCard__title">{props.data.titleEn}</h3>
                 <p className="BottleCard__description">{props.data.descriptionEn}</p>
                 <div className="BottleCard__discover" onClick={bottleSelected}>Select</div>
-                <div className=" BottleCard__scroll__container">
-                        <p className="BottleCard__scroll__description">Scroll down to see how it is made</p>
-                        <img className="BottleCard__scroll__img slide-bottom" src={ArrowDown} alt="" />
-                </div>
             </div>
             }
             <img className="BottleCard__picture" src={props.data.img} alt="" />      
