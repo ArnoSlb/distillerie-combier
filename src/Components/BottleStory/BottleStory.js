@@ -19,7 +19,7 @@ const BottleStory = (props) => {
     //     return (<AbsintheBlanchette langSelected={props.langSelected}/>)
     // } 
     else {
-        return (<h1 className="bottlestory_title">{props.bottle} à venir</h1>)
+        return (<div></div>)
     }  
 }
 

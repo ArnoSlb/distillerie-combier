@@ -27,6 +27,12 @@
     text-align: center;
   }
   
-  .BottleBar__scroll__img {
-    width: 30px;
-  }
+.BottleBar__scroll__img {
+  width: 30px;
+}
+
+.BottleBar__title{
+  color: rgb(19, 23, 29);
+  font-size: 2.3vh;
+  margin: 0;
+}

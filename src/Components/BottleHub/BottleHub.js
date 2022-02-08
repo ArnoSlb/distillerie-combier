@@ -39,8 +39,8 @@ const BottleHub = (props) => {
         img: ElixirCombierImg,
         description: `Un mélange exotique d’épices et de plantes aromatiques soigneusement infusées avant distillation.`,
         descriptionEn: `This recipe, inspired by the hygienic liqueur of Doctor Raspail, was made delicious by the genius of Master Distiller Jean-Baptiste Combier, which earned him the approval and congratulations of the good revolutionary doctor.`,
-        color: `#dc3545`
-        },
+        color: `#dc3545`,
+        disponible: `1er Septembre`        },
         {
         index:2,
         id: `meridor`,
@@ -49,7 +49,8 @@ const BottleHub = (props) => {
         img: GinMeridorImg,
         description: `Baies de genévrier, graines de coriandre, écorces de citron, racines d'iris, cubèbe et  pétales de rose.`,
         descriptionEn: `The first London Dry Gin created in the Loire Valley, Gin Meridor comes from a single distillation of all the ingredients in the historic stills of the Distillerie Combier.`,
-        color: `#74b6ff`
+        color: `#74b6ff`,
+        disponible: `1er Juin`  
         },
         {
         index:3,
@@ -59,8 +60,8 @@ const BottleHub = (props) => {
         img: AbsintheBlanchetteImg,
         description: `Une authentique absinthe blanche avec un style "suisse" à dominante anisée. `,
         descriptionEn: `Produced by the Distillerie Combier between 1899 and 1915, and again in the same stills since 2006, the Blanchette is an authentic white absinthe with a "Swiss" style predominantly aniseed.`,
-        color: `#74b6ff`
-        },
+        color: `#74b6ff`,
+        disponible:`1er Décembre`        },
     ]
 
     const [bottle, setBottle] = useState("original");

@@ -75,6 +75,9 @@ const BottleCard =(props) => {
         let targetCardScroll = e.target.parentNode.parentNode.querySelector('.BottleCard__scroll__container');
         let idBottle = targetCard.getAttribute("id")
 
+        document.querySelector('.BottleBar__Picture').classList.remove('slide-right-bar'),
+        document.querySelector('.BottleBar__Picture').classList.opacity = "O",
+
         // let {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
         // console.log(document.documentElement.scrollTop, document.documentElement.clientHeight, document.documentElement.scrollHeight, window.screen.availHeight)
