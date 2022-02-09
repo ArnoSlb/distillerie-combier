@@ -28,7 +28,7 @@ const BottleHub = (props) => {
         titleEn: `The Original Combier`,
         img: OriginalCombierImg,
         description: `Une distillation d’écorces d’oranges douces et amères, de l’eau et du sucre.`,
-        descriptionEn: `At the origin of the Distillerie Combier , we find this famous orange liqueur made with a still located in the back room of the Combier-Destre confectionery.`,
+        descriptionEn: `A distillation of sweet and bitter orange peel, water and sugar.`,
         color: `#fd7e14`
         },
         {
@@ -38,9 +38,11 @@ const BottleHub = (props) => {
         titleEn: `The Elixir Combier`,
         img: ElixirCombierImg,
         description: `Un mélange exotique d’épices et de plantes aromatiques soigneusement infusées avant distillation.`,
-        descriptionEn: `This recipe, inspired by the hygienic liqueur of Doctor Raspail, was made delicious by the genius of Master Distiller Jean-Baptiste Combier, which earned him the approval and congratulations of the good revolutionary doctor.`,
+        descriptionEn: `An exotic blend of spices and aromatic plants carefully infused before distillation.`,
         color: `#dc3545`,
-        disponible: `1er Septembre`        },
+        disponible: `1er Septembre`,        
+        disponibleEn: `September the 1st`   
+        },   
         {
         index:2,
         id: `meridor`,
@@ -48,9 +50,10 @@ const BottleHub = (props) => {
         titleEn: `The Gin Meridor`,
         img: GinMeridorImg,
         description: `Baies de genévrier, graines de coriandre, écorces de citron, racines d'iris, cubèbe et  pétales de rose.`,
-        descriptionEn: `The first London Dry Gin created in the Loire Valley, Gin Meridor comes from a single distillation of all the ingredients in the historic stills of the Distillerie Combier.`,
+        descriptionEn: `Juniper berries, coriander seeds, lemon peel, iris root, cubeb and rose petals.`,
         color: `#74b6ff`,
-        disponible: `1er Juin`  
+        disponible: `1er Juin`, 
+        disponibleEn: `June the 1st`  
         },
         {
         index:3,
@@ -59,9 +62,11 @@ const BottleHub = (props) => {
         titleEn: `The Absinthe Blanchette`,
         img: AbsintheBlanchetteImg,
         description: `Une authentique absinthe blanche avec un style "suisse" à dominante anisée. `,
-        descriptionEn: `Produced by the Distillerie Combier between 1899 and 1915, and again in the same stills since 2006, the Blanchette is an authentic white absinthe with a "Swiss" style predominantly aniseed.`,
+        descriptionEn: `An authentic white absinthe with a "Swiss" style dominated by aniseed.`,
         color: `#74b6ff`,
-        disponible:`1er Décembre`        },
+        disponible:`1er Décembre`,       
+        disponibleEn:`December the 1st`   
+        }     
     ]
 
     const [bottle, setBottle] = useState("original");

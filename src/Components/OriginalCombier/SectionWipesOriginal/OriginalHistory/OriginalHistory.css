@@ -31,13 +31,14 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 8vw;
-    background-color: rgba(255, 255, 255, 0.788);
+    background-color: rgb(253, 251, 245);
     padding: 20px 30px;
 }
 
 .OriginalHistory__container__left__title{
     font-family: 'Special Elite', cursive;
     font-size: 3vh;
+    opacity: 0%;
 }
 
 .OriginalHistory__container__left__title1{
@@ -45,11 +46,14 @@
     font-size: 8vh;
     margin: 0;
     line-height: 8vh;
+    opacity: 0%;
 }
 
 .OriginalHistory__container__left__description{
     font-family: 'Special Elite', cursive;
-    font-size: 2.7vh;
+    font-size: 2vh;
+    text-align: justify;
+    opacity: 0%;
 }
 
 .OriginalHistory__container__right{
@@ -76,6 +80,7 @@
     /* right: 2vw; */
     border: 5px solid white;
     z-index: 2;
+    opacity: 0%;
     /* top: 10vh; */
 }
 
@@ -95,4 +100,27 @@
     top: 1vh; */
     /* border: 5px solid white; */
     z-index: 2;
+    opacity: 0%;
 }
+
+.revealHistory {
+    -webkit-animation: reveal 1.5s linear both;
+            animation: reveal 1.5s linear both;
+  }
+
+@-webkit-keyframes revealHistory {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  @keyframes revealHistory {
+    0% {
+              opacity: 0%;
+    }
+    100% {
+              opacity: 100%;
+    }
+  }

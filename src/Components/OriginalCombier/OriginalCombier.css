@@ -25,6 +25,7 @@
     left: 10vw;
     max-width: 3vw;
     line-height: 13vh;
+    text-transform: uppercase;
 }
 
 .OriginalCombier__title__img {
@@ -42,9 +43,11 @@
 
 .OriginalCombier__title__container__left__whitecontainer{
     background-color: white;
+    border: 2px solid black;
     width: 100%;
     padding: 30px;
     position: relative;
+    border-radius: 10px;
 }
 
 .OriginalCombier__title__container__left__whitecontainer__orange{

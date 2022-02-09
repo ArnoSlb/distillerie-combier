@@ -24,37 +24,51 @@ const BottleBar = (props) => {
     React.useEffect(() => {
        
         if(props.bottleSelected == "elixir"){
-            document.querySelector('.targetCardTitle--selected').style.color = "#dc3545";
-            document.querySelector('.BottleBar__Picture').classList.add('slide-right-bar')
+            document.querySelector('.targetCardTitle--selected').style.color = "#dc3545";  
         }else if (props.bottleSelected == "meridor") {
             document.querySelector('.targetCardTitle--selected').style.color = "#74b6ff"
-            document.querySelector('.BottleBar__Picture').classList.add('slide-right-bar')
         } else if (props.bottleSelected == "blanchette"){
             document.querySelector('.targetCardTitle--selected').style.color = "#adaaa2"
-            document.querySelector('.BottleBar__Picture').classList.add('slide-right-bar')
         }else {
             document.querySelector('.targetCardTitle--selected').style.color = "rgb(255, 165, 47)"
-            document.querySelector('.BottleBar__Picture').classList.add('slide-right-bar')
         }
+        document.querySelector('.BottleBar__Picture').classList.add('slide-right-bar')
     })
    
 
     return (
         <div>
-            <div className="BottleBar__container">
-                <h3 className="BottleBar__title targetCardTitle--selected ">{props.data[BottleIndex].title}</h3>
-                <p className="BottleCard__description targetCardDescription--selected">{props.data[BottleIndex].description}</p>
-                {props.bottleSelected == 'original' ?
-                <div className=" BottleBar__scroll__container">
-                    <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
-                    <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+            {props.langSelected == 'FR' ?
+                <div className="BottleBar__container">
+                    <h3 className="BottleBar__title targetCardTitle--selected ">{props.data[BottleIndex].title}</h3>
+                    <p className="BottleCard__description targetCardDescription--selected">{props.data[BottleIndex].description}</p>
+                    {props.bottleSelected == 'original' ?
+                    <div className=" BottleBar__scroll__container">
+                        <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
+                        <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+                    </div>
+                    :
+                    <div className=" BottleBar__scroll__container">
+                        <p className="BottleBar__scroll__description">Disponible le {props.data[BottleIndex].disponible}</p>
+                    </div>
+                    }    
                 </div>
-                :
-                <div className=" BottleBar__scroll__container">
-                    <p className="BottleBar__scroll__description">Disponible le {props.data[BottleIndex].disponible}</p>
+            :
+                <div className="BottleBar__container">
+                    <h3 className="BottleBar__title targetCardTitle--selected ">{props.data[BottleIndex].titleEn}</h3>
+                    <p className="BottleCard__description targetCardDescription--selected">{props.data[BottleIndex].descriptionEn}</p>
+                    {props.bottleSelected == 'original' ?
+                    <div className=" BottleBar__scroll__container">
+                        <p className="BottleBar__scroll__description">Scroll down to see how it's made</p>
+                        <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+                    </div>
+                    :
+                    <div className=" BottleBar__scroll__container">
+                        <p className="BottleBar__scroll__description">Available {props.data[BottleIndex].disponibleEn}</p>
+                    </div>
+                    }    
                 </div>
-                }    
-            </div>
+            }
             <img className="BottleBar__Picture" src={props.data[BottleIndex].img} alt="" />
         </div>
  

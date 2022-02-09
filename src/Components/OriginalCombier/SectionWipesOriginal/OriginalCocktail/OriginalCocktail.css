@@ -23,11 +23,12 @@
 }
 
 .OriginalCocktail__container__right__title{
-    font-family: 'Vast Shadow', cursive;
+    font-family: 'Limelight', cursive;
     font-size: 4vw;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     padding: 30px;
+    text-shadow: rgb(0, 0, 0) 4px 4px;
 }
 
 .OriginalCocktail__container__right__description{
@@ -42,10 +43,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: underline;
     font-size: 16px;
 }
 
-.OriginalCocktail__footer:hover{
+.OriginalCocktail__footer__icon{
+    width: 40px;
+    margin: 0 10px;
+}
+
+.OriginalCocktail__footer__icon:hover{
+    cursor: pointer;
+}
+
+.OriginalCoktail__container__right__linkhub{
+    display: flex;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.OriginalCoktail__container__right__linkhub:hover{
+    cursor: pointer;
+}
+
+.OriginalCoktail__container__right__linkhub img{
+    height: 50px;
+    margin: 0px 20px;
+}
+
+
+
+.OriginalCoktail__container__right__linkRecipe{
+    background-color: rgb(167, 23, 23);
+    padding: 0px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.OriginalCoktail__container__right__linkRecipe:hover{
     cursor: pointer;
 }
