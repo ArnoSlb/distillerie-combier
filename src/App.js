@@ -5,9 +5,11 @@ import React, {
   useState
 } from 'react';
 import useIntersectionObserver from './useIntersectionObserver';
+import useDeviceDetect from './useDeviceDetect';
 
 import Map from './Components/Map/Map';
 import Video from './Components/Video/Video';
+import VideoMobile from './Components/VideoMobile/VideoMobile';
 import Empty from './Components/Empty/Empty';
 // import Scene360 from './Components/Scene360/Scene360';
 import Scene360Loader from './Components/Scene360_Loader/Scene360Loader';
@@ -21,7 +23,10 @@ const Scene360 = lazy(() => import('./Components/Scene360/Scene360'))
 function App() {
 
   const Scene360Section = useRef(null);
-  const isScene360Visible = useIntersectionObserver(Scene360Section)
+  const isScene360Visible = useIntersectionObserver(Scene360Section);
+  const { isMobile } = useDeviceDetect();
+
+  console.log(isMobile)
 
   const getRandomColor = () => {
       var letters = '0123456789ABCDEF';
@@ -46,6 +51,7 @@ function App() {
     <div className="App" onScroll={scrollCount}>
       <Header func={modifySetLangSelected}/>
       <Map langSelected={langSelected}/>
+      {isMobile && <VideoMobile/>}
       <section ref={Scene360Section}>
         {isScene360Visible && (
             <Suspense fallback={<Scene360Loader langSelected={langSelected}/>}>

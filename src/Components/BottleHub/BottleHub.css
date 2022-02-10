@@ -136,6 +136,7 @@
 
     .BottleHub__container__split{
         flex-direction: column-reverse;
+        height: 200vh;
     }
 
     .BottleHub__container__left, .BottleHub__container__right{
@@ -143,8 +144,20 @@
         height: 100vh;
     }
 
-    .BottleHub__container__right{
-        padding-top: 50px;
+    .BottleHub__bottleContainer__borderOut{
+        max-width: none;
+    }
+
+    .BottleHub__bottleContainer__borderIn h1{
+        font-size: 3.7vh;
+    }
+
+    .BottleHub__bottleContainer__borderIn h2 {
+        font-size: 2.5vh;
+    }
+
+    .BottleHub__bottleContainer__bottleList{
+        justify-content: inherit;
     }
 }
 

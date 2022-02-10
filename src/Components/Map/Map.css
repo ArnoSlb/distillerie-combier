@@ -142,15 +142,30 @@
 /* Responsive change */
 
 @media screen and (orientation:portrait) {
-    .coin {
-      width: 60vw;
-      height: 60vw;
-    }
 
-    .coin__front,.coin__back {
-      width: 100%;
-      height: 100%;
-    }
+#map{
+  height: 100vh;
+}
+
+.Map__container{
+  display: none;
+}
+
+#v0{
+  display: none;
+}
+
+  .coin {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .coin__front,.coin__back {
+    width: 100%;
+    height: 100%;
+  }
+
+
 }
 
 

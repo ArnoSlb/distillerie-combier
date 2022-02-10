@@ -36,3 +36,14 @@
   font-size: 2.3vh;
   margin: 0;
 }
+
+@media screen and (orientation:portrait) {
+  .BottleBar__Picture{
+    height: 65vh;
+    left: 50vw;
+  }
+
+  .BottleBar__container{
+    max-width: 50%;
+  }
+}

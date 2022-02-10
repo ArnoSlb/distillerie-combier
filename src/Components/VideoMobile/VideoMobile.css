@@ -1,0 +1,9 @@
+.VideoMobile{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.VideoMobile__file{
+    height: 100vh;
+}

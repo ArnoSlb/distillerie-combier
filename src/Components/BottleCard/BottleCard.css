@@ -156,7 +156,8 @@
 @media screen and (orientation:portrait) {
 
   .BottleCard{
-    height: 20vh;
+    height: 15vh;
+    width: 100%;
   }
 
   .BottleCard--selected{
@@ -196,7 +197,7 @@
   }
 
   .BottleCard__title{
-    font-size: 8vw;
+    font-size: 6vw;
     padding-bottom: 2vh;
   }
 }

@@ -192,7 +192,7 @@ const Map = (props) => {
             </div>
             }
 
-            <video id="v0" tabIndex="0" autobuffer="true" preload="true" src={video}></video>
+            <video id="v0" class="v0" tabIndex="0" autobuffer="true" preload="true" src={video}></video>
         </div>
     )
 }
