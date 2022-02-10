@@ -38,7 +38,6 @@
 .OriginalHistory__container__left__title{
     font-family: 'Special Elite', cursive;
     font-size: 3vh;
-    opacity: 0%;
 }
 
 .OriginalHistory__container__left__title1{
@@ -46,14 +45,12 @@
     font-size: 8vh;
     margin: 0;
     line-height: 8vh;
-    opacity: 0%;
 }
 
 .OriginalHistory__container__left__description{
     font-family: 'Special Elite', cursive;
     font-size: 2vh;
     text-align: justify;
-    opacity: 0%;
 }
 
 .OriginalHistory__container__right{
@@ -80,7 +77,6 @@
     /* right: 2vw; */
     border: 5px solid white;
     z-index: 2;
-    opacity: 0%;
     /* top: 10vh; */
 }
 
@@ -100,27 +96,26 @@
     top: 1vh; */
     /* border: 5px solid white; */
     z-index: 2;
-    opacity: 0%;
 }
 
-.revealHistory {
-    -webkit-animation: reveal 1.5s linear both;
-            animation: reveal 1.5s linear both;
+.reveal-history {
+    -webkit-animation: reveal-history 1.5s linear both;
+            animation: reveal-history 1.5s linear both;
   }
 
-@-webkit-keyframes revealHistory {
+  @-webkit-keyframes reveal-history {
     0% {
-      opacity: 0%;
+      opacity: 0;
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
     }
   }
-  @keyframes revealHistory {
+  @keyframes reveal-history {
     0% {
-              opacity: 0%;
+              opacity: 0;
     }
     100% {
-              opacity: 100%;
+              opacity: 1;
     }
   }

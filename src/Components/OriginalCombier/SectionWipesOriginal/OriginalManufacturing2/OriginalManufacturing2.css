@@ -74,17 +74,17 @@
 
 @-webkit-keyframes reveal {
     0% {
-      opacity: 5%;
+      opacity: 0.05;
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
     }
   }
   @keyframes reveal {
     0% {
-              opacity: 5%;
+              opacity: 0.05;
     }
     100% {
-              opacity: 100%;
+              opacity: 1;
     }
   }

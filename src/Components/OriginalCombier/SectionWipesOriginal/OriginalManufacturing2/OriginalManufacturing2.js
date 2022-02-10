@@ -12,7 +12,6 @@ const OriginalManufacturing2 = (props) => {
 
         // We select every elements with the class .anim
         const ElementsToAnimate = document.querySelectorAll('.Original__manufacturing__anim');
-        const ElementsToAnimate2 = document.querySelectorAll('.polaroid');
 
         //We create an intersection observer to know when the element is in the viewport
         // More details here : https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API
@@ -45,6 +44,8 @@ const OriginalManufacturing2 = (props) => {
         ElementsToAnimate.forEach(Element => {
             observer.observe(Element)
         })  
+
+        const ElementsToAnimate2 = document.querySelectorAll('.polaroid');
 
         const observer2 = new IntersectionObserver((entries) => {
 

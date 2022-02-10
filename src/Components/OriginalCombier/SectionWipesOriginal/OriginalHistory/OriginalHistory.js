@@ -12,22 +12,22 @@ const OriginalHistory = (props) => {
     React.useEffect(() => {
 
         // We select every elements with the class .anim
-        const ElementsToAnimate = document.querySelectorAll('.OriginalHistory__anim');
+        const ElementsToAnimateHistory = document.querySelectorAll('.OriginalHistory__anim');
 
         //We create an intersection observer to know when the element is in the viewport
         // More details here : https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API
-        const observer = new IntersectionObserver((entries) => {
+        const observerHistory = new IntersectionObserver((entries) => {
 
             // we can see all the details available
             // console.log(entries)
             let delay = 1;
 
             entries.forEach(entry => {
-
+               
                 delay = delay + 1;
                 // When the element.s are in the user browser we add the class reponsible for the animation
                 if (entry.isIntersecting){
-                    entry.target.classList.add('revealHistory'),
+                    entry.target.classList.add('reveal-history'),
                     entry.target.style.animationDelay = delay + "s"
                 } else {
                     // if we want the animation to play over and over again
@@ -40,8 +40,8 @@ const OriginalHistory = (props) => {
         })
 
         //We have to loop on every elements to observe them individually
-        ElementsToAnimate.forEach(Element => {
-            observer.observe(Element)
+        ElementsToAnimateHistory.forEach(Element => {
+            observerHistory.observe(Element)
         }) 
     },[]) 
 
@@ -54,7 +54,7 @@ const OriginalHistory = (props) => {
                     <h2 className="OriginalHistory__container__left__title1 OriginalHistory__anim">Décembre 1834</h2>
                     <p></p>
                     <h2 className="OriginalHistory__container__left__title1 OriginalHistory__anim">L'INVENTION DU TRIPLE SEC</h2>
-                    <h2 className="OriginalHistory__container__left__title OriginalHistory__anim" >ou l'Histoire de l'Original Combier</h2>
+                    <h2 className="OriginalHistory__container__left__title OriginalHistory__anim">ou l'Histoire de l'Original Combier</h2>
                     <p className="OriginalHistory__container__left__description OriginalHistory__anim">La Hollande, l’île de Curaçao, la Vallée de la Loire : cette improbable conjonction va donner des fruits inattendus ! L’Original Combier a été d’abord élaboré avec un alambic situé dans l’arrière-boutique de la confiserie Combier-Destre, créée en décembre 1834 par Jean-Baptiste Combier et son épouse Joséphine Destre. Très probablement inspiré par ses liens familiaux avec la Hollande - détenant alors l’Île de Curaçao, dans les Caraïbes – et profitant de la livraison régulière d’agrumes par la Loire, Jean-Baptiste Combier met au point une technique de distillation des écorces qui lui permet d’obtenir la toute première liqueur d’oranges transparente : le Triple Sec.</p>
                 </div>
                 :
