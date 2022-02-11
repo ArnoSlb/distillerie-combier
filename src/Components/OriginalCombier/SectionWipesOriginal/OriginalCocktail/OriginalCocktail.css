@@ -82,3 +82,44 @@
 .OriginalCoktail__container__right__linkRecipe:hover{
     cursor: pointer;
 }
+
+@media screen and (orientation:portrait) {
+
+    .OriginalCocktail{
+        height: 200vh;
+        position: relative;
+    }
+
+    .OriginalCocktail__container{
+        height: 200vh;
+    }
+
+    .OriginalCocktail__container{
+        flex-direction: column-reverse;
+    }
+
+    .OriginalCocktail__container__left{
+        height: 100vh;
+        position: relative;
+    }
+
+    .OriginalCocktail__container__right{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .OriginalCocktail__container__right__title{
+        font-size: 5vh;
+    }
+
+    .OriginalCocktail__container__right__description{
+        font-size: 2.4vh;
+    }
+
+    .OriginalCocktail__footer{
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        background-color: transparent;
+    }
+}

@@ -1,7 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import { Controller, Scene } from 'react-scrollmagic';
+import useDeviceDetect from '../../useDeviceDetect';
+
 import SectionWipesOriginal from "./SectionWipesOriginal/SectionWipesOriginal";
+import SectionWipesMobile from "./SectionWipesMobile/SectionWipesMobile";
 
 import originalCombierPresentation from "../../assets/LOriginalCombier652_HD.jpg"
 import OriginalCombierOrange from "../../assets/Orange_HD.png"
@@ -9,6 +12,8 @@ import OriginalCombierOrange from "../../assets/Orange_HD.png"
 import "./OriginalCombier.css";
 
 const OriginalCombier = (props) => {
+
+    const { isMobile } = useDeviceDetect();
 
     console.log(props)
 
@@ -125,7 +130,11 @@ const OriginalCombier = (props) => {
             </div>
             }
             <div className="OriginalCombier__made__container">
-                <SectionWipesOriginal langSelected={props.langSelected}/>
+                {isMobile ?
+                    <SectionWipesMobile langSelected={props.langSelected}/>
+                :
+                    <SectionWipesOriginal langSelected={props.langSelected}/>
+                }
             </div>
         </div>
     )

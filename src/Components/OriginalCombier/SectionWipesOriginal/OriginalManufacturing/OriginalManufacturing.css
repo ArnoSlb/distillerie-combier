@@ -47,3 +47,27 @@
     -webkit-background-clip: text;
     color: rgba(255, 255, 255, 0.459);
 }
+
+@media screen and (orientation:portrait) {
+    .OriginalManufacturing{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .OriginalManufacturing__right{
+        max-width: 80vw;
+        width: 80vw;
+        padding: 2vw;
+        padding: 2vh;
+    }
+
+    .OriginalManufacturing__right__title{
+        font-size: 7vh;
+        text-align: center;
+    }
+
+    .OriginalManufacturing__right__description{
+        font-size: 2.2vh;
+    }
+}

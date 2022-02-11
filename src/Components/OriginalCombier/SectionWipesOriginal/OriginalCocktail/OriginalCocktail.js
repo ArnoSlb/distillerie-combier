@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import useDeviceDetect from '../../../../useDeviceDetect';
+
 import "./OriginalCocktail.css"
 
 import OriginalCoktailImg from "../../../../assets/LOriginalCombier658_HD.jpg"
@@ -9,8 +11,14 @@ import Instagram from "../../../../assets/icons/instagram.png"
 import Facebook from "../../../../assets/icons/facebook.png"
 import Home from "../../../../assets/icons/home.png"
 import Contact from "../../../../assets/icons/contact.png"
+import InstagramW from "../../../../assets/icons/instagram_white.png"
+import FacebookW from "../../../../assets/icons/facebook_white.png"
+import HomeW from "../../../../assets/icons/home_white.png"
+import ContactW from "../../../../assets/icons/contact_white.png"
 
 const OriginalCocktail = (props) => {
+
+    const { isMobile } = useDeviceDetect();
 
     const homeRedirection = () => {
         window.scrollTo({
@@ -79,12 +87,21 @@ const OriginalCocktail = (props) => {
                 
                 }            
             </div>
+            {isMobile ?
+            <div className="OriginalCocktail__footer">
+                <img className="OriginalCocktail__footer__icon" src={HomeW} alt="" onClick={homeRedirection}/>
+                <img className="OriginalCocktail__footer__icon" src={InstagramW} alt="" onClick={instagramRedirection}/>
+                <img className="OriginalCocktail__footer__icon" src={FacebookW} alt="" onClick={facebookRedirection}/>
+                <img className="OriginalCocktail__footer__icon" src={ContactW} alt="" onClick={contactRedirection}/>
+            </div>
+            :
             <div className="OriginalCocktail__footer">
                 <img className="OriginalCocktail__footer__icon" src={Home} alt="" onClick={homeRedirection}/>
                 <img className="OriginalCocktail__footer__icon" src={Instagram} alt="" onClick={instagramRedirection}/>
                 <img className="OriginalCocktail__footer__icon" src={Facebook} alt="" onClick={facebookRedirection}/>
                 <img className="OriginalCocktail__footer__icon" src={Contact} alt="" onClick={contactRedirection}/>
-            </div>          
+            </div> 
+            }         
         </div>
     )
 }
