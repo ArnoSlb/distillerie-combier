@@ -18,7 +18,7 @@ import './BottleHub.css';
 
 const BottleHub = (props) => {
 
-    console.log(props)
+    // console.log(props)
 
     const bottlesData = [
         {
@@ -77,7 +77,7 @@ const BottleHub = (props) => {
 
     const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-    console.log(scrollTop, clientHeight, scrollHeight, window.pageYOffset)
+    // console.log(scrollTop, clientHeight, scrollHeight, window.pageYOffset)
     window.pageYOffset
     
     return (

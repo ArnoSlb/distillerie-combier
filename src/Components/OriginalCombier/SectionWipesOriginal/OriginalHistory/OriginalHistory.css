@@ -107,7 +107,7 @@
 @media screen and (orientation:portrait) {
 
     .OriginalHistory{
-        background: url(/src/assets/1836-lithographie-edmond_savoure.jpg) no-repeat center center fixed;
+        background-attachment: scroll;
         height: 230vh;
     }
 

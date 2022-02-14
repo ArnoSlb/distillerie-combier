@@ -6,8 +6,8 @@ import ArrowDown from "../../../src/assets/Bottom_Arrow.png"
 
 const BottleBar = (props) => {
 
-    console.log(props.bottleSelected)
-    console.log(props.data)
+    // console.log(props.bottleSelected)
+    // console.log(props.data)
 
     let BottleIndex 
 

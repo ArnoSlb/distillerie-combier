@@ -15,7 +15,7 @@ const OriginalCombier = (props) => {
 
     const { isMobile } = useDeviceDetect();
 
-    console.log(props)
+    // console.log(props)
 
     React.useEffect(() => {
 

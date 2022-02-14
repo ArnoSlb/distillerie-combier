@@ -1,6 +1,8 @@
 .OriginalManufacturing{
     height: 100vh;
-    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center fixed; 
+    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center; 
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,7 +26,9 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 6vw;
-    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center fixed; 
+    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center; 
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -38,7 +42,9 @@
     color: black;
     font-weight: bold;
     font-size: 1.5vw;
-    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center fixed; 
+    background: url(../../../../assets/rehydratation-ecorces.jpg) no-repeat center center; 
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -53,6 +59,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-attachment: scroll;
     }
 
     .OriginalManufacturing__right{
@@ -60,14 +67,17 @@
         width: 80vw;
         padding: 2vw;
         padding: 2vh;
+        
     }
 
     .OriginalManufacturing__right__title{
         font-size: 7vh;
         text-align: center;
+        background-attachment: scroll;
     }
 
     .OriginalManufacturing__right__description{
         font-size: 2.2vh;
+        background-attachment: scroll;
     }
 }

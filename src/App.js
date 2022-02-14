@@ -26,7 +26,7 @@ function App() {
   const isScene360Visible = useIntersectionObserver(Scene360Section);
   const { isMobile } = useDeviceDetect();
 
-  console.log(isMobile)
+  // console.log(isMobile)
 
   const getRandomColor = () => {
       var letters = '0123456789ABCDEF';
@@ -37,10 +37,6 @@ function App() {
       return color;
   }
 
-  const scrollCount = () => {
-    console.log(window.scrollY)
-  }
-
   const [langSelected, setLangSelected] = useState('FR')
 
   const modifySetLangSelected = (lang) => {
@@ -48,10 +44,13 @@ function App() {
   }
 
   return (
-    <div className="App" onScroll={scrollCount}>
+    <div className="App">
       <Header func={modifySetLangSelected}/>
+      {isMobile == true ?
+      <VideoMobile langSelected={langSelected}/>
+      : 
       <Map langSelected={langSelected}/>
-      {isMobile && <VideoMobile/>}
+      }
       <section ref={Scene360Section}>
         {isScene360Visible && (
             <Suspense fallback={<Scene360Loader langSelected={langSelected}/>}>

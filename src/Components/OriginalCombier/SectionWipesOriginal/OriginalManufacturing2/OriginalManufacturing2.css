@@ -8,15 +8,17 @@
 }
 
 .OriginalManufacturing2__1{
-    /* margin-top: 70px; */
+    margin-top: 10vh;
     max-height: calc(23vw + 4em + 10px);
 }
 
 .OriginalManufacturing2__2{
+    margin-top: 18vh;
     max-height: calc(22vw + 4em + 95px);
 }
 
 .OriginalManufacturing2__3{
+    margin-top: 30vh;
     max-height: calc(23vw + 4em + 40px);
 }
 

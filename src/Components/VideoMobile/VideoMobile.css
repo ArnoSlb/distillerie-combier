@@ -7,3 +7,31 @@
 .VideoMobile__file{
     height: 100vh;
 }
+
+.VideoMobile__Map_coin{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.VideoMobile__Map_coin p{
+    color: white;
+    text-align: center;
+  }
+
+.VideoMobile__btn_start_exp{
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #c02d23;
+    color: #c02d23 !important;
+    padding: 2vw;
+    font-weight: bold;
+    font-size: 4vw;
+}

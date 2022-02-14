@@ -12,6 +12,7 @@ const Map = (props) => {
 
     // lower numbers = faster playback
     const playbackConst = 100;
+    // console.log("map")
 
     React.useEffect(() => {
 
