@@ -101,6 +101,10 @@
         height: 100vh;
     }
 
+    .Scene360__popin{
+        width: 85vw;
+        bottom: 2%;
+    }
 }
 
 @-webkit-keyframes Scene360_popin_animation {
