@@ -9,6 +9,7 @@
     align-items: center;
     padding: 10px;
     color: white;
+    border-bottom: 2px solid #c02d23;
 }
 
 .Header__img{

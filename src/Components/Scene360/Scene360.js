@@ -4,22 +4,56 @@ import { VRButton } from './VRButton.js';
 
 import './Scene360.css';
 import Scene360Loader from '../Scene360_Loader/Scene360Loader';
+import Scene360Data from "./Scene360Data.js";
 
 import Logo360Sphere from "../../assets/360-Logo-sphere.png"
 
 const Scene360 = (props) => {
 
+    let indexCard = 0
+    let myInterval
+
     const exitSceneIntro = () => {
         document.querySelector('.Scene360__intro').style.display = "none"
     }
+
+    window.addEventListener('enter_frustrum_for_alambic_animation', () => {
+        console.log('je rentre dans le frustrum')
+        indexCard = -1
+        myInterval = setInterval(TextPopIn, 6000)
+    })
+
+    const TextPopIn = () => {
+        indexCard = indexCard + 1
+        if (indexCard == 6){
+            document.querySelector('.Scene360__popin').style.display = "none"
+            clearInterval(myInterval);
+        } else {
+            document.querySelector('.Scene360__popin').style.display = "flex"
+
+            {props.langSelected == 'FR' ? 
+            document.querySelector('.Scene360__popin').innerText = Scene360Data[indexCard].textFr
+            :
+            document.querySelector('.Scene360__popin').innerText = Scene360Data[indexCard].textEn
+            }
+        }
+    }
+
+    window.addEventListener('quit_frustrum_for_alambic_animation', () => {
+        console.log('je quitte le frustrum')
+        document.querySelector('.Scene360__popin').style.display = "none"
+        clearInterval(myInterval);
+    })
 
     React.useEffect(() => {
         window.THREE = THREE; // Used by APP Scripts.
         window.VRButton = VRButton; // Used by APP Scripts.
 
         var loader = new THREE.FileLoader();
+
+        console.log(Scene360Data[0])
         
-        loader.load( 'https://landings.blinkl.com/combier/expe3D/combier.json', function ( text ) {
+        loader.load( 'https://landings.blinkl.com/distillerie-combier/expe3D/combier.json', function ( text ) {
 
             var player = new THREE.App();
             player.load( JSON.parse(text) );
@@ -43,13 +77,6 @@ const Scene360 = (props) => {
         }, function (error){
             console.log(error)
         } );
-
-        window.addEventListener('nom_de_l_event', () => {
-            console.log('jouvre la fenetre dans la scene 360')
-            document.querySelector('.Scene360__intro').style.display = "flex"
-        })
-
-        
     },[])
 
     return(
@@ -72,8 +99,11 @@ const Scene360 = (props) => {
                 </div>
             }
                 <img src={Logo360Sphere} alt="" />
+                <div className="Scene360__popin" 
+                onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}
+                ></div>
             </div>
-            <div className="Scene360__popin" onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, repellendus! Repudiandae reprehenderit et sint quam natus quae molestias placeat illum, numquam ex deserunt? Nesciunt, dignissimos nemo minima nihil ex porro!</div>
+            
         </div>
     )
 }

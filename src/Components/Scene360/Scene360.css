@@ -30,15 +30,19 @@
 }
 
 .Scene360__popin{
-    height: 300px;
-    width: 300px;
-    background-color: white;
-    position: absolute;
-    top: 50vh;
-    right: 0;
     display: none;
-    padding: 30px;
-    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    border: 3px solid #c02d23;
+    padding: 1vw 2vw;
+    max-width: 400px;
+    position: absolute;
+    bottom: 3%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, 0%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+    -webkit-animation: Scene360_popin_animation 1.5s linear both;
+    animation: Scene360_popin_animation 1.5s linear both;
 }
 
 .Scene360__intro{
@@ -98,3 +102,20 @@
     }
 
 }
+
+@-webkit-keyframes Scene360_popin_animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes Scene360_popin_animation {
+    0% {
+              opacity: 0;
+    }
+    100% {
+              opacity: 1;
+    }
+  }
