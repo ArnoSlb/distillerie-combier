@@ -46,11 +46,20 @@ function App() {
   return (
     <div className="App">
       <Header func={modifySetLangSelected}/>
+
       {isMobile == true ?
       <VideoMobile langSelected={langSelected}/>
       : 
       <Map langSelected={langSelected}/>
       }
+
+      {isMobile == true ?
+          <section ref={Scene360Section}>
+            <Suspense fallback={<Scene360Loader langSelected={langSelected}/>}>
+              <Scene360 langSelected={langSelected}/>
+            </Suspense>
+          </section>
+      : 
       <section ref={Scene360Section}>
         {isScene360Visible && (
             <Suspense fallback={<Scene360Loader langSelected={langSelected}/>}>
@@ -58,6 +67,8 @@ function App() {
             </Suspense>
         )}
       </section>
+      }
+      
       <BottleHub langSelected={langSelected}/>
       {/* <Video/> */}
       {/* <Empty randomColor={getRandomColor()}/> */}

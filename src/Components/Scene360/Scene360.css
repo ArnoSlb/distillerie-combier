@@ -43,6 +43,7 @@
                                          translateX(-50%) and translateY(-50%) */
     -webkit-animation: Scene360_popin_animation 1.5s linear both;
     animation: Scene360_popin_animation 1.5s linear both;
+    text-align: center;
 }
 .Scene360__popin__plus{
     display: none;
@@ -57,6 +58,7 @@
     left: 50%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, 0%); /* This is a shorthand of
                                          translateX(-50%) and translateY(-50%) */
+    text-align: center;
 }
 
 .Scene360__intro{

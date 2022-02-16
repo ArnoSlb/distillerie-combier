@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../assets/FlyOver11.mp4"
+import video from "../../assets/production ID_5208988.mp4"
 import ArrowDown from "../../assets/Bottom_Arrow.png"
 
 import './VideoMobile.css'
@@ -18,7 +18,6 @@ const VideoMobile = (props) => {
 
         const videoFile = document.querySelector('.VideoMobile__file');
         videoFile.play()
-
     }
     
 
@@ -43,7 +42,7 @@ const VideoMobile = (props) => {
                     <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Click to <br/>start the experience</p>
                 </div>
             }
-            <video className="VideoMobile__file" autoPlay={true} autobuffer="true" preload="true" src={video}></video>
+            <video className="VideoMobile__file" autobuffer="true" preload="true" playsinline="true" src={video}></video>
         </div>  
         
     )
