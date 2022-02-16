@@ -7,7 +7,12 @@ import OriginalHistoryArchive from "../../../../assets/archives_etiquette_triple
 import OriginalHistoryBeaurepaire from "../../../../assets/archives_municipales_rue_beaurepaire.jpg"
 import OriginalHistoryPub from "../../../../assets/pub_ancienne_curacao_combier.png"
 
+import useDeviceDetect from '../../../../useDeviceDetect';
+
 const OriginalHistory = (props) => {
+
+    const { isMobile } = useDeviceDetect();
+    let delay
 
     React.useEffect(() => {
 
@@ -20,11 +25,21 @@ const OriginalHistory = (props) => {
 
             // we can see all the details available
             // console.log(entries)
-            let delay = 1;
+            {isMobile ?
+                delay = 0
+                :
+                delay = 1
+            }
+            
 
             entries.forEach(entry => {
                
-                delay = delay + 1;
+                {isMobile ?
+                    delay = 0
+                    :
+                    delay = delay + 1;
+                }
+                
                 // When the element.s are in the user browser we add the class reponsible for the animation
                 if (entry.isIntersecting){
                     entry.target.classList.add('reveal-history'),

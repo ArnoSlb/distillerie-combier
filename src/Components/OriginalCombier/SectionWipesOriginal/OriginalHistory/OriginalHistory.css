@@ -144,6 +144,11 @@
         width: 50vw;
         margin: 7vh;
     }
+
+    .reveal-history {
+        -webkit-animation: reveal-history 0.5s linear both;
+                animation: reveal-history 0.5s linear both;
+      }
 }
 
   

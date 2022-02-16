@@ -7,9 +7,13 @@ import Scene360Loader from '../Scene360_Loader/Scene360Loader';
 import Scene360Data from "./Scene360Data.js";
 import Scene360DataPlus from "./Scene360DataPlus.js";
 
+import useDeviceDetect from '../../useDeviceDetect';
+
 import Logo360Sphere from "../../assets/360-Logo-sphere.png"
 
 const Scene360 = (props) => {
+
+    const { isMobile } = useDeviceDetect();
 
     let indexArray
     let indexCard = -1
@@ -172,6 +176,7 @@ const Scene360 = (props) => {
                 </div>
             }
                 <img src={Logo360Sphere} alt="" />
+                {isMobile && ( <div className="Scene360__ScrollGrip"></div>)}
                 <div className="Scene360__popin" 
                 onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}
                 ></div>

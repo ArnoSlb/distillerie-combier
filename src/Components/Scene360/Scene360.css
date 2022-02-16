@@ -61,6 +61,15 @@
     text-align: center;
 }
 
+.Scene360__ScrollGrip{
+    position: absolute;
+    background-color: transparent;
+    border-top: 2px dashed black;
+    width: 100vw;
+    height: 18vh;
+    bottom: 0;
+}
+
 .Scene360__intro{
     display: flex;
     flex-direction: column;
