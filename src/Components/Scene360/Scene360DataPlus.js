@@ -21,6 +21,28 @@ const Scene360DataPlus = [
             textEn: `His work has resulted in unique creations such as the first perfectly transparent orange liqueur, the L'Original Combier triple sec.`,
         },
     ],  
+    [
+        {
+            textFr: `Une structure métallique pleine d’audace`,
+            textEn: `A bold metallic structure`,
+        },
+        {
+            textFr: `Ces poutrelles, rivets, passerelles et ce rouge vibrant témoignent du cousinage de la structure avec celle de la Tour Eiffel ...`,
+            textEn: `These beams, rivets, footbridges and this vibrant red testify to the connection of the structure with that of the Eiffel Tower ...`,
+        },
+        {
+            textFr: `Les alambics en cuivre sont issus du mythique Atelier Egrot fondé à Paris en 1780. De contenance 350 litres, ils sont parfaits pour distiller des "small batch", des alcools, ou esprits, sur-mesure ...`,
+            textEn: `The copper stills come from the mythical Atelier Egrot founded in Paris in 1780. With a capacity of 350 liters, they are perfect for distilling "small batch", alcohols, or spirits, tailor-made ...`,
+        },
+        {
+            textFr: `Leur bain-marie protège les ingrédients d’une trop forte chaleur. Leurs cols de cygne plus longs que l’habitude participent à la concentration des esprits ...`,
+            textEn: `Their bain-marie protects the ingredients from excessive heat. Their longer than usual swan necks contribute to the concentration of spirits ...`,
+        },
+        {
+            textFr: `Patrimoine exceptionnel en parfait état, qui n’a jamais cessé de distiller les liqueurs et spiritueux de la Distillerie Combier, cette salle représente le summum de la distillation et un excellent investissement de la part du fondateur.`,
+            textEn: `Exceptional heritage in perfect condition, which has never stopped distilling the liqueurs and spirits of the Combier Distillery, this room represents the pinnacle of distillation and an excellent investment on the part of the founder.`,
+        },  
+    ]
 ]
 
 export default Scene360DataPlus

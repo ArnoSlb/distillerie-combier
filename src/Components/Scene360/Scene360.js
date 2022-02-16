@@ -75,6 +75,7 @@ const Scene360 = (props) => {
         window.addEventListener('Infos_le_savoir_faire_du_confiseur', () => {
             document.querySelector('.Scene360__popin').style.display = "none"
             clearInterval(myInterval);
+            clearInterval(myIntervalPlus);
             document.querySelector('.Scene360__popin__plus').style.display = "flex"
             console.log('infos sur le bouton plus')
 
@@ -89,6 +90,25 @@ const Scene360 = (props) => {
 
             myIntervalPlus = setInterval(TextPopInPlus, 6000)
         });
+
+        window.addEventListener('Infos_Structure_metalique', () => {
+            document.querySelector('.Scene360__popin').style.display = "none"
+            clearInterval(myInterval);
+            clearInterval(myIntervalPlus);
+            document.querySelector('.Scene360__popin__plus').style.display = "flex"
+            console.log('infos sur le bouton plus')
+
+            indexCardPlus = 0
+            indexArray = 1
+
+            {props.langSelected == 'FR' ? 
+            document.querySelector('.Scene360__popin__plus').innerText = Scene360DataPlus[indexArray][indexCardPlus].textFr
+            :
+            document.querySelector('.Scene360__popin__plus').innerText = Scene360DataPlus[indexArray][indexCardPlus].textEn
+            }
+
+            myIntervalPlus = setInterval(TextPopInPlus, 6000)
+        })
     })
 
     React.useEffect(() => {
@@ -97,33 +117,38 @@ const Scene360 = (props) => {
         window.VRButton = VRButton; // Used by APP Scripts.
 
         var loader = new THREE.FileLoader();
-
-        console.log(Scene360Data[0])
         
         loader.load( 'https://landings.blinkl.com/distillerie-combier/expe3D/combier.json', function ( text ) {
 
             var player = new THREE.App();
-            player.load( JSON.parse(text) );
-            player.setSize( window.innerWidth, window.innerHeight );
-            player.play();
+            player.loadAsync( JSON.parse(text) )
 
-            const Scene360Player = document.querySelector('.Scene360__player');
-            Scene360Player.style.display = "block"
-
-            document.querySelector('.Scene360Loader').style.display = "none"
-
-            Scene360Player.appendChild( player.dom );
-
-            window.addEventListener( 'resize', function () {
-
+            // interprétation du fichier .json
+            .then(() => {
                 player.setSize( window.innerWidth, window.innerHeight );
+                player.play();
+    
+                const Scene360Player = document.querySelector('.Scene360__player');
+                Scene360Player.style.display = "block"
+    
+                document.querySelector('.Scene360Loader').style.display = "none"
+    
+                Scene360Player.appendChild( player.dom );
+    
+                window.addEventListener( 'resize', function () {
+    
+                    player.setSize( window.innerWidth, window.innerHeight );
+    
+                } );
+            }).catch((error) => {
+                console.error(error)
+            })
 
-            } );
-
+        // téléchargement du fichier .json
         }, function (progress){
             // console.log(progress)
         }, function (error){
-            console.log(error)
+            console.error(error)
         } );
     },[])
 
