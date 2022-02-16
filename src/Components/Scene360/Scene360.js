@@ -5,23 +5,23 @@ import { VRButton } from './VRButton.js';
 import './Scene360.css';
 import Scene360Loader from '../Scene360_Loader/Scene360Loader';
 import Scene360Data from "./Scene360Data.js";
+import Scene360DataPlus from "./Scene360DataPlus.js";
 
 import Logo360Sphere from "../../assets/360-Logo-sphere.png"
 
 const Scene360 = (props) => {
 
-    let indexCard = 0
+    let indexArray
+    let indexCard = -1
+    let indexCardPlus = 0
     let myInterval
+    let myIntervalPlus
+
+    console.log(props, 'je suis dans la scene360')
 
     const exitSceneIntro = () => {
         document.querySelector('.Scene360__intro').style.display = "none"
     }
-
-    window.addEventListener('enter_frustrum_for_alambic_animation', () => {
-        console.log('je rentre dans le frustrum')
-        indexCard = -1
-        myInterval = setInterval(TextPopIn, 6000)
-    })
 
     const TextPopIn = () => {
         indexCard = indexCard + 1
@@ -39,13 +39,59 @@ const Scene360 = (props) => {
         }
     }
 
-    window.addEventListener('quit_frustrum_for_alambic_animation', () => {
-        console.log('je quitte le frustrum')
-        document.querySelector('.Scene360__popin').style.display = "none"
-        clearInterval(myInterval);
-    })
+    const TextPopInPlus = () => {
+        indexCardPlus = indexCardPlus + 1
+        console.log(Scene360DataPlus[0].length)
+        if (indexCardPlus == Scene360DataPlus[indexArray].length){
+            document.querySelector('.Scene360__popin__plus').style.display = "none"
+            clearInterval(myIntervalPlus);
+        } else {
+            document.querySelector('.Scene360__popin__plus').style.display = "flex"
+
+            {props.langSelected == 'FR' ? 
+            document.querySelector('.Scene360__popin__plus').innerText = Scene360DataPlus[indexArray][indexCardPlus].textFr
+            :
+            document.querySelector('.Scene360__popin__plus').innerText = Scene360DataPlus[indexArray][indexCardPlus].textEn
+            }
+        }
+    }
 
     React.useEffect(() => {
+
+        window.addEventListener('enter_frustrum_for_alambic_animation', () => {
+            document.querySelector('.Scene360__popin__plus').style.display = "none"
+            clearInterval(myIntervalPlus);
+            
+            console.log('je rentre dans le frustrum')
+            
+            indexCard = -1
+            myInterval = setInterval(TextPopIn, 6000)
+        });
+
+        window.addEventListener('quit_frustrum_for_alambic_animation', () => {
+            console.log('je quitte le frustrum')
+            document.querySelector('.Scene360__popin').style.display = "none"
+            clearInterval(myInterval);
+        });
+
+        window.addEventListener('Infos_le_savoir_faire_du_confiseur', () => {
+            document.querySelector('.Scene360__popin').style.display = "none"
+            clearInterval(myInterval);
+            document.querySelector('.Scene360__popin__plus').style.display = "flex"
+            console.log('infos sur le bouton plus')
+
+            indexCardPlus = 0
+            indexArray = 0
+
+            {props.langSelected == 'FR' ? 
+            document.querySelector('.Scene360__popin__plus').innerText = Scene360DataPlus[indexArray][indexCardPlus].textFr
+            :
+            document.querySelector('.Scene360__popin__plus').innerText = Scene360DataPlus[indexArray][indexCardPlus].textEn
+            }
+
+            myIntervalPlus = setInterval(TextPopInPlus, 6000)
+        });
+
         window.THREE = THREE; // Used by APP Scripts.
         window.VRButton = VRButton; // Used by APP Scripts.
 
@@ -72,6 +118,8 @@ const Scene360 = (props) => {
                 player.setSize( window.innerWidth, window.innerHeight );
 
             } );
+
+
         }, function (progress){
             // console.log(progress)
         }, function (error){
@@ -100,6 +148,9 @@ const Scene360 = (props) => {
             }
                 <img src={Logo360Sphere} alt="" />
                 <div className="Scene360__popin" 
+                onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}
+                ></div>
+                <div className="Scene360__popin__plus" 
                 onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}
                 ></div>
             </div>

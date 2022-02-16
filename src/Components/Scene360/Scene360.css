@@ -44,6 +44,20 @@
     -webkit-animation: Scene360_popin_animation 1.5s linear both;
     animation: Scene360_popin_animation 1.5s linear both;
 }
+.Scene360__popin__plus{
+    display: none;
+    background-color: #c02d23;
+    border-radius: 8px;
+    border: 3px solid white;
+    color: white;
+    padding: 1vw 2vw;
+    max-width: 400px;
+    position: absolute;
+    bottom: 3%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, 0%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+}
 
 .Scene360__intro{
     display: flex;
@@ -103,7 +117,12 @@
 
     .Scene360__popin{
         width: 85vw;
-        bottom: 2%;
+        bottom: 4%;
+    }
+
+    .Scene360__popin__plus{
+        width: 85vw;
+        bottom: 4%;
     }
 }
 
