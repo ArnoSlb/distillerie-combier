@@ -55,9 +55,7 @@ const Scene360 = (props) => {
             }
         }
     }
-
     React.useEffect(() => {
-
         window.addEventListener('enter_frustrum_for_alambic_animation', () => {
             document.querySelector('.Scene360__popin__plus').style.display = "none"
             clearInterval(myIntervalPlus);
@@ -91,6 +89,9 @@ const Scene360 = (props) => {
 
             myIntervalPlus = setInterval(TextPopInPlus, 6000)
         });
+    })
+
+    React.useEffect(() => {
 
         window.THREE = THREE; // Used by APP Scripts.
         window.VRButton = VRButton; // Used by APP Scripts.
@@ -118,7 +119,6 @@ const Scene360 = (props) => {
                 player.setSize( window.innerWidth, window.innerHeight );
 
             } );
-
 
         }, function (progress){
             // console.log(progress)
