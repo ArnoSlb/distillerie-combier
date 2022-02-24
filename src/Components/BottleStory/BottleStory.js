@@ -10,15 +10,13 @@ const BottleStory = (props) => {
 
     if(props.bottle == "original"){
         return (<OriginalCombier langSelected={props.langSelected}/>)
-    } 
     // else if(props.bottle == "elixir"){
     //     return (<ElixirCombier langSelected={props.langSelected}/>)
     // } else if(props.bottle == "meridor"){
     //     return (<Meridor langSelected={props.langSelected}/>)
     // } else if(props.bottle == "blanchette"){
     //     return (<AbsintheBlanchette langSelected={props.langSelected}/>)
-    // } 
-    else {
+    } else {
         return (<div></div>)
     }  
 }

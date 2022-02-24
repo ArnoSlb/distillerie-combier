@@ -8,7 +8,7 @@ import useIntersectionObserver from './useIntersectionObserver';
 import useDeviceDetect from './useDeviceDetect';
 
 import Map from './Components/Map/Map';
-import Video from './Components/Video/Video';
+import Video from './Components/Video2/Video2';
 import VideoMobile from './Components/VideoMobile/VideoMobile';
 import Empty from './Components/Empty/Empty';
 // import Scene360 from './Components/Scene360/Scene360';
@@ -51,6 +51,7 @@ function App() {
       <VideoMobile langSelected={langSelected}/>
       : 
       <Map langSelected={langSelected}/>
+      // <Video langSelected={langSelected}/>
       }
 
       {isMobile == true ?

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import './Map.css'
-import video from "../../assets/FlyOver11.mp4"
+import video from "../../assets/Intro_map2.mp4"
 import LogoCombierTransparent from "../../assets/Combier_logo_transparent.png";
 import SalledesAlembics from "../../assets/salle_des_alembic.jpg";
 import ArrowDown from "../../assets/Bottom_Arrow.png"
@@ -11,10 +11,28 @@ import EmblemeCoin from "../../assets/Embleme_coin.png"
 const Map = (props) => {
 
     // lower numbers = faster playback
-    const playbackConst = 100;
+    const playbackConst = 550;
     // console.log("map")
 
     React.useEffect(() => {
+
+        if(window.innerWidth/window.innerHeight > 16/9){
+            document.getElementById('v0').style.height = "auto"
+            document.getElementById('v0').style.width = "100vw"
+        } else {
+            document.getElementById('v0').style.height = "100vh"
+            document.getElementById('v0').style.width = "auto"
+        }
+
+        window.onresize = (() => {
+            if(window.innerWidth/window.innerHeight > 16/9){
+                document.getElementById('v0').style.height = "auto"
+                document.getElementById('v0').style.width = "100vw"
+            } else {
+                document.getElementById('v0').style.height = "100vh"
+                document.getElementById('v0').style.width = "auto"
+            }
+        })
 
         // get page height from video duration
         const setHeight = document.getElementById("set-height");

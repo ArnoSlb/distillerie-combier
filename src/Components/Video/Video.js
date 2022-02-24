@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../assets/drone.mp4"
+import video from "../../assets/Intro_map.mp4"
 
 import './Video.css'
 
@@ -31,7 +31,7 @@ const Video = () => {
 
     return(
         <div className="Video">
-            <video className="Video__file" autoPlay={true} autobuffer="true" preload="true" src={video}></video>
+            <video className="Video__file" autobuffer="true" preload="true" playsInline={true} src={video}></video>
         </div>  
         
     )

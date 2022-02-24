@@ -33,18 +33,6 @@ const BottleHub = (props) => {
         },
         {
         index: 1,
-        id: `elixir`,
-        title: `L'Elixir Combier`,
-        titleEn: `The Elixir Combier`,
-        img: ElixirCombierImg,
-        description: `Un mélange exotique d’épices et de plantes aromatiques soigneusement infusées avant distillation.`,
-        descriptionEn: `An exotic blend of spices and aromatic plants carefully infused before distillation.`,
-        color: `#dc3545`,
-        disponible: `1er Septembre`,        
-        disponibleEn: `September the 1st`   
-        },   
-        {
-        index:2,
         id: `meridor`,
         title: `Le Gin Meridor`,
         titleEn: `The Gin Meridor`,
@@ -55,6 +43,18 @@ const BottleHub = (props) => {
         disponible: `1er Juin`, 
         disponibleEn: `June the 1st`  
         },
+        {
+        index: 2,
+        id: `elixir`,
+        title: `L'Elixir Combier`,
+        titleEn: `The Elixir Combier`,
+        img: ElixirCombierImg,
+        description: `Un mélange exotique d’épices et de plantes aromatiques soigneusement infusées avant distillation.`,
+        descriptionEn: `An exotic blend of spices and aromatic plants carefully infused before distillation.`,
+        color: `#dc3545`,
+        disponible: `1er Septembre`,        
+        disponibleEn: `September the 1st`   
+        },   
         {
         index:3,
         id: `blanchette`,

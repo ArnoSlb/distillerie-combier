@@ -14,9 +14,9 @@ const BottleBar = (props) => {
     if(props.bottleSelected == 'original'){
         BottleIndex = 0
     } else if (props.bottleSelected == 'elixir'){
-        BottleIndex = 1
-    } else if (props.bottleSelected == 'meridor'){
         BottleIndex = 2
+    } else if (props.bottleSelected == 'meridor'){
+        BottleIndex = 1
     } else if (props.bottleSelected == 'blanchette'){
         BottleIndex = 3
     }

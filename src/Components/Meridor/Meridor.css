@@ -16,7 +16,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center fixed; 
+    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center; 
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -159,6 +160,32 @@
 .slide-top {
 	-webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@media screen and (orientation:portrait) {
+    .Meridor__First__empty{
+        display: none;
+    }
+
+    .Meridor__First__text__left{
+        width: 85%;
+    }
+
+    .Meridor__First__text__left__title{
+        font-size: 13vw;
+    }
+
+    .Meridor__Second__text__left__title{
+        font-size: 12vw;
+    }
+
+    .Meridor__First__text__right{
+        width: 85%;
+    }
+
+    .Meridor__First__text__right__content{
+        width: 85%;
+    }
 }
 
 /* ----------------------------------------------
