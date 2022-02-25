@@ -141,51 +141,62 @@ const Map = (props) => {
         <div className="Map" id="map">
 
             <section className="Map__container">
-                <div className="Map__container__content">
-                    {/* <div className="Map__container__content__title">
-                        <img src={LogoCombierTransparent} alt="" />
-                        <p>Scroller vers le bas pour commencer</p>
-                    </div> */}
-                </div>
+                <div className="Map__container__content"></div>
             </section>
-
+            {props.langSelected == 'FR' ?
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>France</h1>
-                    {/* <p>Start it like this</p> */}
+                    <h1>Bienvenue en France</h1>
                 </div>
             </section> 
-
+            :
             <section className="Map__container">
-                {/* <div className="Map__container__content" ref={ref}> */}
                 <div className="Map__container__content anim">
-                    <h1>Saumur</h1>
-                    {/* <p>Start it like this</p> */}
+                    <h1>Welcome in France</h1>
                 </div>
             </section> 
+            }
+            {props.langSelected == 'FR' ?
+            <section className="Map__container">
+                 <div className="Map__container__content anim">
+                     <h1>Au cœur du Val-de-Loire</h1>
+                 </div>
+             </section> 
+            :
+            <section className="Map__container">
+                 <div className="Map__container__content anim">
+                     <h1>In the heart of the Loire Valley</h1>
+                 </div>
+             </section> 
+            }
+            {props.langSelected == 'FR' ?
+            <section className="Map__container">
+                <div className="Map__container__content anim">
+                    <h1>À Saumur</h1>
+                </div>
+            </section> 
+            :
+            <section className="Map__container">
+            <div className="Map__container__content anim">
+                <h1>In Saumur</h1>
+            </div>
+        </section> 
+            }
+        
             {props.langSelected == 'FR' ? 
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>la Distillerie Combier</h1>
+                    <h1>Dans la Distillerie Combier</h1>
                     {/* <p>Start it like this</p> */}
                 </div>
             </section>
             :
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>The Distillerie Combier</h1>
-                    {/* <p>Start it like this</p> */}
+                    <h1>In the Distillerie Combier</h1>
                 </div>
             </section>
             }
-            
-
-            <section className="Map__container">
-                <div className="Map__container__content anim">
-                    {/* <h1>Step 4</h1>
-                    <p>Start it like this</p> */}
-                </div>
-            </section> 
 
             <div id="set-height"></div>
             
