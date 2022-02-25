@@ -7,12 +7,16 @@ const Scene360Loader = () => {
     return (
         <div className="Scene360Loader">
             <div className="Scene360Loader__container">
-                <div id="ctn">
+                <div class="coin">
+                    <div class="coin__front"></div>
+                    <div class="coin__back"></div>
+                </div>
+                {/* <div id="ctn">
                     <div class="loader loader_one"></div>
                     <div class="loader loader_two"></div>
                     <div class="loader loader_three"></div>
-                </div>
-                <h1>Chargement</h1>
+                </div> */}
+                <h1>Chargement ...</h1>
             </div>
         </div>
     )
