@@ -28,12 +28,13 @@
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     padding: 30px;
-    text-shadow: rgb(0, 0, 0) 4px 4px;
+    /* text-shadow: rgb(0, 0, 0) 4px 4px; */
 }
 
 .OriginalCocktail__container__right__description{
-    font-size: 1vw;
-    padding: 0 5vw;
+    font-size: 1.1vw;
+    width: 33vw;
+    text-align: justify;
 }
 
 .OriginalCocktail__footer{
@@ -42,7 +43,7 @@
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 16px;
 }
 
@@ -66,7 +67,7 @@
 }
 
 .OriginalCoktail__container__right__linkhub img{
-    height: 50px;
+    height: 70px;
     margin: 0px 20px;
 }
 
@@ -113,7 +114,8 @@
     }
 
     .OriginalCocktail__container__right__description{
-        font-size: 2.4vh;
+        font-size: 2.2vh;
+        width: 80vw;
     }
 
     .OriginalCocktail__footer{
@@ -121,5 +123,6 @@
         bottom: 0;
         z-index: 10;
         background-color: transparent;
+        color: white;
     }
 }

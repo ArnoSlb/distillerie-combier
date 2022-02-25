@@ -140,7 +140,12 @@ const Scene360 = (props) => {
                 Scene360Player.style.display = "block"
     
                 document.querySelector('.Scene360Loader').style.display = "none"
-                document.querySelector('.Scene360').style.height = "180vh"
+
+                {isMobile ?
+                    document.querySelector('.Scene360').style.height = "100vh"
+                    : 
+                    document.querySelector('.Scene360').style.height = "180vh"
+                } 
     
                 Scene360Player.appendChild( player.dom );
     

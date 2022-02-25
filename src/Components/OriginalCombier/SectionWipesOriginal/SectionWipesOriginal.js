@@ -26,7 +26,7 @@ const SectionWipesOriginal = (props) => {
             <OriginalManufacturing langSelected={props.langSelected}/>
           </section>
           <Tween
-            from={{ x: '-100%' }}
+            from={{ x: '100%' }}
             to={{ x: '0%' }}
           >
             <section className="panel">

@@ -40,8 +40,8 @@ const BottleHub = (props) => {
         description: `Baies de genévrier, graines de coriandre, écorces de citron, racines d'iris, cubèbe et  pétales de rose.`,
         descriptionEn: `Juniper berries, coriander seeds, lemon peel, iris root, cubeb and rose petals.`,
         color: `#74b6ff`,
-        disponible: `1er Juin`, 
-        disponibleEn: `June the 1st`  
+        disponible: `Juin`, 
+        disponibleEn: `June`  
         },
         {
         index: 2,
@@ -52,8 +52,8 @@ const BottleHub = (props) => {
         description: `Un mélange exotique d’épices et de plantes aromatiques soigneusement infusées avant distillation.`,
         descriptionEn: `An exotic blend of spices and aromatic plants carefully infused before distillation.`,
         color: `#dc3545`,
-        disponible: `1er Septembre`,        
-        disponibleEn: `September the 1st`   
+        disponible: `Septembre`,        
+        disponibleEn: `September`   
         },   
         {
         index:3,
@@ -64,8 +64,8 @@ const BottleHub = (props) => {
         description: `Une authentique absinthe blanche avec un style "suisse" à dominante anisée. `,
         descriptionEn: `An authentic white absinthe with a "Swiss" style dominated by aniseed.`,
         color: `#74b6ff`,
-        disponible:`1er Décembre`,       
-        disponibleEn:`December the 1st`   
+        disponible:`Décembre`,       
+        disponibleEn:`December`   
         }     
     ]
 

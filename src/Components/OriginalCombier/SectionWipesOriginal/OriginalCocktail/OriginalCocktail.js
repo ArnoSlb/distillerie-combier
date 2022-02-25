@@ -6,7 +6,7 @@ import useDeviceDetect from '../../../../useDeviceDetect';
 import "./OriginalCocktail.css"
 
 import OriginalCoktailImg from "../../../../assets/LOriginalCombier658_HD.jpg"
-import CocktailHand from "../../../../assets/Hand.png"
+import CocktailHand from "../../../../assets/vintage-hand.svg"
 import Instagram from "../../../../assets/icons/instagram.png"
 import Facebook from "../../../../assets/icons/facebook.png"
 import Home from "../../../../assets/icons/home.png"
@@ -30,8 +30,8 @@ const OriginalCocktail = (props) => {
     const instagramRedirection = () => {
         window.open('https://www.instagram.com/distilleriecombier/?hl=fr', "_blank") || window.location.replace('https://www.instagram.com/distilleriecombier/?hl=fr');
     }
-    const facebookRedirection = () => {
-        window.open('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/', "_blank") || window.location.replace('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/');
+    const eshopRedirection = () => {
+        window.open('https://www.combier.fr/signatures/original-combier/', "_blank") || window.location.replace('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/');
     }
     const contactRedirection = () => {
         window.open('https://www.combier.fr/distillerie/boutique-et-contact/', "_blank") || window.location.replace('https://www.combier.fr/distillerie/boutique-et-contact/');
@@ -41,9 +41,9 @@ const OriginalCocktail = (props) => {
 
         const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+        console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
 
-        const pixelToHub = 4680 +  (clientHeight * 3.23)
+        const pixelToHub = 11750 +  (clientHeight * 3.23)
 
         window.scrollTo({
             top: pixelToHub,
@@ -84,24 +84,14 @@ const OriginalCocktail = (props) => {
                         <p>Recipe and Shop</p>
                     </div>
                 </div>
-                
                 }            
             </div>
-            {isMobile ?
             <div className="OriginalCocktail__footer">
-                <img className="OriginalCocktail__footer__icon" src={HomeW} alt="" onClick={homeRedirection}/>
-                <img className="OriginalCocktail__footer__icon" src={InstagramW} alt="" onClick={instagramRedirection}/>
-                <img className="OriginalCocktail__footer__icon" src={FacebookW} alt="" onClick={facebookRedirection}/>
-                <img className="OriginalCocktail__footer__icon" src={ContactW} alt="" onClick={contactRedirection}/>
-            </div>
-            :
-            <div className="OriginalCocktail__footer">
-                <img className="OriginalCocktail__footer__icon" src={Home} alt="" onClick={homeRedirection}/>
-                <img className="OriginalCocktail__footer__icon" src={Instagram} alt="" onClick={instagramRedirection}/>
-                <img className="OriginalCocktail__footer__icon" src={Facebook} alt="" onClick={facebookRedirection}/>
-                <img className="OriginalCocktail__footer__icon" src={Contact} alt="" onClick={contactRedirection}/>
-            </div> 
-            }         
+                <div onClick={homeRedirection}>Accueil</div>
+                <div onClick={eshopRedirection}>E-shop</div>
+                <div onClick={instagramRedirection}>Instagram</div>
+                <div onClick={contactRedirection}>Contact</div>
+            </div>         
         </div>
     )
 }

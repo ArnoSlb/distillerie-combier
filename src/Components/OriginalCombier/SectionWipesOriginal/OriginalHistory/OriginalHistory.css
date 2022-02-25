@@ -48,6 +48,14 @@
     line-height: 8vh;
 }
 
+.OriginalHistory__container__left__title2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+    margin: 0;
+    margin-bottom: 10px;
+    line-height: 4vh;
+}
+
 .OriginalHistory__container__left__description{
     font-family: 'Special Elite', cursive;
     font-size: 2vh;
@@ -125,6 +133,11 @@
 
     .OriginalHistory__container__left__title1{
         font-size: 6vh;
+        text-align: center;
+        margin: 0;
+    }
+    .OriginalHistory__container__left__title2{
+        font-size: 3vh;
         text-align: center;
         margin: 0;
     }

@@ -66,7 +66,7 @@ const OriginalHistory = (props) => {
             <div className="OriginalHistory__container">
                 {props.langSelected == 'FR' ? 
                 <div className="OriginalHistory__container__left OriginalHistory__anim">
-                    <h2 className="OriginalHistory__container__left__title1 OriginalHistory__anim">Décembre 1834</h2>
+                    <h2 className="OriginalHistory__container__left__title2 OriginalHistory__anim">Décembre 1834</h2>
                     {/* <p></p> */}
                     <h2 className="OriginalHistory__container__left__title1 OriginalHistory__anim">L'INVENTION DU TRIPLE SEC</h2>
                     <h2 className="OriginalHistory__container__left__title OriginalHistory__anim">ou l'Histoire de l'Original Combier</h2>

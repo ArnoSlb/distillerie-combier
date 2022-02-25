@@ -49,7 +49,7 @@ const BottleBar = (props) => {
                     </div>
                     :
                     <div className=" BottleBar__scroll__container">
-                        <p className="BottleBar__scroll__description">Disponible le {props.data[BottleIndex].disponible}</p>
+                        <p className="BottleBar__scroll__description">À découvrir à partir de {props.data[BottleIndex].disponible}</p>
                     </div>
                     }    
                 </div>
@@ -64,7 +64,7 @@ const BottleBar = (props) => {
                     </div>
                     :
                     <div className=" BottleBar__scroll__container">
-                        <p className="BottleBar__scroll__description">Available {props.data[BottleIndex].disponibleEn}</p>
+                        <p className="BottleBar__scroll__description">Available in {props.data[BottleIndex].disponibleEn}</p>
                     </div>
                     }    
                 </div>
