@@ -21,7 +21,7 @@ const Scene360 = (props) => {
     let myInterval
     let myIntervalPlus
 
-    console.log(props, 'je suis dans la scene360')
+    // console.log(props, 'je suis dans la scene360')
 
     const exitSceneIntro = () => {
         document.querySelector('.Scene360__intro').style.display = "none"
@@ -29,7 +29,10 @@ const Scene360 = (props) => {
 
     const TextPopIn = () => {
         indexCard = indexCard + 1
-        if (indexCard == 6){
+
+        // console.log(Scene360Data[indexCard].textFr, indexCard, Scene360Data.length)
+        
+        if (indexCard >= Scene360Data.length){
             document.querySelector('.Scene360__popin').style.display = "none"
             clearInterval(myInterval);
         } else {
@@ -45,8 +48,8 @@ const Scene360 = (props) => {
 
     const TextPopInPlus = () => {
         indexCardPlus = indexCardPlus + 1
-        console.log(Scene360DataPlus[0].length)
-        if (indexCardPlus == Scene360DataPlus[indexArray].length){
+        console.log(Scene360DataPlus[indexArray].length)
+        if (indexCardPlus >= Scene360DataPlus[indexArray].length){
             document.querySelector('.Scene360__popin__plus').style.display = "none"
             clearInterval(myIntervalPlus);
         } else {
@@ -63,8 +66,9 @@ const Scene360 = (props) => {
         window.addEventListener('enter_frustrum_for_alambic_animation', () => {
             document.querySelector('.Scene360__popin__plus').style.display = "none"
             clearInterval(myIntervalPlus);
+            clearInterval(myInterval);
             
-            console.log('je rentre dans le frustrum')
+            // console.log('je rentre dans le frustrum')
             
             indexCard = -1
             myInterval = setInterval(TextPopIn, 6000)

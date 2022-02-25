@@ -1,27 +1,31 @@
 const Scene360Data = [
     {
-        textFr: 'Et nous voici au coeur de la Distillerie Combier : dans cette salle, des alambics du 19ème siècle ...',
-        textEn: 'And here we are in the heart of the Combier Distillery: in this room, stills from the 19th century...'
+        textFr: 'Les matières premières ont été macérés dans un alcool neutre ...',
+        textEn: 'The raw materials have been macerated in a neutral alcohol ...'
     },
     {
-        textFr: `Les matières premières sont mises à macérer pendant plus de 24 heures dans un alcool neutre pour débuter l'extraction des arômes ...`,
-        textEn: `The raw materials are left to macerate for more than 24 hours in a neutral alcohol to begin the extraction of the aromas ...`
+        textFr: `Au bain-marie, nos alambics chauffent et distillent les ingrédients en douceur ...`,
+        textEn: `In a bain-marie, our stills gently heat and distill the ingredients ...`
     },
     {
-        textFr: `Les ingrédients sont portés lentement à ébullition. Plus que centenaires, nos alambics en cuivre distillent les ingrédients en douceur au bain-marie ...`,
-        textEn: `The ingredients are slowly brought to a boil. More than a hundred years old, our copper stills distill the ingredients gently in a bain-marie...`
+        textFr: `Les vapeurs d’alcool sont recueillies dans le chapiteau ...`,
+        textEn: `The alcohol vapors are collected in the marquee ...`
     },
     {
-        textFr: `Les vapeurs d'alcool sont recueillis dans le chapiteau et s'engagent dans le très long col de cygne ...`,
-        textEn: `The alcohol vapors are collected in the marquee and enter the very long gooseneck ...`
+        textFr: `Et s’engagent dans le très long col de cygne ...`,
+        textEn: `And engage in the very long swan's neck ...`
     },
     {
-        textFr: `Le passage par la boule de rectification permet d'agir en continu sur la qualité des condensats. Ceux-ci descendent et se liquéfient dans la colonne de refroidissement, rafraichis par un serpentin d'eau froide ...`,
-        textEn: `The passage through the rectification ball allows continuous action on the quality of the condensates. These descend and liquefy in the cooling column, refreshed by a coil of cold water...`,
+        textFr: `Puis passent par la boule de rectification ...`,
+        textEn: `Then go through the grinding ball ...`,
     },
     {
-        textFr: `Guidé par les alcoomètres, l'oeil avisé du maître distillateur opère une séléction fine des coeurs de distillation les plus élégants et aromatiques.`,
-        textEn: `Guided by the alcoholmeters, the watchful eye of the master distiller makes a fine selection of the most elegant and aromatic distillation hearts.`,
+        textFr: `Les condensats se liquéfient dans la colonne de refroidissement ...`,
+        textEn: `The condensates liquefy in the cooling column ...`,
+    },
+    {
+        textFr: `L’oeil sur l’alcoomètre, le maître-distillateur sélectionne les coeurs de distillation.`,
+        textEn: `With his eye on the alcoholometer, the master distiller selects the hearts of distillation.`,
     },
 ]
 
