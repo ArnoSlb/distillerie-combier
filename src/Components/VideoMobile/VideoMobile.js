@@ -1,5 +1,6 @@
 import React from "react";
-import video from "../../assets/IntroM.mp4"
+import video from "../../assets/IntroM2.mp4"
+import videoEn from "../../assets/IntroM2En.mp4"
 import ArrowDown from "../../assets/Bottom_Arrow.png"
 
 import './VideoMobile.css'
@@ -42,7 +43,12 @@ const VideoMobile = (props) => {
                     <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Click to <br/>start the experience</p>
                 </div>
             }
-            <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={video}></video>
+             {props.langSelected == 'FR' ? 
+             <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={video}></video>
+             :
+             <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={videoEn}></video>
+             }
+            
         </div>  
         
     )

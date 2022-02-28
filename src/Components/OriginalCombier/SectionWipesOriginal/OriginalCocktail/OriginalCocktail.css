@@ -116,6 +116,10 @@
         width: 80vw;
     }
 
+    .OriginalCoktail__container__right__linkhub{
+        text-align: center;
+    }
+
     .OriginalCocktail__footer{
         position: absolute;
         bottom: 0;
