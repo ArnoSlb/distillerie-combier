@@ -102,7 +102,7 @@ const OriginalCombier = (props) => {
                     <div className="OriginalCombier__title__container__left__whitecontainer">
                         {/* <img className="OriginalCombier__title__container__left__whitecontainer__orange OriginalCombier__anim" src={OriginalCombierOrange} alt="Orange picture" /> */}
                         <h2>Qu'est-ce que c'est ?</h2>
-                        <p className="OriginalCombier__anim2">La première liqueur d’oranges triple sec, parfaitement transparente, telle fût l’innovation majeure du fondateur de la distillerie, Jean-Baptiste Combier. Obtenue en distillant les écorces d’oranges douces et amères avec de l’eau et du sucre sans aucun ajout d’arôme, la recette et le procédé sont resté inchangés depuis 1834.</p>
+                        <p className="OriginalCombier__anim2">La première liqueur d’oranges parfaitement transparente, le triple sec, fût l’innovation majeure du fondateur de la distillerie, Jean-Baptiste Combier. Obtenue en distillant les écorces d’oranges douces et amères avec de l’eau et du sucre sans aucun ajout d’arôme, la recette et le procédé sont restés inchangés depuis 1834.</p>
                     </div>
                     <p></p>
                     <div className="OriginalCombier__title__container__left__whitecontainer">
@@ -117,7 +117,7 @@ const OriginalCombier = (props) => {
                     <div className="OriginalCombier__title__container__left__whitecontainer">
                         {/* <img className="OriginalCombier__title__container__left__whitecontainer__orange OriginalCombier__anim" src={OriginalCombierOrange} alt="Orange picture" /> */}
                         <h2>What is it ?</h2>
-                        <p className="OriginalCombier__anim2">The first triple sec orange liqueur, perfectly transparent, such was the major innovation of the founder of the distillery, Jean-Baptiste Combier. Obtained by distilling sweet and bitter orange peels with water and sugar without any added flavor, the recipe and process have remained unchanged since 1834.</p>
+                        <p className="OriginalCombier__anim2">The first perfectly transparent orange liqueur, triple sec, was the major innovation of the founder of the distillery, Jean-Baptiste Combier. Obtained by distilling the peels of sweet and bitter oranges with water and sugar without any added flavoring, the recipe and the process have remained unchanged since 1834.</p>
                     </div>
                     <p></p>
                     <div className="OriginalCombier__title__container__left__whitecontainer">

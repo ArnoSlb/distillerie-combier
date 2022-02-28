@@ -144,7 +144,7 @@ const Scene360 = (props) => {
                 console.log("isMobile ", isMobile)
 
                 if (isMobile) {
-                    document.querySelector('.Scene360').style.height = "100vh"
+                    document.querySelector('.Scene360').style.height = "100vh !important"
                 } else {
                     document.querySelector('.Scene360').style.height = "180vh"
                 } 

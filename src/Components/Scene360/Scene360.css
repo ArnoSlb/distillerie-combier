@@ -111,7 +111,7 @@
 
 @media screen and (orientation:portrait) {
     .Scene360{
-        height: 100vh;
+        height: 100vh !important;
     }
 
     .Scene360__intro{
