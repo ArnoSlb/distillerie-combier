@@ -1,4 +1,5 @@
 import React,{ useState, useRef, useEffect } from "react";
+import detectBrowserLanguage from 'detect-browser-language'
 
 import "./Header.css";
 
@@ -8,6 +9,8 @@ import EnglishFlag from "../../assets/english-flag-round-small.png"
 
 
 const Header = (props) => {
+
+
     
     const [lang, setLang] = useState('FR')
     const [langToggle, setLangToggle] = useState(false)
@@ -65,6 +68,14 @@ const Header = (props) => {
         props.func('EN')
     }
 
+    React.useEffect(() => {
+        console.log(detectBrowserLanguage())
+        if((detectBrowserLanguage() != 'fr-FR') && (detectBrowserLanguage() != 'fr')){
+            setLang('EN')
+            props.func('EN')
+        }
+    },)
+    
     return (
         <div className="Header">
             <img className="Header__img" src={CombierLogo} alt="" />

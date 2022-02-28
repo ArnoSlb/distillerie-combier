@@ -43,7 +43,7 @@ function App() {
     setLangSelected(lang)
   }
 
-  console.clear();
+  // console.clear();
 
   return (
     <div className="App">
