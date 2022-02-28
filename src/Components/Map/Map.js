@@ -78,7 +78,7 @@ const Map = (props) => {
         // dynamically set the page height according to video length
         const setPageHeight = () => {
             setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-            console.log('hauteur nécessaire pour lire la video : ' + setHeight.style.height)
+            // console.log('hauteur nécessaire pour lire la video : ' + setHeight.style.height)
 
             // When txt added you can set the setHeight.style.height to 0
             // Otherwise you will have the height x2

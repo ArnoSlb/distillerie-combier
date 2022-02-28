@@ -106,8 +106,7 @@ const OriginalCombier = (props) => {
                     </div>
                     <p></p>
                     <div className="OriginalCombier__title__container__left__whitecontainer">
-                        <p className="OriginalCombier__anim2">À l’oeil scintillant et cristallin au joli gras fluide et léger, L’Original Combier concentre au nez toute la richesse de la fleur d’oranger.</p>
-                        <p className="OriginalCombier__anim2">Il allie la fraîcheur du zeste d’orange amère à la rondeur de l’orange douce pour une finale gourmande.</p>
+                        <p className="OriginalCombier__anim2">À l’oeil scintillant et cristallin au joli gras fluide et léger, L’Original Combier concentre au nez toute la richesse de la fleur d’oranger. En bouche, il allie la fraîcheur du zeste d’orange amère à la rondeur de l’orange douce pour une finale gourmande.</p>
                     </div>
                 </div>
                 <h1 className="OriginalCombier__title">L'Original Combier triple sec</h1>
@@ -122,8 +121,7 @@ const OriginalCombier = (props) => {
                     </div>
                     <p></p>
                     <div className="OriginalCombier__title__container__left__whitecontainer">
-                        <p className="OriginalCombier__anim2">With a sparkling and crystalline eye and a pretty fluid and light fat, L’Original Combier concentrates all the richness of orange blossom on the nose.</p>
-                        <p className="OriginalCombier__anim2">It combines the freshness of bitter orange zest with the roundness of sweet orange for a gourmet finish.</p>
+                        <p className="OriginalCombier__anim2">With a sparkling and crystalline eye and a pretty fluid and light fat, L'Original Combier concentrates all the richness of orange blossom on the nose. On the palate, it combines the freshness of bitter orange zest with the roundness of sweet orange for a gourmet finish.</p>
                     </div>
                 </div>
                 <h1 className="OriginalCombier__title">The Original Combier triple sec</h1>

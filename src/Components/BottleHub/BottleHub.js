@@ -78,7 +78,8 @@ const BottleHub = (props) => {
     const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
     // console.log(scrollTop, clientHeight, scrollHeight, window.pageYOffset)
-    window.pageYOffset
+    
+    console.clear();
     
     return (
         <div className="BottleHub__container">

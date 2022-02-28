@@ -141,9 +141,11 @@ const Scene360 = (props) => {
     
                 document.querySelector('.Scene360Loader').style.display = "none"
 
-                {isMobile ?
+                console.log("isMobile ", isMobile)
+
+                if (isMobile) {
                     document.querySelector('.Scene360').style.height = "100vh"
-                    : 
+                } else {
                     document.querySelector('.Scene360').style.height = "180vh"
                 } 
     

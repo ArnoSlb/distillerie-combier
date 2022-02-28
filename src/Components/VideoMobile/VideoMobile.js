@@ -42,7 +42,7 @@ const VideoMobile = (props) => {
                     <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Click to <br/>start the experience</p>
                 </div>
             }
-            <video className="VideoMobile__file" autobuffer="true" preload="true" playsinline="true" src={video}></video>
+            <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={video}></video>
         </div>  
         
     )

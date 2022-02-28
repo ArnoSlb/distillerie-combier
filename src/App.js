@@ -43,6 +43,8 @@ function App() {
     setLangSelected(lang)
   }
 
+  console.clear();
+
   return (
     <div className="App">
       <Header func={modifySetLangSelected}/>

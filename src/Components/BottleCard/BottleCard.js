@@ -4,9 +4,12 @@ import './BottleCard.css';
 
 import ArrowDown from "../../../src/assets/Bottom_Arrow.png"
 
+import useDeviceDetect from '../../useDeviceDetect';
+
 const BottleCard =(props) => {
 
     // console.log(props)
+    const { isMobile } = useDeviceDetect();
 
     React.useEffect(() => {
 
@@ -81,8 +84,8 @@ const BottleCard =(props) => {
         // let {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
         // console.log(document.documentElement.scrollTop, document.documentElement.clientHeight, document.documentElement.scrollHeight, window.screen.availHeight)
-        console.log('je clique sur cette bouteille :')
-        console.log(e.target.parentNode.parentNode.querySelector('.BottleCard__discover'))
+        // console.log('je clique sur cette bouteille :')
+        // console.log(e.target.parentNode.parentNode.querySelector('.BottleCard__discover'))
 
         BottleHubContainer.childNodes.forEach(card => {
             card.querySelector('.BottleCard__discover').classList.remove('BottleCard__discover--selected');
@@ -90,15 +93,7 @@ const BottleCard =(props) => {
             card.querySelector('.BottleCard__discover').textContent = "Séléctionner"
             :
             card.querySelector('.BottleCard__discover').textContent = "Select"
-        }
-        //     card.classList.remove('BottleCard--selected')
-        //     card.firstChild.firstChild.classList.remove('targetCardTitle--selected')
-        //     card.firstChild.classList.remove('targetCardContainer--selected')
-        //     card.firstChild.querySelector('.BottleCard__description').classList.remove('targetCardDescription--selected')
-        //     card.firstChild.querySelector('.BottleCard__discover').classList.remove('targetCardDiscover--selected')
-        //     card.firstChild.querySelector('.BottleCard__scroll__container').classList.remove('BottleCard__scroll__container--selected')
-        //     card.querySelector('.BottleCard__picture').classList.remove('slide-right-bar')
-        //     console.log(card.firstChild)
+            }
         })
 
         // console.log(targetCard)
@@ -109,24 +104,19 @@ const BottleCard =(props) => {
         : 
         targetCardDiscover.textContent = "Selected"
         }
-        
-        // targetCard.classList.add('BottleCard--selected')
-        // targetCardTitle.classList.add('targetCardTitle--selected')
-        // targetCardContainer.classList.add('targetCardContainer--selected')
-        // targetCardDescription.classList.add('targetCardDescription--selected')
-        // targetCardDiscover.classList.add('targetCardDiscover--selected')
-        // targetCardPicture.classList.add('slide-right-bar')
-        // targetCardScroll.classList.add('BottleCard__scroll__container--selected')
 
-        // if(idBottle == "elixir"){
-        //     document.querySelector('.BottleCard--selected').style.borderColor = "#dc3545"
-        // }else if (idBottle == "meridor") {
-        //     document.querySelector('.BottleCard--selected').style.borderColor = "#74b6ff"
-        // } else if (idBottle == "blanchette"){
-        //     document.querySelector('.BottleCard--selected').style.borderColor = "#adaaa2"
-        // }else {
-        //     document.querySelector('.BottleCard--selected').style.borderColor = "rgb(255, 165, 47)"
-        // }
+        if (isMobile) {
+
+            const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+            
+            const pixelToHub = 11750 +  (clientHeight * 5.23)
+
+            window.scrollTo({
+                top: pixelToHub,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
 
         props.setBottle(idBottle)
     }
