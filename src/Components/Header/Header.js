@@ -84,11 +84,10 @@ const Header = (props) => {
                     {showLang()}
                 </div>
                 {lang=='FR' ? 
-                <div className="Header__container__eshop" onClick={eshopRedirection}>Acheter</div>
+                <div className="Header__container__eshop" onClick={eshopRedirection}>Boutique</div>
                 : 
                 <div className="Header__container__eshop" onClick={eshopRedirection}>Shop</div>
                 }
-                
             </div>
         </div>
     )

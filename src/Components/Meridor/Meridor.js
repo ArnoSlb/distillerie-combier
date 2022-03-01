@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import useDeviceDetect from '../../../src/useDeviceDetect';
+
 import "./Meridor.css";
 
 import MeridorRose from "../../assets/HD-Roses-05881.jpg"
 import MeridorRoses from "../../assets/HD-Roses-05201.jpg"
 import MeridorAffiche from "../../assets/GC189.jpg"
 import MeridorCocktail from "../../assets/Meridor460.jpg"
+import CocktailHand from "../../../src/assets/vintage-hand.svg"
 
 
 const Meridor = (props) => {
@@ -22,7 +25,7 @@ const Meridor = (props) => {
 
             // we can see all the details available
             // console.log(entries)
-            let delay = 1;
+            let delay = 0.6;
 
             entries.forEach(entry => {
 
@@ -50,13 +53,32 @@ const Meridor = (props) => {
         })  
     },[])
 
+    const { isMobile } = useDeviceDetect();
+
+    const homeRedirection = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    const instagramRedirection = () => {
+        window.open('https://www.instagram.com/distilleriecombier/?hl=fr', "_blank") || window.location.replace('https://www.instagram.com/distilleriecombier/?hl=fr');
+    }
+    const eshopRedirection = () => {
+        window.open('https://www.combier.fr/signatures/original-combier/', "_blank") || window.location.replace('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/');
+    }
+    const contactRedirection = () => {
+        window.open('https://www.combier.fr/distillerie/boutique-et-contact/', "_blank") || window.location.replace('https://www.combier.fr/distillerie/boutique-et-contact/');
+    }
+
     const GotoBottleHub = () => {
 
         const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+        console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
 
-        const pixelToHub = 4680 +  (clientHeight * 3.23)
+        const pixelToHub = 11750 +  (clientHeight * 3.23)
 
         window.scrollTo({
             top: pixelToHub,
@@ -65,8 +87,14 @@ const Meridor = (props) => {
         });
     }
 
+
     return (
         <div className="Meridor">
+            <div className="Meridor_bg_container">
+                <div className="Meridor_bg_sticky">
+                    <img src={MeridorRose} alt="" />
+                </div>
+            </div>
             <div className="Meridor__First">
                 <div className="Meridor__empty__margin"></div>
                 <div className="Meridor__First__text Meridor__anim">
@@ -158,30 +186,46 @@ const Meridor = (props) => {
                     <div className="Meridor__First__empty"></div>
                 </div>
             </div>
-            <div className="Meridor">
-                <div className="Meridor__container">
-                    <div className="Meridor__container__left">
-                        <img className="Meridor__container__left__img" src={MeridorCocktail} alt="" />
-                    </div>
-                    {props.langSelected == 'FR' ?
-                    <div className="Meridor__container__right">
-                        <h2 className="Meridor__container__right__title">Savourez-le ...</h2>
-                        <p className="Meridor__container__right__description">au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
-                    </div>
-                    :
-                    <div className = "Meridor__container__right">
-                        <h2 className = "Meridor__container__right__title"> Savor it ... </h2>
-                        <p className = "Meridor__container__right__description"> all the qualities of Elixir Combier at best, serve it at the end of a meal, chilled or on ice, where it will reveal all its complexity. For the more adventurous, make good use of it to revisit and reinvigorate great cocktail classics: Crusta, Mule, Swizzle, Sazerac ... </p>
-                    </div>
-                    }
-                    
+            <div className="OriginalCocktail">
+            <div className="OriginalCocktail__container">
+                <div className="OriginalCocktail__container__left">
+                    <img className="OriginalCocktail__container__left__img" src={MeridorCocktail} alt="" />
                 </div>
                 {props.langSelected == 'FR' ?
-                <div className="Meridor__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
+                <div className="OriginalCocktail__container__right">
+                    <h2 className="OriginalCocktail__container__right__title">Savourez-le...</h2>
+                    <p className="OriginalCocktail__container__right__description">pur pour terminer un repas en douceur ou dans un des grands classiques du cocktail où l’Original Combier apporte toute sa vivacité : la Margarita, le Long Island, le Cosmopolitan, le Sidecar. La liste est longue. En cuisine, il apporte la note gastronomique aux préparations et aux flambages : soufflés, génoises, confitures, salades de fruits ou les fameuses crêpes Suzette.</p>
+                    <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
+                        {/* <img src={CocktailHand} alt="" /> */}
+                        <p >Découvrir un autre produit de la Distillerie </p>
+                        <img src={CocktailHand} alt="" />
+                    </div>
+                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={contactRedirection}>
+                        <p >Recette et Boutique</p>
+                    </div>
+                </div>
                 :
-                <div className = "Meridor__footer" onClick = {GotoBottleHub}> Discover another product from the Distillerie Combier  </div>
-                }
+                <div className="OriginalCocktail__container__right">
+                    <h2 className="OriginalCocktail__container__right__title">Savor it ...</h2>
+                    <p className="OriginalCocktail__container__right__description"> pure to end a meal smoothly or in one of the great classics of the cocktail where the Original Combier brings all its liveliness: the Margarita, the Long Island, the Cosmopolitan, the Sidecar. The list is long. In the kitchen, he brings a gastronomic note to preparations and flambages: soufflés, sponge cake, jams, fruit salads or the famous crêpes Suzette.</p>
+                    <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
+                        {/* <img src={CocktailHand} alt="" /> */}
+                        <p> Discover another product from the Distillery </p>
+                        <img src={CocktailHand} alt="" />
+                    </div>
+                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={contactRedirection}>
+                        <p>Recipe and Shop</p>
+                    </div>
+                </div>
+                }            
             </div>
+            <div className="OriginalCocktail__footer">
+                <div onClick={homeRedirection}>Accueil</div>
+                <div onClick={eshopRedirection}>E-shop</div>
+                <div onClick={instagramRedirection}>Instagram</div>
+                <div onClick={contactRedirection}>Contact</div>
+            </div>         
+        </div>
         </div>
     )
 }

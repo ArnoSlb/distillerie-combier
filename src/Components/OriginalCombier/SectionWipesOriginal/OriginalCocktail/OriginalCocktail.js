@@ -67,7 +67,7 @@ const OriginalCocktail = (props) => {
                         <p >Découvrir un autre produit de la Distillerie </p>
                         <img src={CocktailHand} alt="" />
                     </div>
-                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={contactRedirection}>
+                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
                         <p >Recette et Boutique</p>
                     </div>
                 </div>
@@ -80,17 +80,17 @@ const OriginalCocktail = (props) => {
                         <p> Discover another product from the Distillery </p>
                         <img src={CocktailHand} alt="" />
                     </div>
-                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={contactRedirection}>
+                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
                         <p>Recipe and Shop</p>
                     </div>
                 </div>
                 }            
             </div>
             <div className="OriginalCocktail__footer">
-                <div onClick={homeRedirection}>Accueil</div>
-                <div onClick={eshopRedirection}>E-shop</div>
-                <div onClick={instagramRedirection}>Instagram</div>
-                <div onClick={contactRedirection}>Contact</div>
+                <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Accueil</div>
+                <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>E-shop</div>
+                <div className="OriginalCocktail__footer__link" onClick={instagramRedirection}>Instagram</div>
+                <div className="OriginalCocktail__footer__link" onClick={contactRedirection}>Contact</div>
             </div>         
         </div>
     )

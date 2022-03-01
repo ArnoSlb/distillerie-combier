@@ -83,9 +83,9 @@ const OriginalManufacturing2 = (props) => {
             <div className="OriginalManufacturing2__1 Original__manufacturing__anim">
                 <img className="polaroid" src={ImgOriginalManufacturing1} alt="" />
                 {props.langSelected == 'FR' ? 
-                <p>1. Les écorces sont réhydratées dans l'eau durant 24h pour leur rendre leur forme initiale. Autrefois transportées entières par la Loire puis épluchées à Saumur, la distillerie reçoit aujourd’hui les écorces préalablement séchées sous le soleil haïtien. Elles sont réhydratées dans l’eau durant 24h pour leur rendre leur forme initiale.</p>
+                <p>1. Autrefois transportées entières par la Loire puis épluchées à Saumur, la distillerie reçoit aujourd’hui les écorces préalablement séchées sous le soleil haïtien. Elles sont réhydratées dans l’eau durant 24h pour leur rendre leur forme initiale.</p>
                 :
-                <p>1. The peels are rehydrated in water for 24 hours to return them to their original shape. Formerly transported whole by the Loire then peeled in Saumur, the distillery now receives the bark previously dried under the Haitian sun. They are rehydrated in water for 24 hours to return them to their original shape.</p>
+                <p>1. Formerly transported whole by the Loire then peeled in Saumur, the distillery now receives the bark previously dried under the Haitian sun. They are rehydrated in water for 24 hours to return them to their original shape.</p>
                 }       
             </div>
             <div className="OriginalManufacturing2__2 Original__manufacturing__anim">

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import './Map.css'
-import video from "../../assets/Intro_map2.mp4"
+import video from "../../assets/Intro.mp4"
 import LogoCombierTransparent from "../../assets/Combier_logo_transparent.png";
 import SalledesAlembics from "../../assets/salle_des_alembic.jpg";
 import ArrowDown from "../../assets/Bottom_Arrow.png"

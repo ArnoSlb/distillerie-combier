@@ -10,7 +10,7 @@
 }
 
 .OriginalCocktail__container__left__img{
-    height: 100vh;
+    height: 100%;
 }
 
 .OriginalCocktail__container__right{
@@ -79,6 +79,10 @@
 }
 
 .OriginalCoktail__container__right__linkRecipe:hover{
+    cursor: pointer;
+}
+
+.OriginalCocktail__footer__link{
     cursor: pointer;
 }
 
