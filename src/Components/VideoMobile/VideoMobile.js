@@ -20,6 +20,18 @@ const VideoMobile = (props) => {
         const videoFile = document.querySelector('.VideoMobile__file');
         videoFile.play()
     }
+
+    const VideoOnEnd = () => {
+        document.querySelector('.VideoMobile__End').style.display = "flex"
+    }
+
+    const VideoPlayOnDemand = () => {
+        
+        const videoFile = document.querySelector('.VideoMobile__file');
+        videoFile.play()
+
+        document.querySelector('.VideoMobile__End').style.display = "none"
+    }
     
 
     return(
@@ -44,11 +56,23 @@ const VideoMobile = (props) => {
                 </div>
             }
              {props.langSelected == 'FR' ? 
-             <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={video}></video>
+             <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={video} onEnded={VideoOnEnd}></video>
              :
-             <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={videoEn}></video>
+             <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={videoEn} onEnded={VideoOnEnd}></video>
              }
-            
+            {props.langSelected == 'FR' ? 
+            <div className="VideoMobile__End">
+                <p className="VideoMobile__End__RepeatVideo" onClick={VideoPlayOnDemand}>Revoir la vidéo</p>
+                <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir la suite</p>
+                <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+            </div>
+            :
+            <div className="VideoMobile__End">
+                <p className="VideoMobile__End__RepeatVideo" onClick={VideoPlayOnDemand}>Replay video</p>
+                <p className="BottleBar__scroll__description">Scroll down to find out more</p>
+                <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+            </div>
+            }
         </div>  
         
     )
