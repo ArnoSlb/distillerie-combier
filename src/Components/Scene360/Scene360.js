@@ -176,7 +176,6 @@ const Scene360 = (props) => {
                 <div className="Scene360__intro">
                     <p>Vous arrivez dans la Salle des Alambics, à visiter en 360 °</p>
                     <p>Déplacez vous en orientant votre téléphone ou en utilisant votre souris sur ordinateur</p>
-                    <p>Cherchez et visez l'icone avec un oeil pour activer les animations</p>
                     <img src={Logo360Sphere} alt="" />
                     <div id="button_scene_intro" onClick={exitSceneIntro}>OK J'ai compris</div>
                 </div>
@@ -184,13 +183,14 @@ const Scene360 = (props) => {
                 <div className="Scene360__intro">
                     <p>You arrive in the Alambics Room, to visit in 360 °</p>
                     <p>Move around by pointing your phone or using your mouse on the computer</p>
-                    <p>Find and aim the icon with an eye to activate animations</p>
                     <img src={Logo360Sphere} alt="" />
                     <div id="button_scene_intro" onClick={exitSceneIntro}>OK Understood</div>
                 </div>
             }
                 <img src={Logo360Sphere} alt="" />
-                {isMobile && ( <div className="Scene360__ScrollGrip"></div>)}
+                {isMobile && ( <div className="Scene360__ScrollGrip">
+                    <p>SCROLL ZONE</p>
+                </div>)}
                 <div className="Scene360__popin" 
                 onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}
                 ></div>

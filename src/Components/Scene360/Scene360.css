@@ -63,11 +63,15 @@
 
 .Scene360__ScrollGrip{
     position: absolute;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.26);
     border-top: 2px dashed white;
     width: 100vw;
     height: 18vh;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .Scene360__intro{
@@ -128,12 +132,12 @@
 
     .Scene360__popin{
         width: 85vw;
-        bottom: 4%;
+        bottom: 10%;
     }
 
     .Scene360__popin__plus{
         width: 85vw;
-        bottom: 4%;
+        bottom: 10%;
     }
 }
 

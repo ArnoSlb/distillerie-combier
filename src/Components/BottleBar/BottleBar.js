@@ -3,6 +3,7 @@ import React from "react";
 import "./BottleBar.css"
 
 import ArrowDown from "../../../src/assets/Bottom_Arrow.png"
+import ArrowUp from "../../../src/assets/Top_Arrow.png"
 
 const BottleBar = (props) => {
 
@@ -50,6 +51,8 @@ const BottleBar = (props) => {
                     :
                     <div className=" BottleBar__scroll__container">
                         <p className="BottleBar__scroll__description">À découvrir à partir de {props.data[BottleIndex].disponible}</p>
+                        <p className="BottleBar__scroll__description">Scrollez vers le haut pour découvrir une autre bouteille</p>
+                        <img className="BottleBar__scroll__img rotate slide-top" src={ArrowUp} alt="" />
                     </div>
                     }    
                 </div>
@@ -65,6 +68,8 @@ const BottleBar = (props) => {
                     :
                     <div className=" BottleBar__scroll__container">
                         <p className="BottleBar__scroll__description">Available in {props.data[BottleIndex].disponibleEn}</p>
+                        <p className="BottleBar__scroll__description">Scroll up to see an other bottle</p>
+                        <img className="BottleBar__scroll__img rotate slide-top" src={ArrowUp} alt="" />
                     </div>
                     }    
                 </div>

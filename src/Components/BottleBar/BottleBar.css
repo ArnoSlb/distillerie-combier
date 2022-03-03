@@ -31,6 +31,11 @@
   width: 30px;
 }
 
+.rotate {
+  transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+}
+
 .BottleBar__title{
   color: rgb(19, 23, 29);
   font-size: 2.3vh;
