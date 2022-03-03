@@ -63,10 +63,10 @@
 
 .Scene360__ScrollGrip{
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.26);
-    border-top: 2px dashed white;
+    /* background-color: rgba(255, 255, 255, 0.26); */
+    /* border-top: 2px dashed white; */
     width: 100vw;
-    height: 18vh;
+    height: 100vh;
     bottom: 0;
     display: flex;
     align-items: center;

@@ -189,7 +189,7 @@ const Scene360 = (props) => {
             }
                 <img src={Logo360Sphere} alt="" />
                 {isMobile && ( <div className="Scene360__ScrollGrip">
-                    <p>SCROLL ZONE</p>
+                    {/* <p>SCROLL ZONE</p> */}
                 </div>)}
                 <div className="Scene360__popin" 
                 onClick={() => document.querySelector('.Scene360__popin').style.display = "none"}

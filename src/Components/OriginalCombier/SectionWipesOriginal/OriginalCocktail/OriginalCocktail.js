@@ -87,11 +87,24 @@ const OriginalCocktail = (props) => {
                 }            
             </div>
             <div className="OriginalCocktail__footer">
-                <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Accueil</div>
-                <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>E-shop</div>
-                <div className="OriginalCocktail__footer__link" onClick={instagramRedirection}>Instagram</div>
-                <div className="OriginalCocktail__footer__link" onClick={contactRedirection}>Contact</div>
-            </div>         
+                <div className="OriginalCocktail__footer__links">
+                    {props.langSelected == 'FR' ?
+                    <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Accueil</div>
+                    :
+                    <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Home</div>
+                    }
+                    <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>E-shop</div>
+                    <div className="OriginalCocktail__footer__link" onClick={instagramRedirection}>Instagram</div>
+                    <div className="OriginalCocktail__footer__link" onClick={contactRedirection}>Contact</div>
+                </div>
+                <div className="OriginalCocktail__footer__signature">
+                {props.langSelected == 'FR' ?
+                    <p>© 2022 - Distillé avec ♥ par Combier et Blinkl</p>
+                :
+                    <p>© 2022 - Distilled with ♥ by Combier and Blinkl</p>
+                } 
+                </div>
+            </div>  
         </div>
     )
 }
