@@ -1,4 +1,5 @@
 import React from "react";
+import useDeviceDetect from '../../../src/useDeviceDetect';
 
 import "./BottleBar.css"
 
@@ -9,6 +10,7 @@ const BottleBar = (props) => {
 
     // console.log(props.bottleSelected)
     // console.log(props.data)
+    const { isMobile } = useDeviceDetect();
 
     let BottleIndex 
 
@@ -45,14 +47,30 @@ const BottleBar = (props) => {
                     <p className="BottleCard__description targetCardDescription--selected">{props.data[BottleIndex].description}</p>
                     {props.bottleSelected == 'original' ?
                     <div className=" BottleBar__scroll__container">
+                        {isMobile == true ?
                         <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
+                        :
+                        <p></p>
+                        }
+                        {isMobile == true ?
                         <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+                        :
+                        <p></p>
+                        }
                     </div>
                     :
                     <div className=" BottleBar__scroll__container">
                         <p className="BottleBar__scroll__description">À découvrir à partir de {props.data[BottleIndex].disponible}</p>
+                        {isMobile == true ?
                         <p className="BottleBar__scroll__description">Scrollez vers le haut pour découvrir une autre bouteille</p>
+                        :
+                        <p></p>
+                        }
+                        {isMobile == true ?
                         <img className="BottleBar__scroll__img rotate slide-top" src={ArrowUp} alt="" />
+                        :
+                        <p></p>
+                        }
                     </div>
                     }    
                 </div>
