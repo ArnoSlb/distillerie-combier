@@ -21,11 +21,15 @@ const OriginalCocktail = (props) => {
     const { isMobile } = useDeviceDetect();
 
     const homeRedirection = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
+        if(isMobile == true){
+            location.reload(); 
+        } else {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
     }
     const instagramRedirection = () => {
         window.open('https://www.instagram.com/distilleriecombier/?hl=fr', "_blank") || window.location.replace('https://www.instagram.com/distilleriecombier/?hl=fr');
