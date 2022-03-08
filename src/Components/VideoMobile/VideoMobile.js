@@ -43,7 +43,14 @@ const VideoMobile = (props) => {
                         <div class="coin__back"></div>
                     </div>
                     <p className="Map_coin__">Bienvenue à la Distillerie Combier pour une visite immersive pleine de surprises. </p>
-                    <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Cliquer pour <br/> commencer l’expérience </p>
+                    <div className="VideoMobile__btn_start_exp_container_container">
+                        <p className="Map_coin__ margin_btm">Avez-vous plus de 18 Ans ?</p>
+                        <div className="VideoMobile__btn_start_exp_container">
+                            <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Oui</p>
+                            <p className="VideoMobile__btn_start_exp">Non</p>
+                        </div>
+                    </div>     
+                    <p className="Warning_alcool_mobile">L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION.</p>
                 </div>
                 :
                 <div className="VideoMobile__Map_coin">
@@ -52,7 +59,14 @@ const VideoMobile = (props) => {
                         <div class="coin__back"></div>
                     </div>
                     <p className="Map_coin__">Welcome to the Distillerie Combier  for an immersive visit full of surprises. </p>
-                    <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Click to <br/>start the experience</p>
+                    <div className="VideoMobile__btn_start_exp_container_container">
+                        <p className="Map_coin__ margin_btm">Are you over 18 ?</p>
+                        <div className="VideoMobile__btn_start_exp_container">
+                            <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Yes</p>
+                            <p className="VideoMobile__btn_start_exp">No</p>
+                        </div>
+                    </div>     
+                    <p className="Warning_alcool_mobile">ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION.</p>
                 </div>
             }
              {props.langSelected == 'FR' ? 

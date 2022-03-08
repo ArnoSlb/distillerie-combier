@@ -72,7 +72,7 @@ const OriginalCocktail = (props) => {
                         <img src={CocktailHand} alt="" />
                     </div>
                     <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
-                        <p >Recette et Boutique</p>
+                        <p >Recettes et Boutique</p>
                     </div>
                 </div>
                 :
@@ -85,7 +85,7 @@ const OriginalCocktail = (props) => {
                         <img src={CocktailHand} alt="" />
                     </div>
                     <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
-                        <p>Recipe and Shop</p>
+                        <p>Recipes and Shop</p>
                     </div>
                 </div>
                 }            
@@ -97,17 +97,29 @@ const OriginalCocktail = (props) => {
                     :
                     <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Home</div>
                     }
+                    {props.langSelected == 'FR' ?
+                    <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>Boutique</div>
+                    :
                     <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>E-shop</div>
+                    }
+                    
                     <div className="OriginalCocktail__footer__link" onClick={instagramRedirection}>Instagram</div>
                     <div className="OriginalCocktail__footer__link" onClick={contactRedirection}>Contact</div>
                 </div>
-                <div className="OriginalCocktail__footer__signature">
+                
                 {props.langSelected == 'FR' ?
-                    <p>© 2022 - Distillé avec ♥ par Combier et Blinkl</p>
+                <div className="OriginalCocktail__footer__signature">
+                    <p>mentions légales</p>
+                    <p>L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION</p>
+                    <p>© 2022 - Distillé avec amour par Combier et Blinkl</p>
+                </div> 
                 :
-                    <p>© 2022 - Distilled with ♥ by Combier and Blinkl</p>
+                <div className="OriginalCocktail__footer__signature">
+                    <p>Legal Notice</p>
+                    <p>ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION</p>
+                    <p>© 2022 - Distilled with love by Combier and Blinkl</p>
+                </div>     
                 } 
-                </div>
             </div>  
         </div>
     )

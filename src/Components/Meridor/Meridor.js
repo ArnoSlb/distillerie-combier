@@ -34,7 +34,7 @@ const Meridor = (props) => {
                 if (entry.isIntersecting){
                     // console.log(entry)
                     // console.log(delay)
-                    entry.target.classList.add('slide-top'),
+                    entry.target.classList.add('slide-top-Meridor'),
                     entry.target.style.animationDelay = delay + "s"
                 } else {
                     // if we want the animation to play over and over again

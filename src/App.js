@@ -43,6 +43,11 @@ function App() {
     setLangSelected(lang)
   }
 
+  window.scrollTo({
+    top: 0,
+    left: 0,
+});
+
   // console.clear();
 
   return (
