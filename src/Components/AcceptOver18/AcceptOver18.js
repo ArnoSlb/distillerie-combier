@@ -13,7 +13,7 @@ const AcceptOver18 = (props) => {
 
         disablePageScroll();
         
-    })
+    },[])
 
     const startDesktopExp = () => {
         clearQueueScrollLocks();
