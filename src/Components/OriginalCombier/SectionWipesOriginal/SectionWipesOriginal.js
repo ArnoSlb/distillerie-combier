@@ -2,6 +2,7 @@
 import React from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
+import { disablePageScroll, enablePageScroll, clearQueueScrollLocks } from 'scroll-lock';
 
 import OriginalManufacturing from './OriginalManufacturing/OriginalManufacturing';
 import OriginalManufacturing2 from './OriginalManufacturing2/OriginalManufacturing2';
@@ -11,6 +12,10 @@ import OriginalCocktail from './OriginalCocktail/OriginalCocktail';
 import "./SectionWipesOriginal.css"
 
 const SectionWipesOriginal = (props) => {
+
+  clearQueueScrollLocks();
+  enablePageScroll();
+  
   return (
     <div className="SectionWipes2Styled">
     <Controller>

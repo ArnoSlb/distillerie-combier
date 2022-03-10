@@ -1,0 +1,63 @@
+.AcceptOver18__container{
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.486);
+    backdrop-filter: blur(50px);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    font-weight: bold;
+}
+
+.Map_18__container{
+    text-align: center;
+    width: auto;
+    background-color: white;
+    padding: 40px;
+    color: black;
+    border: 2px solid #c02d23;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .Map_18__container__logo{
+      max-width: 40vw;
+  }
+
+  .Map_18__container__accept{
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    flex-direction: column;
+    padding-left: 30px;
+    width: 20vw;
+    margin-top: 2vh;
+  }
+  
+  .Map_18__container__btn_start_exp_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .Map_18__container__btn_start_exp{
+    background-color: white;
+    border-radius: 8px;
+    background-color: #e33c2f;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    width: 70px;
+  }
+  
+  .Map_18__container__btn_start_exp:hover{
+    cursor: pointer;
+  }

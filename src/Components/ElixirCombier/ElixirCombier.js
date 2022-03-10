@@ -90,10 +90,10 @@ const ElixirCombier = (props) => {
 
             const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-            console.log(scrollTop, clientHeight, scrollHeight)
+            // console.log(scrollTop, clientHeight, scrollHeight)
 
                 if( scrollTop + clientHeight == scrollHeight){
-                    console.log("je passe en scroll horizontal")
+                    // console.log("je passe en scroll horizontal")
                     document.querySelector('.ElixirCombier').style.overflowX = "hidden";
                 } else {
                     document.querySelector('.ElixirCombier').style.overflowX = "initial";

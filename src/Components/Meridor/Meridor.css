@@ -72,7 +72,7 @@
 
 .Meridor__First__text__left__title{
     font-size: 9vh;
-    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center fixed; 
+    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -86,7 +86,7 @@
 
 .Meridor__Second__text__left__title{
     font-size: 8vh;
-    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center fixed; 
+    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -72,32 +72,6 @@
   transform: translateZ(1px) rotateY(0);
 }
 
-.Map_18__container{
-  text-align: center;
-  width: 300px;
-}
-
-.Map_18__container__btn_start_exp_container{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.Map_18__container__btn_start_exp{
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #c02d23;
-  color: #c02d23 !important;
-  padding: 10px;
-  font-weight: bold;
-  font-size: 20px;
-  width: 70px;
-}
-
-.Map_18__container__btn_start_exp:hover{
-  cursor: pointer;
-}
-
 .Map__container {
     z-index: -1;
     position: relative;
@@ -139,7 +113,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  display: none;
 }
 
 /* ALL YOUR ELEMENTS COMBINE MUST BE EQUAL TO setHeight.style.height */

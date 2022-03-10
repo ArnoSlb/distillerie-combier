@@ -50,12 +50,12 @@ const BottleBar = (props) => {
                         {isMobile == true ?
                         <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
                         :
-                        <p></p>
+                        <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
                         }
                         {isMobile == true ?
                         <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
                         :
-                        <p></p>
+                        <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
                         }
                     </div>
                     :

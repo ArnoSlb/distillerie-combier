@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import { disablePageScroll, enablePageScroll, clearQueueScrollLocks } from 'scroll-lock';
 
-import './Map.css'
-import video from "../../assets/Intro.mp4"
+import './Map.css';
+import video from "../../assets/Intro.mp4";
 import LogoCombierTransparent from "../../assets/Combier_logo_transparent.png";
 import SalledesAlembics from "../../assets/salle_des_alembic.jpg";
-import ArrowDown from "../../assets/Bottom_Arrow.png"
-import EmblemeCoin from "../../assets/Embleme_coin.png"
+import ArrowDown from "../../assets/Bottom_Arrow.png";
+import EmblemeCoin from "../../assets/Embleme_coin.png";
 
 
 const Map = (props) => {
@@ -105,7 +105,11 @@ const Map = (props) => {
         //When metadata are loaded, dynamically set the page height according to video length
         vid.addEventListener('loadedmetadata', setPageHeight);
        
-        disablePageScroll()
+        const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+        
+
+        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
 
         // cleanup this component
         // You need to remove the event listener when the component is unmounted.
@@ -221,18 +225,18 @@ const Map = (props) => {
                     <div class="coin__back"></div>
                 </div>
                 <p className="Map_coin__">Bienvenue à la Distillerie Combier pour une visite immersive pleine de surprises. </p>
-                <div className="Map_18__container">
+                {/* <div className="Map_18__container">
                         <p className="Map_coin__ margin_btm">Avez-vous plus de 18 Ans ?</p>
                         <div className="Map_18__container__btn_start_exp_container">
                             <p className="Map_18__container__btn_start_exp" onClick={startDesktopExp}>Oui</p>
                             <p className="Map_18__container__btn_start_exp">Non</p>
                         </div>
-                </div>    
+                </div>     */}
                 <div className='Map__scrollToStart__container'>
                     <p>Scroller pour commencer l’expérience. </p>
                     <img className="Map_coin__arrow" src={ArrowDown} alt="" />
                 </div> 
-                <p className="Warning_alcool">L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION</p>
+                {/* <p className="Warning_alcool">L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION</p> */}
             </div>
             :
             <div className="Map_coin">
@@ -241,18 +245,18 @@ const Map = (props) => {
                     <div class="coin__back"></div>
                 </div>
                 <p className="Map_coin__">Welcome to the Distillerie Combier  for an immersive visit full of surprises. </p>
-                <div className="Map_18__container">
+                {/* <div className="Map_18__container">
                         <p className="Map_coin__ margin_btm">Are you over 18 ?</p>
                         <div className="Map_18__container__btn_start_exp_container">
                             <p className="Map_18__container__btn_start_exp" onClick={startDesktopExp}>Yes</p>
                             <p className="Map_18__container__btn_start_exp">No</p>
                         </div>
-                </div>  
+                </div>   */}
                 <div className='Map__scrollToStart__container'>
                     <p>Scroll to start </p>
                     <img className="Map_coin__arrow" src={ArrowDown} alt="" />
                 </div>
-                <p className="Warning_alcool">ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION</p>
+                {/* <p className="Warning_alcool">ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION</p> */}
             </div>
             }
             <video id="v0" class="v0" tabIndex="0" autobuffer="true" preload="true" src={video}></video>

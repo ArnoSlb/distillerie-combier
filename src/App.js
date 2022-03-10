@@ -15,6 +15,9 @@ import Empty from './Components/Empty/Empty';
 import Scene360Loader from './Components/Scene360_Loader/Scene360Loader';
 import BottleHub from './Components/BottleHub/BottleHub';
 import Header from './Components/Header/Header';
+import AcceptOver18 from './Components/AcceptOver18/AcceptOver18';
+
+import { disablePageScroll, enablePageScroll, clearQueueScrollLocks } from 'scroll-lock';
 
 import './App.css';
 
@@ -43,16 +46,22 @@ function App() {
     setLangSelected(lang)
   }
 
-  window.scrollTo({
-    top: 0,
-    left: 0,
-});
+  const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+  // console.log(scrollTop, clientHeight, scrollHeight, document.documentElement, window.pageYOffset)
+
+  // window.scrollTo({
+  //   top: 0,
+  //   left: 0,
+  // });
 
   // console.clear();
 
   return (
     <div className="App">
       <Header func={modifySetLangSelected}/>
+
+      {!isMobile && <AcceptOver18 langSelected={langSelected}/>}
 
       {isMobile == true ?
       <VideoMobile langSelected={langSelected}/>

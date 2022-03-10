@@ -76,7 +76,7 @@ const Meridor = (props) => {
 
         const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-        console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
 
         const pixelToHub = 11750 +  (clientHeight * 3.23)
 
@@ -194,7 +194,8 @@ const Meridor = (props) => {
                 {props.langSelected == 'FR' ?
                 <div className="OriginalCocktail__container__right">
                     <h2 className="OriginalCocktail__container__right__title">Savourez-le...</h2>
-                    <p className="OriginalCocktail__container__right__description">pur pour terminer un repas en douceur ou dans un des grands classiques du cocktail où l’Original Combier apporte toute sa vivacité : la Margarita, le Long Island, le Cosmopolitan, le Sidecar. La liste est longue. En cuisine, il apporte la note gastronomique aux préparations et aux flambages : soufflés, génoises, confitures, salades de fruits ou les fameuses crêpes Suzette.</p>
+                    <p className="OriginalCocktail__container__right__description">Évocateur des bords de Loire et de ses jardins parfumés, le Gin Meridor se déguste dans des cocktails classiques comme le White Lady, le Corpse Reviver,
+                    ou des créations maison comme Le Jardin Secret, où fleurs de sureau et roses apportent une délicate note de litchi.</p>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p >Découvrir un autre produit de la Distillerie </p>
@@ -207,7 +208,8 @@ const Meridor = (props) => {
                 :
                 <div className="OriginalCocktail__container__right">
                     <h2 className="OriginalCocktail__container__right__title">Savor it ...</h2>
-                    <p className="OriginalCocktail__container__right__description"> pure to end a meal smoothly or in one of the great classics of the cocktail where the Original Combier brings all its liveliness: the Margarita, the Long Island, the Cosmopolitan, the Sidecar. The list is long. In the kitchen, he brings a gastronomic note to preparations and flambages: soufflés, sponge cake, jams, fruit salads or the famous crêpes Suzette.</p>
+                    <p className="OriginalCocktail__container__right__description"> Evocative of the banks of the Loire and its fragrant gardens, Gin Meridor can be enjoyed in classic cocktails such as the White Lady, the Corpse Reviver,
+                    or in-house creations like Le Jardin Secret, where elderflowers and roses bring a delicate note of lychee.</p>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p> Discover another product from the Distillery </p>

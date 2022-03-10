@@ -69,7 +69,7 @@ const Header = (props) => {
     }
 
     React.useEffect(() => {
-        console.log(detectBrowserLanguage())
+        // console.log(detectBrowserLanguage())
         if((detectBrowserLanguage() != 'fr-FR') && (detectBrowserLanguage() != 'fr')){
             setLang('EN')
             props.func('EN')
