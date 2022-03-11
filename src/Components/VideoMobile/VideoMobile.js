@@ -2,6 +2,7 @@ import React from "react";
 import video from "../../assets/IntroM2.mp4"
 import videoEn from "../../assets/IntroM2En.mp4"
 import ArrowDown from "../../assets/Bottom_Arrow.png"
+import CombierLogo from "../../assets/Combier_Distil_P179.png"
 
 import './VideoMobile.css'
 
@@ -15,7 +16,7 @@ const VideoMobile = (props) => {
         document.querySelector('.App').style.maxHeight = "inherit"
         document.querySelector('.App').style.overflow = "inherit"
         document.querySelector('.App').style.overflowX = "hidden"
-        document.querySelector('.VideoMobile__Map_coin').style.display = "none"
+        document.querySelector('.AcceptOver18__container').style.display = "none"
 
         const videoFile = document.querySelector('.VideoMobile__file');
         videoFile.play()
@@ -36,39 +37,45 @@ const VideoMobile = (props) => {
 
     return(
         <div className="VideoMobile">
-            {props.langSelected == 'FR' ? 
-                <div className="VideoMobile__Map_coin">
-                    <div class="coin">
-                        <div class="coin__front"></div>
-                        <div class="coin__back"></div>
-                    </div>
-                    <p className="Map_coin__">Bienvenue à la Distillerie Combier pour une visite immersive pleine de surprises. </p>
-                    <div className="VideoMobile__btn_start_exp_container_container">
-                        <p className="Map_coin__ margin_btm">Avez-vous plus de 18 Ans ?</p>
-                        <div className="VideoMobile__btn_start_exp_container">
-                            <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Oui</p>
-                            <p className="VideoMobile__btn_start_exp">Non</p>
+            <div className="AcceptOver18__container">
+                {props.langSelected == 'FR' ?
+                    <div className="Map_18__container Map_18__container--mobile">
+                        <img className="Map_18__container__logo Map_18__container__logo--mobile" src={CombierLogo} alt="" />
+                        <div className="Map_18__container__accept Map_18__container__accept--mobile">
+                            <p className="Map_coin__ ">Pour profiter de l'experience, vous devez avoir l'âge requis*.</p>
+                            <div className="Map_18__container__btn_start_exp_container Map_18__container__btn_start_exp_container--mobile">
+                                <div id="over18__validate"className="Map_18__container__btn_start_exp Map_18__container__btn_start_exp--mobile" onClick={VideoMobileExp}>
+                                    <p>Je suis majeur</p>
+                                    <p className="thin">Je poursuis l'expérience</p>
+                                </div>
+                                <div className="Map_18__container__btn_start_exp whitebtn">
+                                    <p>Je n'ai pas l'âge requis</p>
+                                    <p className="thin">Je ne poursuis pas l'expérience</p>
+                                </div>
+                            </div>
+                            <p className="rules_country">*Voir la légilsation en vigueur dans votre pays de résidence</p>
                         </div>
-                    </div>     
-                    <p className="Warning_alcool_mobile">L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION.</p>
-                </div>
+                    </div>   
                 :
-                <div className="VideoMobile__Map_coin">
-                    <div class="coin">
-                        <div class="coin__front"></div>
-                        <div class="coin__back"></div>
-                    </div>
-                    <p className="Map_coin__">Welcome to the Distillerie Combier  for an immersive visit full of surprises. </p>
-                    <div className="VideoMobile__btn_start_exp_container_container">
-                        <p className="Map_coin__ margin_btm">Are you over 18 ?</p>
-                        <div className="VideoMobile__btn_start_exp_container">
-                            <p className="VideoMobile__btn_start_exp" onClick={VideoMobileExp}>Yes</p>
-                            <p className="VideoMobile__btn_start_exp">No</p>
+                    <div className="Map_18__container Map_18__container--mobile">
+                        <img className="Map_18__container__logo Map_18__container__logo--mobile" src={CombierLogo} alt="" />
+                        <div className="Map_18__container__accept Map_18__container__accept--mobile">
+                            <p className="Map_coin__ ">To enter the experience, you must be of the required age*.</p>
+                            <div className="Map_18__container__btn_start_exp_container Map_18__container__btn_start_exp_container--mobile">
+                                <div id="over18__validate"className="Map_18__container__btn_start_exp Map_18__container__btn_start_exp--mobile" onClick={VideoMobileExp}>
+                                    <p>I am of legal age</p>
+                                    <p className="thin">I enter the experience</p>
+                                </div>
+                                <div className="Map_18__container__btn_start_exp whitebtn">
+                                    <p>I am not of legal age</p>
+                                    <p className="thin">I do not enter the experience</p>
+                                </div>
+                            </div>
+                            <p className="rules_country">*See the legislation in force in your country of residence</p>
                         </div>
-                    </div>     
-                    <p className="Warning_alcool_mobile">ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION.</p>
-                </div>
-            }
+                    </div>   
+                }       
+            </div> 
              {props.langSelected == 'FR' ? 
              <video className="VideoMobile__file" autobuffer="true" preload="true" playsInline={true} src={video} onEnded={VideoOnEnd}></video>
              :
