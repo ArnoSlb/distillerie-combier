@@ -2,6 +2,7 @@ import React, { useEffect, useState} from "react";
 
 const useIntersectionObserver = (reference) => {
     const [isVisible, setIsVisible] = useState(false)
+    const pathUrl = window.location.pathname
 
     useEffect(() => {
         const handleIntersect = (entries, observer) => {
@@ -15,8 +16,10 @@ const useIntersectionObserver = (reference) => {
         //Create the observer, passing in the callback
         const observer = new IntersectionObserver(handleIntersect);
 
+        console.log(pathUrl)
+
         //If we have a ref value, start observing it
-        if(reference) {
+        if(reference && pathUrl != "/mentionslegales" ) {
             observer.observe(reference.current);
         }
 

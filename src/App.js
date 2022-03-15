@@ -4,6 +4,8 @@ import React, {
   useRef,
   useState
 } from 'react';
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useIntersectionObserver from './useIntersectionObserver';
 import useDeviceDetect from './useDeviceDetect';
 
@@ -16,6 +18,8 @@ import Scene360Loader from './Components/Scene360_Loader/Scene360Loader';
 import BottleHub from './Components/BottleHub/BottleHub';
 import Header from './Components/Header/Header';
 import AcceptOver18 from './Components/AcceptOver18/AcceptOver18';
+import Scene360Mobile from './Components/Scene360/Scene360';
+import MentionsLegales from './Components/MentionsLegales/MentionsLegales';
 
 import { disablePageScroll, enablePageScroll, clearQueueScrollLocks } from 'scroll-lock';
 
@@ -58,38 +62,40 @@ function App() {
   // console.clear();
 
   return (
-    <div className="App">
-      <Header func={modifySetLangSelected}/>
-
-      {!isMobile && <AcceptOver18 langSelected={langSelected}/>}
-
-      {isMobile == true ?
-      <VideoMobile langSelected={langSelected}/>
-      : 
-      <Map langSelected={langSelected}/>
-      // <Video langSelected={langSelected}/>
-      }
-
-      {isMobile == true ?
-          <section ref={Scene360Section}>
-            <Suspense fallback={<Scene360Loader langSelected={langSelected}/>}>
-              <Scene360 langSelected={langSelected}/>
-            </Suspense>
-          </section>
-      : 
-      <section ref={Scene360Section}>
-        {isScene360Visible && (
-            <Suspense fallback={<Scene360Loader langSelected={langSelected}/>}>
-              <Scene360 langSelected={langSelected}/>
-            </Suspense>
-        )}
-      </section>
-      }
+    <Routes>
+          <Route path="/mentionslegales" element={<MentionsLegales langSelected={langSelected}/>}></Route>
+          <Route path="*" element={
+            <div className="App">
+            <Header func={modifySetLangSelected}/>
       
-      <BottleHub langSelected={langSelected}/>
-      {/* <Video/> */}
-      {/* <Empty randomColor={getRandomColor()}/> */}
-    </div>
+            {!isMobile && <AcceptOver18 langSelected={langSelected}/>}
+      
+            {isMobile == true ?
+            <VideoMobile langSelected={langSelected}/>
+            : 
+            <Map langSelected={langSelected}/>
+            // <Video langSelected={langSelected}/>
+            }
+      
+            {isMobile == true ?
+              <Scene360Mobile langSelected={langSelected}/>
+            : 
+              <section ref={Scene360Section}>
+                {isScene360Visible && (
+                    <Suspense fallback={<Scene360Loader langSelected={langSelected}/>}>
+                      <Scene360 langSelected={langSelected}/>
+                    </Suspense>
+                )}
+              </section>
+            }
+            
+            <BottleHub langSelected={langSelected}/>
+            {/* <Video/> */}
+            {/* <Empty randomColor={getRandomColor()}/> */}
+          </div>
+          }
+          ></Route>
+    </Routes>
   );
 }
 

@@ -156,6 +156,11 @@ const Scene360 = (props) => {
                     player.setSize( window.innerWidth, window.innerHeight );
     
                 } );
+
+                window.addEventListener('scroll',function (){
+                    player.setSize( window.innerWidth, window.innerHeight );
+                })
+                
             }).catch((error) => {
                 console.error(error)
             })

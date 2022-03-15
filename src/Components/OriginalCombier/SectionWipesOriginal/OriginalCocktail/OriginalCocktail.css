@@ -9,12 +9,18 @@
     justify-content: space-between;
 }
 
+.OriginalCocktail__container__left{
+    display: flex;
+    align-items: flex-start;
+    width: 40%;
+}
+
 .OriginalCocktail__container__left__img{
     height: 100%;
 }
 
 .OriginalCocktail__container__right{
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

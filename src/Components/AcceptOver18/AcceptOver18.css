@@ -90,7 +90,8 @@
   }
 
   .Map_18__container__logo--mobile{
-    max-width: 55%;
+    max-width: none;
+    height: 10vh;
   }
 
   .Map_18__container__accept--mobile{

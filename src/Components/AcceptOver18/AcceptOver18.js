@@ -7,8 +7,6 @@ import "./AcceptOver18.css";
 
 const AcceptOver18 = (props) => {
 
-    
-
     react.useEffect(() => {
 
         disablePageScroll();

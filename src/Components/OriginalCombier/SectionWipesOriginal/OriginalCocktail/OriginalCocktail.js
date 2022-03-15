@@ -40,6 +40,9 @@ const OriginalCocktail = (props) => {
     const contactRedirection = () => {
         window.open('https://www.combier.fr/distillerie/boutique-et-contact/', "_blank") || window.location.replace('https://www.combier.fr/distillerie/boutique-et-contact/');
     }
+    const mentionslegalesRedirection = () => {
+        window.open('https://www.combier.blinkl.com/mentionslegales', "_blank") || window.location.replace('https://www.combier.blinkl.com/mentionslegales');
+    }
 
     const GotoBottleHub = () => {
 
@@ -108,14 +111,14 @@ const OriginalCocktail = (props) => {
                 </div>
                 
                 {props.langSelected == 'FR' ?
-                <div className="OriginalCocktail__footer__signature">
-                    <p>mentions légales</p>
+                <div className="OriginalCocktail__footer__signature " >
+                    <p className="OriginalCocktail__footer__link" onClick={mentionslegalesRedirection}>mentions légales</p>
                     <p>L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION</p>
                     <p>© 2022 - Distillé avec amour par Combier et Blinkl</p>
                 </div> 
                 :
                 <div className="OriginalCocktail__footer__signature">
-                    <p>Legal Notice</p>
+                    <p className="OriginalCocktail__footer__link" onClick={mentionslegalesRedirection}>Legal Notice</p>
                     <p>ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION</p>
                     <p>© 2022 - Distilled with love by Combier and Blinkl</p>
                 </div>     
