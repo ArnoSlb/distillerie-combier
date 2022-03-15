@@ -6,8 +6,6 @@ import MentionsLegalesDocument from "../../assets/mentions_legales_blinkl_2022.p
 
 const MentionsLegales =(props) => {
 
-
-
     return <div className="MentionsLegales">
         <iframe className="MentionsLegales__iframe" src={MentionsLegalesDocument}></iframe>
     </div>

@@ -130,16 +130,21 @@ const Map = (props) => {
     const scrollPlay = () => {  
         
         const map = document.getElementById('map');
+        const pathUrl = window.location.pathname
 
         // We get the distance in pxl between the top of the document and the component with map.offsetTop
         // We get the distance where we are in the document from the top with window.pageYOffset
         // We get the speed of play of the video with playbackConst
-        let frameNumber  = (window.pageYOffset - map.offsetTop)/playbackConst;
 
-        let vid = document.getElementById("v0"); 
-        // console.log(vid)
+        if(pathUrl != "/mentionslegales"){
+            let frameNumber  = (window.pageYOffset - map.offsetTop)/playbackConst;
 
-        vid.currentTime = frameNumber;
+            let vid = document.getElementById("v0"); 
+            // console.log(vid)
+    
+            vid.currentTime = frameNumber
+        }
+       ;
 
         window.requestAnimationFrame(scrollPlay);
     }

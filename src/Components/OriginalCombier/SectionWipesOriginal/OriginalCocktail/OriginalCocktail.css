@@ -110,6 +110,13 @@
     width: 100vw;
 }
 
+a:-webkit-any-link{
+    text-decoration: none !important;
+    color: grey !important;
+    display: flex;
+    align-items: center;
+}
+
 @media screen and (orientation:portrait) {
 
     .OriginalCocktail{
