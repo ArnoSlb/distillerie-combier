@@ -13,9 +13,9 @@ const OriginalManufacturing = (props) => {
             </div>
             :
             <div className="OriginalManufacturing__right">
-                <h1 className="OriginalManufacturing__right__title">Everything starts from orange</h1>
+                <h1 className="OriginalManufacturing__right__title">Everything begins with orange</h1>
                 <p className="OriginalManufacturing__right__description">
-                Original Combier Triple Sec is made from Haitian orange peels macerated in alcohol for 24 hours. Their distillation in century-old copper stills provides a highly fragrant liquor with sweet and bitter flavors.</p>
+                Original Combier Triple Sec is made from Haitian orange peel macerated in alcohol for 24 hours. Distillation in 19th-century copper stills produces a highly fragrant liquor with sweet and bitter flavors.</p>
             </div>
             }
             

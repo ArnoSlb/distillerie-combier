@@ -80,7 +80,7 @@ const BottleBar = (props) => {
                     <p className="BottleCard__description targetCardDescription--selected">{props.data[BottleIndex].descriptionEn}</p>
                     {props.bottleSelected == 'original' ?
                     <div className=" BottleBar__scroll__container">
-                        <p className="BottleBar__scroll__description">Scroll down to see how it's made</p>
+                        <p className="BottleBar__scroll__description">Scroll down to find out all about it</p>
                         <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
                     </div>
                     :

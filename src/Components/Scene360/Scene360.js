@@ -180,14 +180,14 @@ const Scene360 = (props) => {
             {props.langSelected == 'FR' ? 
                 <div className="Scene360__intro">
                     <p>Vous arrivez dans la Salle des Alambics, à visiter en 360 °</p>
-                    <p>Déplacez vous en orientant votre téléphone ou en utilisant votre souris sur ordinateur</p>
+                    <p>Déplacez vous en orientant votre téléphone ou en utilisant votre souris sur ordinateur.</p>
                     <img src={Logo360Sphere} alt="" />
                     <div id="button_scene_intro" onClick={exitSceneIntro}>OK J'ai compris</div>
                 </div>
             : 
                 <div className="Scene360__intro">
-                    <p>You arrive in the Alambics Room, to visit in 360 °</p>
-                    <p>Move around by pointing your phone or using your mouse on the computer</p>
+                    <p>You have arrived in the still's room, for a 360 °visit</p>
+                    <p>Take a tour by moving your phone or using your mouse on the computer.</p>
                     <img src={Logo360Sphere} alt="" />
                     <div id="button_scene_intro" onClick={exitSceneIntro}>OK Understood</div>
                 </div>

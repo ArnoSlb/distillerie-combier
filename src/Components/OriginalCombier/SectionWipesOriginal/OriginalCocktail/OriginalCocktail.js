@@ -81,7 +81,7 @@ const OriginalCocktail = (props) => {
                 :
                 <div className="OriginalCocktail__container__right">
                     <h2 className="OriginalCocktail__container__right__title">Savor it ...</h2>
-                    <p className="OriginalCocktail__container__right__description"> pure to end a meal smoothly or in one of the great classics of the cocktail where the Original Combier brings all its liveliness: the Margarita, the Long Island, the Cosmopolitan, the Sidecar. The list is long. In the kitchen, he brings a gastronomic note to preparations and flambages: soufflés, sponge cake, jams, fruit salads or the famous crêpes Suzette.</p>
+                    <p className="OriginalCocktail__container__right__description"> pure and smooth at the end of a meal or in one of the great cocktail classics where L'Original Combier contributes its essential lively zest: Margarita, Long Island, Cosmopolitan, Sidecar. The list is long. In the culinary arena, L'Original Combier adds a gastronomic accent to soufflés, pâtisseries, jams, fruit salads and flambées like the famous crêpes Suzette. </p>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p> Discover another product from the Distillery </p>

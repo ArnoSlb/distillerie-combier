@@ -175,7 +175,7 @@ const Map = (props) => {
             :
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>Welcome in France</h1>
+                    <h1>Welcome to France</h1>
                 </div>
             </section> 
             }
@@ -188,7 +188,7 @@ const Map = (props) => {
             :
             <section className="Map__container">
                  <div className="Map__container__content anim">
-                     <h1>In the heart of the Loire Valley</h1>
+                     <h1>in the heart of the Loire Valley</h1>
                  </div>
              </section> 
             }
@@ -201,7 +201,7 @@ const Map = (props) => {
             :
             <section className="Map__container">
             <div className="Map__container__content anim">
-                <h1>In Saumur</h1>
+                <h1>Welcome to Saumur</h1>
             </div>
         </section> 
             }
@@ -216,7 +216,7 @@ const Map = (props) => {
             :
             <section className="Map__container">
                 <div className="Map__container__content anim">
-                    <h1>In the Distillerie Combier</h1>
+                    <h1>and the Distillerie Combier</h1>
                 </div>
             </section>
             }
@@ -249,7 +249,8 @@ const Map = (props) => {
                     <div class="coin__front"></div>
                     <div class="coin__back"></div>
                 </div>
-                <p className="Map_coin__">Welcome to the Distillerie Combier  for an immersive visit full of surprises. </p>
+                <p className="Map_coin__">Welcome to the Distillerie Combier for an immersive visit full of surprises.</p>
+                <p className="Map_coin__">Alcohol abuse is dangerous for your health; consume in moderation.</p>
                 {/* <div className="Map_18__container">
                         <p className="Map_coin__ margin_btm">Are you over 18 ?</p>
                         <div className="Map_18__container__btn_start_exp_container">
@@ -258,7 +259,7 @@ const Map = (props) => {
                         </div>
                 </div>   */}
                 <div className='Map__scrollToStart__container'>
-                    <p>Scroll to start </p>
+                    <p>Scroll down to start the experience</p>
                     <img className="Map_coin__arrow" src={ArrowDown} alt="" />
                 </div>
                 {/* <p className="Warning_alcool">ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION</p> */}

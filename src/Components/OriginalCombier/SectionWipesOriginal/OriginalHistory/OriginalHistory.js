@@ -77,8 +77,9 @@ const OriginalHistory = (props) => {
                     <h2 className="OriginalHistory__container__left__title1 OriginalHistory__anim">December 1834</h2>
                     {/* <p></p> */}
                     <h2 className="OriginalHistory__container__left__title1 OriginalHistory__anim">THE INVENTION OF TRIPLE SEC</h2>
-                    <h2 className="OriginalHistory__container__left__title OriginalHistory__anim">or the History of the Original Combier</h2>
-                    <p className="OriginalHistory__container__left__description OriginalHistory__anim">Holland, the island of Curaçao, the Loire Valley: this improbable conjunction will bear unexpected fruits! The Original Combier was first made with a still located in the back room of the Combier-Destre confectionery, created in December 1834 by Jean-Baptiste Combier and his wife Joséphine Destre. Very probably inspired by his family ties with Holland - then holding the Island of Curaçao, in the Caribbean - and taking advantage of the regular delivery of citrus fruits by the Loire, Jean-Baptiste Combier perfected a technique of bark distillation which allows him to obtain the very first transparent orange liqueur: the Triple Sec.</p>
+                    <h2 className="OriginalHistory__container__left__title OriginalHistory__anim">or the History of L'Original Combier</h2>
+                    <p className="OriginalHistory__container__left__description OriginalHistory__anim">Holland, the island of Curaçao, the Loire Valley: this improbable conjunction was to bear unexpected fruits! L'Original Combier was first made in a small copper still in the back room of the Combier-Destre confectionery shop, opened in Saumur in December 1834 by Jean-Baptiste Combier and his wife, Joséphine Destre. 
+                    At the time, the island of Curaçao in the Caribbean was owned by the Dutch. Very likely inspired by his wife's family ties with Holland, Jean-Baptiste Combier perfected a technique of distilling the peel from the citrus fruits regularly delivered by barges on the Loire. His invention allowed him to create the first completely transparent orange liqueur: Triple Sec.</p>
                 </div>
                 }
                 

@@ -43,14 +43,14 @@ const AcceptOver18 = (props) => {
                     <div className="Map_18__container">
                         <img className="Map_18__container__logo" src={CombierLogo} alt="" />
                         <div className="Map_18__container__accept">
-                            <p className="Map_coin__ ">To enter the experience, you must be of the required age*.</p>
+                            <p className="Map_coin__ ">To enjoy the Combier Experience, you must be of legal drinking age in your country of residence.*</p>
                             <div className="Map_18__container__btn_start_exp_container">
                                 <div id="over18__validate"className="Map_18__container__btn_start_exp" onClick={startDesktopExp}>
                                     <p>I am of legal age</p>
                                     <p className="thin">I enter the experience</p>
                                 </div>
                                 <div className="Map_18__container__btn_start_exp whitebtn">
-                                    <p>I am not of legal age</p>
+                                    <p>I am not of the required age.</p>
                                     <p className="thin">I don't enter the experience</p>
                                 </div>
                             </div>

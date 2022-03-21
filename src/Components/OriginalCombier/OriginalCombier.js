@@ -117,14 +117,14 @@ const OriginalCombier = (props) => {
                     <div className="OriginalCombier__title__container__left__whitecontainer">
                         {/* <img className="OriginalCombier__title__container__left__whitecontainer__orange OriginalCombier__anim" src={OriginalCombierOrange} alt="Orange picture" /> */}
                         <h2>What is it ?</h2>
-                        <p className="OriginalCombier__anim2">The first perfectly transparent orange liqueur, triple sec, was the major innovation of the founder of the distillery, Jean-Baptiste Combier. Obtained by distilling the peels of sweet and bitter oranges with water and sugar without any added flavoring, the recipe and the process have remained unchanged since 1834.</p>
+                        <p className="OriginalCombier__anim2">The first-ever perfectly transparent orange liqueur, triple-sec, was the major innovation of distillery founder Jean-Baptiste Combier. Obtained by distilling the peel of sweet and bitter oranges with water and sugar with no added flavoring, the recipe and the process have remained unchanged since 1834.</p>
                     </div>
                     <p></p>
                     <div className="OriginalCombier__title__container__left__whitecontainer">
-                        <p className="OriginalCombier__anim2">With a sparkling and crystalline eye and a pretty fluid and light fat, L'Original Combier concentrates all the richness of orange blossom on the nose. On the palate, it combines the freshness of bitter orange zest with the roundness of sweet orange for a gourmet finish.</p>
+                        <p className="OriginalCombier__anim2">L'Original Combier concentrates all the richness of orange blossom on the nose with a crystal clear, fluid and slightly fleshy aspect. It combines the freshness of bitter orange zest on the palate with the roundness of sweet orange for a gourmet finish.</p>
                     </div>
                 </div>
-                <h1 className="OriginalCombier__title">The Original Combier triple sec</h1>
+                <h1 className="OriginalCombier__title">L'Original Combier triple sec</h1>
             </div>
             }
             <div className="OriginalCombier__made__container">
