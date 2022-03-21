@@ -36,7 +36,7 @@ const AcceptOver18 = (props) => {
                                     <p className="thin">Je ne poursuis pas l'expérience</p>
                                 </div>
                             </div>
-                            <p className="rules_country">*Voir la légilsation en vigueur dans votre pays de résidence</p>
+                            <p className="rules_country">*Voir la législation en vigueur dans votre pays de résidence</p>
                         </div>
                     </div>   
                 :

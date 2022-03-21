@@ -1,6 +1,6 @@
 const Scene360Data = [
     {
-        textFr: 'Les matières premières ont été macérés dans un alcool neutre ...',
+        textFr: 'Les matières premières ont été macérées dans un alcool neutre ...',
         textEn: 'The raw materials have been macerated in a neutral alcohol ...'
     },
     {

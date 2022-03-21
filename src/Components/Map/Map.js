@@ -182,7 +182,7 @@ const Map = (props) => {
             {props.langSelected == 'FR' ?
             <section className="Map__container">
                  <div className="Map__container__content anim">
-                     <h1>Au cœur du Val-de-Loire</h1>
+                     <h1>au cœur du Val-de-Loire</h1>
                  </div>
              </section> 
             :

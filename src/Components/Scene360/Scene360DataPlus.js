@@ -9,7 +9,7 @@ const Scene360DataPlus = [
             textEn: `In these copper basins, he transformed the sugar into liqueurs and syrups ...`,
         },
         {
-            textFr: `À partir de fruits et de fleurs, issus de de la Vallée de la Loire.`,
+            textFr: `À partir de fruits et de fleurs, issus de la Vallée de la Loire.`,
             textEn: `From fruits and flowers, from the Loire Valley.`,
         },
         {
