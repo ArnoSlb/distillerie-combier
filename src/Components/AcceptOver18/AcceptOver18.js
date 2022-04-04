@@ -50,7 +50,7 @@ const AcceptOver18 = (props) => {
                                     <p className="thin">I enter the experience</p>
                                 </div>
                                 <div className="Map_18__container__btn_start_exp whitebtn">
-                                    <p>I am not of the required age.</p>
+                                    <p>I am not of the required age</p>
                                     <p className="thin">I don't enter the experience</p>
                                 </div>
                             </div>

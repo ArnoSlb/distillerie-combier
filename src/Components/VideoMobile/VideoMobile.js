@@ -20,6 +20,20 @@ const VideoMobile = (props) => {
 
         const videoFile = document.querySelector('.VideoMobile__file');
         videoFile.play()
+
+        console.log("search ", window.location.search)
+        if(window.location.search != undefined && window.location.search != null && window.location.search != ""){
+          console.log('je vais au bottlehub')
+          const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+      
+              const pixelToHub = 11750 +  (clientHeight * 3.23)
+      
+              window.scrollTo({
+                  top: pixelToHub,
+                  left: 0,
+                  behavior: "smooth"
+              });
+        }
     }
 
     const VideoOnEnd = () => {
@@ -32,6 +46,7 @@ const VideoMobile = (props) => {
         videoFile.play()
 
         document.querySelector('.VideoMobile__End').style.display = "none"
+
     }
     
 
@@ -60,15 +75,15 @@ const VideoMobile = (props) => {
                     <div className="Map_18__container Map_18__container--mobile">
                         <img className="Map_18__container__logo Map_18__container__logo--mobile" src={CombierLogo} alt="" />
                         <div className="Map_18__container__accept Map_18__container__accept--mobile">
-                            <p className="Map_coin__ ">To enter the experience, you must be of the required age*.</p>
+                            <p className="Map_coin__ ">To enjoy the Combier Experience, you must be of legal drinking age in your country of residence.*</p>
                             <div className="Map_18__container__btn_start_exp_container Map_18__container__btn_start_exp_container--mobile">
                                 <div id="over18__validate"className="Map_18__container__btn_start_exp Map_18__container__btn_start_exp--mobile" onClick={VideoMobileExp}>
                                     <p>I am of legal age</p>
                                     <p className="thin">I enter the experience</p>
                                 </div>
                                 <div className="Map_18__container__btn_start_exp whitebtn">
-                                    <p>I am not of legal age</p>
-                                    <p className="thin">I do not enter the experience</p>
+                                    <p>I am not of the required age</p>
+                                    <p className="thin">I don't enter the experience</p>
                                 </div>
                             </div>
                             <p className="rules_country">*See the legislation in force in your country of residence</p>

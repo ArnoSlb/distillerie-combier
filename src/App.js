@@ -50,7 +50,7 @@ function App() {
     setLangSelected(lang)
   }
 
-  const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+  // const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
   // console.log(scrollTop, clientHeight, scrollHeight, document.documentElement, window.pageYOffset)
 

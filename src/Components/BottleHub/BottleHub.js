@@ -75,7 +75,40 @@ const BottleHub = (props) => {
       setBottle(alcool)
     }
 
-    const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+ 
+    React.useEffect(() => {
+        if(window.location.search != undefined && window.location.search != null && window.location.search != ""){
+            console.log("search ", window.location.search)
+            const cocktailSearch = window.location.search.substring(3);
+            console.log(cocktailSearch)
+    
+            if (cocktailSearch == "elixir" || cocktailSearch == "meridor" || cocktailSearch == "blanchette" || cocktailSearch == "original"){
+                
+                setBottle(cocktailSearch)
+
+                document.getElementById("original").firstChild.lastChild.classList.remove("BottleCard__discover--selected")
+
+                if(props.langSelected == "FR"){
+
+                    document.getElementById("original").firstChild.lastChild.innerText = "Selectionner"
+
+                    document.getElementById(cocktailSearch).firstChild.lastChild.innerText = "Selectionné"
+                    
+
+                } else {
+
+                    document.getElementById("original").firstChild.lastChild.innerText = "Select"
+
+                    document.getElementById(cocktailSearch).firstChild.lastChild.innerText = "Selected"
+
+                }
+
+                document.getElementById(cocktailSearch).firstChild.lastChild.classList.add("BottleCard__discover--selected")
+                
+            }
+        }
+    },[])
+
 
     // console.log(scrollTop, clientHeight, scrollHeight, window.pageYOffset)
     
