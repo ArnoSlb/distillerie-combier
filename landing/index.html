@@ -17,7 +17,7 @@
         <img class="combier_logo" src="./src/Combier_Distil_P179Bck_1.png" alt="distillerie combier logo" srcset="">
         <h1 class="combier_title">Expérience Combier</h1>
         <img class="combier_bottles" src="./src/pub_ancienne_curacao_combier 3.png" alt="distillerie combier bottles" srcset="">
-        <p class="combier_p"> <strong> Scannez la bouteille </strong> ou le <strong> QR code </strong> et plongez dans l'univers du spiritueux.</p>
+        <p class="combier_p"> <strong> Scannez l'étiquette de la bouteille </strong> ou le <strong> QR code </strong> et plongez dans l'univers du spiritueux.</p>
         <button id="bkl_exp">
             <img class="blinkl_logo" src="./src/blinkl-logo.png" alt="blinkl logo" srcset="">
             <p>Démarrer</p>
@@ -27,5 +27,14 @@
 <script id='Blinkl_Script' type='module' src='https://beta.blinkl.com/client/main.js'
         orga='a78094cdc3a740f18e57e0e51dc793d2' campaign='5244d10e82f244e5a8970af2142501fb'
         blinklbuttonid="bkl_exp">
+</script>
+<script>
+    var userLang = navigator.language || navigator.userLanguage; 
+    // alert ("The language is: " + userLang);
+    if (userLang != 'fr' && userLang != 'fr-FR' && userLang != 'fr-CA' && userLang != 'fr-CH'){
+        document.querySelector('.combier_title').innerText = "Combier Experience";
+        document.querySelector('.combier_p').innerHTML = "<strong> Scan the bottle label</strong> or the <strong> QR code </strong> and dive into the world of spirits."
+        document.querySelector('#bkl_exp p').innerText = "Start"
+    }
 </script>
 </html>
