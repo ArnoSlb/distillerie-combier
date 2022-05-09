@@ -72,13 +72,11 @@
 
 .Meridor__First__text__left__title{
     font-size: 9vh;
-    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url(../../../src/assets/Meridor420.jpg) no-repeat; 
+    background-position: 20% 55%;
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; 
+    background-attachment: fixed;
     color: transparent;
     text-transform: uppercase;
     padding: 15px;
@@ -86,11 +84,9 @@
 
 .Meridor__Second__text__left__title{
     font-size: 8vh;
-    background: url(../../../src/assets/Meridor420.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url(../../../src/assets/Meridor420.jpg) no-repeat; 
+    background-attachment: fixed;
+    background-position: 20% 55%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

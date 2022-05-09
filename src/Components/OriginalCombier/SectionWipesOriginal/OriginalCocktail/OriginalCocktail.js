@@ -44,19 +44,23 @@ const OriginalCocktail = (props) => {
         window.open('https://combier.blinkl.com/mentionslegales', "_blank") || window.location.replace('https://www.combier.blinkl.com/mentionslegales');
     }
 
+    const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+    console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+
+    const pixelToHub = 11750 +  (clientHeight * 3.23)
+
     const GotoBottleHub = () => {
 
-        const {scrollTop, scrollHeight, clientHeight} = document.documentElement
-
-        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
-
-        const pixelToHub = 11750 +  (clientHeight * 3.23)
-
-        window.scrollTo({
-            top: pixelToHub,
-            left: 0,
-            behavior: 'smooth'
-        });
+        if(isMobile == true){
+            window.location.href = window.location.hostname + "/?="
+        } else {
+            scrollTo({
+                top: pixelToHub,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
     }
 
     return (

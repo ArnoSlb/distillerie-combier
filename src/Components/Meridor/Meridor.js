@@ -32,7 +32,7 @@ const Meridor = (props) => {
                 // delay = delay + 0.4;
                 // When the element.s are in the user browser we add the class reponsible for the animation
                 if (entry.isIntersecting){
-                    // console.log(entry)
+                    // console.log(entry.target)
                     // console.log(delay)
                     entry.target.classList.add('slide-top-Meridor'),
                     entry.target.style.animationDelay = delay + "s"
@@ -66,7 +66,7 @@ const Meridor = (props) => {
         window.open('https://www.instagram.com/distilleriecombier/?hl=fr', "_blank") || window.location.replace('https://www.instagram.com/distilleriecombier/?hl=fr');
     }
     const eshopRedirection = () => {
-        window.open('https://www.combier.fr/signatures/original-combier/', "_blank") || window.location.replace('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/');
+        window.open('https://www.combier.fr/signatures/gin-meridor/', "_blank") || window.location.replace('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/');
     }
     const contactRedirection = () => {
         window.open('https://www.combier.fr/distillerie/boutique-et-contact/', "_blank") || window.location.replace('https://www.combier.fr/distillerie/boutique-et-contact/');
@@ -77,6 +77,8 @@ const Meridor = (props) => {
         const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
         // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+
+        
 
         const pixelToHub = 11750 +  (clientHeight * 3.23)
 
@@ -194,41 +196,65 @@ const Meridor = (props) => {
                 {props.langSelected == 'FR' ?
                 <div className="OriginalCocktail__container__right">
                     <h2 className="OriginalCocktail__container__right__title">Savourez-le...</h2>
-                    <p className="OriginalCocktail__container__right__description">Évocateur des bords de Loire et de ses jardins parfumés, le Gin Meridor se déguste dans des cocktails classiques comme le White Lady, le Corpse Reviver,
-                    ou des créations maison comme Le Jardin Secret, où fleurs de sureau et roses apportent une délicate note de litchi.</p>
+                    <p className="OriginalCocktail__container__right__description">pur pour terminer un repas en douceur ou dans un des grands classiques du cocktail où l’Original Combier apporte toute sa vivacité : la Margarita, le Long Island, le Cosmopolitan, le Sidecar. La liste est longue. En cuisine, il apporte la note gastronomique aux préparations et aux flambages : soufflés, génoises, confitures, salades de fruits ou les fameuses crêpes Suzette.</p>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p >Découvrir un autre produit de la Distillerie </p>
                         <img src={CocktailHand} alt="" />
                     </div>
-                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={contactRedirection}>
-                        <p >Recette et Boutique</p>
+                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
+                        <p >Recettes et Boutique</p>
                     </div>
                 </div>
                 :
                 <div className="OriginalCocktail__container__right">
                     <h2 className="OriginalCocktail__container__right__title">Savor it ...</h2>
-                    <p className="OriginalCocktail__container__right__description"> Evocative of the banks of the Loire and its fragrant gardens, Gin Meridor can be enjoyed in classic cocktails such as the White Lady, the Corpse Reviver,
-                    or in-house creations like Le Jardin Secret, where elderflowers and roses bring a delicate note of lychee.</p>
+                    <p className="OriginalCocktail__container__right__description"> pure and smooth at the end of a meal or in one of the great cocktail classics where L'Original Combier contributes its essential lively zest: Margarita, Long Island, Cosmopolitan, Sidecar. The list is long. In the culinary arena, L'Original Combier adds a gastronomic accent to soufflés, pâtisseries, jams, fruit salads and flambées like the famous crêpes Suzette. </p>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p> Discover another product from the Distillery </p>
                         <img src={CocktailHand} alt="" />
                     </div>
-                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={contactRedirection}>
-                        <p>Recipe and Shop</p>
+                    <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
+                        <p>Recipes and Shop</p>
                     </div>
                 </div>
                 }            
             </div>
             <div className="OriginalCocktail__footer">
-                <div onClick={homeRedirection}>Accueil</div>
-                <div onClick={eshopRedirection}>E-shop</div>
-                <div onClick={instagramRedirection}>Instagram</div>
-                <div onClick={contactRedirection}>Contact</div>
-            </div>         
+                <div className="OriginalCocktail__footer__links">
+                    {props.langSelected == 'FR' ?
+                    <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Accueil</div>
+                    :
+                    <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Home</div>
+                    }
+                    {props.langSelected == 'FR' ?
+                    <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>Boutique</div>
+                    :
+                    <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>E-shop</div>
+                    }
+                    
+                    <div className="OriginalCocktail__footer__link" onClick={instagramRedirection}>Instagram</div>
+                    <div className="OriginalCocktail__footer__link" onClick={contactRedirection}>Contact</div>
+                </div>
+                
+                {props.langSelected == 'FR' ?
+                <div className="OriginalCocktail__footer__signature " >
+                    {/* <p className="OriginalCocktail__footer__link" onClick={mentionslegalesRedirection}>mentions légales</p> */}
+                    <Link to="/mentionslegales">mentions légales</Link>
+                    <p>L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION</p>
+                    <p>© 2022 - Distillé avec amour par Combier et Blinkl</p>
+                </div> 
+                :
+                <div className="OriginalCocktail__footer__signature">
+                    <p className="OriginalCocktail__footer__link" >Legal Notice</p>
+                    <p>ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION</p>
+                    <p>© 2022 - Distilled with love by Combier and Blinkl</p>
+                </div>     
+                } 
+            </div>  
         </div>
-        </div>
+    </div>
     )
 }
 
