@@ -50,17 +50,6 @@ function App() {
     setLangSelected(lang)
   }
 
-  // const {scrollTop, scrollHeight, clientHeight} = document.documentElement
-
-  // console.log(scrollTop, clientHeight, scrollHeight, document.documentElement, window.pageYOffset)
-
-  // window.scrollTo({
-  //   top: 0,
-  //   left: 0,
-  // });
-
-  // console.clear();
-
   return (
     <Routes>
           <Route path="/mentionslegales" element={<MentionsLegales langSelected={langSelected}/>}></Route>

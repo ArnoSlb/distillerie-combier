@@ -3,36 +3,64 @@ import video from "../../assets/IntroM2.mp4"
 import videoEn from "../../assets/IntroM2En.mp4"
 import ArrowDown from "../../assets/Bottom_Arrow.png"
 import CombierLogo from "../../assets/Combier_Distil_P179.png"
+import { disablePageScroll, enablePageScroll, clearQueueScrollLocks } from 'scroll-lock';
 
 import './VideoMobile.css'
 
 const VideoMobile = (props) => {
 
+    React.useEffect(() => {
+        
+        console.log(isOver18)
 
-    document.querySelector('.App').style.maxHeight = "100vh"
-    document.querySelector('.App').style.overflow = "hidden"
+        {isOver18 ?
+            VideoMobileExp()
+            : 
+            AcceptOver18PopUp()
+        }
+    
+    })
+
+    const isOver18 = sessionStorage.getItem('AcceptOver18');
+
+    const AcceptOver18PopUp = () => {
+        document.querySelector('.App').style.maxHeight = "100vh"
+        document.querySelector('.App').style.overflow = "hidden"
+    }
 
     const VideoMobileExp = () => {
-        document.querySelector('.App').style.maxHeight = "inherit"
-        document.querySelector('.App').style.overflow = "inherit"
+
+        sessionStorage.setItem('AcceptOver18', true)
+        
+        document.querySelector('.App').style.maxHeight = "none"
+        document.querySelector('.App').style.overflowY = "inherit"
         document.querySelector('.App').style.overflowX = "hidden"
-        document.querySelector('.AcceptOver18__container').style.display = "none"
+        clearQueueScrollLocks();
+        enablePageScroll();
+        document.querySelector('#AcceptOver18_Mobile').style.opacity = "0.5"
+        document.querySelector('#AcceptOver18_Mobile').style.display = "none"
+        
 
         const videoFile = document.querySelector('.VideoMobile__file');
-        videoFile.play()
-
+        {!isOver18 &&  videoFile.play()}
+       
         console.log("search ", window.location.search)
         if(window.location.search != undefined && window.location.search != null && window.location.search != ""){
           console.log('je vais au bottlehub')
+          document.querySelector('.VideoMobile__End').style.display = "flex"
           const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+         
       
-              const pixelToHub = 11750 +  (clientHeight * 3.23)
+            //   const pixelToHub = 11750 +  (clientHeight * 3.23)
       
-              window.scrollTo({
-                  top: pixelToHub,
-                  left: 0,
-                  behavior: "smooth"
-              });
+              const pixelToHub = clientHeight * 2.22
+      
+            //   window.scrollTo({
+            //       top: pixelToHub,
+            //       left: 0,
+            //       behavior: "smooth"
+            //   });
+            window.scrollBy(0, pixelToHub)
         }
     }
 
@@ -48,11 +76,10 @@ const VideoMobile = (props) => {
         document.querySelector('.VideoMobile__End').style.display = "none"
 
     }
-    
 
     return(
         <div className="VideoMobile">
-            <div className="AcceptOver18__container">
+            <div id="AcceptOver18_Mobile" className="AcceptOver18__container">
                 {props.langSelected == 'FR' ?
                     <div className="Map_18__container Map_18__container--mobile">
                         <img className="Map_18__container__logo Map_18__container__logo--mobile" src={CombierLogo} alt="" />

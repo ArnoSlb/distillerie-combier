@@ -8,24 +8,10 @@ import "./AcceptOver18.css";
 const AcceptOver18 = (props) => {
 
     react.useEffect(() => {
-
-        var data = sessionStorage.getItem('AcceptOver18');
-        console.log(data)
-
-        if(data){
-            clearQueueScrollLocks();
-            enablePageScroll();
-            document.querySelector(".AcceptOver18__container").style.display = "none"
-        } else {
-            disablePageScroll();
-        }
-
-        
+   
     },[])
 
     const startDesktopExp = () => {
-
-        sessionStorage.setItem('AcceptOver18', true)
 
         clearQueueScrollLocks();
         enablePageScroll();

@@ -53,7 +53,7 @@ const OriginalCocktail = (props) => {
     const GotoBottleHub = () => {
 
         if(isMobile == true){
-            window.location.href = window.location.hostname + "/?="
+            window.location.replace("https://combier.blinkl.com/?s=")
         } else {
             scrollTo({
                 top: pixelToHub,
