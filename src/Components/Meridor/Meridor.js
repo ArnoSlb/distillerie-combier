@@ -32,9 +32,10 @@ const Meridor = (props) => {
                 // delay = delay + 0.4;
                 // When the element.s are in the user browser we add the class reponsible for the animation
                 if (entry.isIntersecting){
-                    // console.log(entry.target)
+                    console.log(entry.target.firstChild)
                     // console.log(delay)
                     entry.target.classList.add('slide-top-Meridor'),
+                    entry.target.firstChild.style.backgroundAttachment = "fixed"
                     entry.target.style.animationDelay = delay + "s"
                 } else {
                     // if we want the animation to play over and over again

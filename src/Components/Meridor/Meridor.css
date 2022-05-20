@@ -68,15 +68,22 @@
     text-align: center;
     background-color: whitesmoke;
     border-radius: 10px;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
 }
 
 .Meridor__First__text__left__title{
+    width: 100vw;
+    height: 100vh;
     font-size: 9vh;
     background: url(../../../src/assets/Meridor420.jpg) no-repeat; 
     background-position: 20% 55%;
-    background-clip: text;
-    -webkit-background-clip: text; 
+    -webkit-background-position: 20% 55%;
+    background-size: contain;
+    /* background-clip: text;
+    -webkit-background-clip: text;  */
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     color: transparent;
     text-transform: uppercase;
     padding: 15px;
