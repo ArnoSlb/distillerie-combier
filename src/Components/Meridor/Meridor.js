@@ -114,15 +114,13 @@ const Meridor = (props) => {
                     <div className="Meridor__First__empty"></div>
                     {props.langSelected == 'FR' ?
                     <div className="Meridor__First__text__right__content">
-                        <p>Premier London Dry Gin créé en Vallée de la Loire, Gin Meridor est issu d'une seule et unique distillation de tous les ingrédients dans les alambics d’époque. Baies de genévrier, graines de coriandre, écorces de citron, racines d'iris, cubèbe et réglisse s'associent à merveille aux deux botaniques emblématiques du Val de Loire : pétales de rose et fleurs de sureau ramassés à la main.</p>
-                        <p><strong>Allure :</strong> cristalline.</p>
-                        <p><strong>En bouche :</strong> nez floral subtilement épicé et finale poivrée.</p>
+                        <p>Premier London Dry Gin créé en Vallée de la Loire, Gin Meridor est issu d'une seule et unique distillation de tous les ingrédients dans les alambics historiques de la Distillerie. Baies de genévrier, graines de coriandre, écorces de citron, racines d'iris, cubèbe et réglisse s'associent à merveille aux deux botaniques emblématiques du Val de Loire : des pétales de rose et des fleurs de sureau, ramassés à la main. 
+                        Cristallin, avec un nez floral subtilement épicé, Gin Meridor envoûte par la douceur des pétales de rose et fleurs de sureau du Val de Loire, et ravive la finale par ses notes poivrées.</p>
                     </div> 
                     :
                     <div className = "Meridor__First__text__right__content">
-                        <p> The first London Dry Gin created in the Loire Valley, Gin Meridor is made from a single distillation of all the ingredients in period stills. Juniper berries, coriander seeds, lemon peel, iris roots, cubeb and liquorice combine wonderfully with the two emblematic botanicals of the Loire Valley: hand-picked rose petals and elderflower. </p>
-                        <p> <strong> Allure: </strong> crystalline. </p>
-                        <p> <strong> In the mouth: </strong> subtly spicy floral nose and peppery finish. </p>
+                        <p>Gin Meridor is the First London Dry Gin created in the Loire Valley. Made from a single distillation of all ingredients in Distillerie Combier's historic stills: juniper berries, coriander seeds, lemon peel, iris roots, cubeb, and licorice combine wonderfully with two botanicals that are emblematic of the Loire Valley: rose petals and elderflowers, picked by hand.
+                        Crystalline, with a subtly spicy floral nose, Gin Meridor captivates with the sweetness of rose petals and elderflowers from the Loire Valley. The finish with its peppery notes revives the palate.</p>
                     </div>
                     }
                     
@@ -130,9 +128,9 @@ const Meridor = (props) => {
                 <div className="Meridor__First__text Meridor__anim">
                     <div className="Meridor__First__text__left">
                     {props.langSelected == 'FR' ?
-                        <h1 className="Meridor__Second__text__left__title">La fabrication</h1>
+                        <h1 className="Meridor__Second__text__left__title">Savoir-faire</h1>
                     :
-                        <h1 className="Meridor__Second__text__left__title">The making</h1>
+                        <h1 className="Meridor__Second__text__left__title">Craftsmanship</h1>
                     }
                     </div>
                     <div className="Meridor__First__empty"></div>
@@ -141,13 +139,11 @@ const Meridor = (props) => {
                     <div className="Meridor__First__empty"></div>
                     {props.langSelected == 'FR' ?
                     <div className="Meridor__First__text__right__content">
-                    <p>London Dry Gin, appellation à part entière - distillation de tous les ingrédients, à l'issue dernière distillation on ne rajoute rien. 1er London Dry Gin de la Loire ! 
-                    Technicité du traitement des fleurs. Liée à la finesse de l'outil de distillation en col de cygne - chauffe douce en bain marie.</p>
+                    <p>Distillé en « Small Batch » dans de rares alambics fabriqués par la célèbre société Egrot (1780), chaque distillation ne produit que 360 bouteilles. Cette méthode authentique et artisanale contribue à le rendre unique. Les alambics en cuivre à longs cols de cygne, parfaitement adaptés à ce type de spiritueux, permettent d’extraire un maximum de parfums des 8 botaniques soigneusement sélectionnées. </p>
                     </div> 
                     :
                     <div className = "Meridor__First__text__right__content">
-                    <p> London Dry Gin, full name - distillation of all the ingredients, at the end of the last distillation nothing is added. 1st London Dry Gin from the Loire!
-                    Technicality of flower treatment. Linked to the finesse of the gooseneck distillation tool - gentle heating in a bain-marie. </p>
+                    <p> Authentic, artisanal methods contribute to making Gin Meridor unique. Each small batch produces only 360 bottles, distilled in rare 19th-century stills from the famous Egrot company (1780). The copper stills with their long swan necks are perfectly adapted to this type of spirit, extracting a maximum of flavors from the eight carefully selected botanicals.</p>
                     </div>
                     }
                     
@@ -177,9 +173,9 @@ const Meridor = (props) => {
                     <div className="Meridor__First__empty"></div>
                     <div className="Meridor__First__text__right__content">
                     {props.langSelected == 'FR' ?
-                    <p>Gin Meridor doit son nom à la dame de Monsoreau devenue Diane de Meridor sous la plume d’Alexandre Dumas. conte autour de Méridor (cf. cocktail "Le Jardin secret"). Passage « Dame de Montsoreau » d'Alexandre Dumas qui avait été immortalisée dans une oeuvre d'Alexandre Dumas.</p>
+                    <p>Ce gin original et romantique doit son nom à l’illustre Dame de Montsoreau qui vécue au 16ème siècle dans le Château du même nom sur les bords de Loire pas loin de Saumur. Cette amoureuse intrépide est devenue Diane de Meridor sous la plume d’Alexandre Dumas en 1846. Le château de Montsoreau surplombe l'eau de la Loire à quelques encablures de Saumur. La blondeur de sa pierre de tuffeau met en valeur la volupté des jardins fleuris de la vallée.</p>
                     :
-                    <p> Gin Meridor owes its name to the Lady of Monsoreau who became Diane de Meridor from the pen of Alexandre Dumas. tale about Méridor (cf. cocktail "Le Jardin secret"). Passage "Dame de Montsoreau" by Alexandre Dumas which had been immortalized in a work by Alexandre Dumas. </p>
+                    <p> This original and romantic gin owes its name to the illustrious Lady of Montsoreau, who lived in the 16th century in the château of the same name on the banks of the Loire not far from Saumur. Her tragic love story inspired Alexandre Dumas, who gave her the name Diane de Meridor in his novel published in 1846. The Château of Montsoreau overlooks the waters of the Loire not far from Saumur. Its blond tufa stone is a perfect background for the voluptuous flowers of the valley.</p>
                     } 
                     </div> 
                 </div>
@@ -195,11 +191,16 @@ const Meridor = (props) => {
                 </div>
                 {props.langSelected == 'FR' ?
                 <div className="OriginalCocktail__container__right">
-                    <h2 className="OriginalCocktail__container__right__title">Savourez-le...</h2>
-                    <p className="OriginalCocktail__container__right__description">pur pour terminer un repas en douceur ou dans un des grands classiques du cocktail où l’Original Combier apporte toute sa vivacité : la Margarita, le Long Island, le Cosmopolitan, le Sidecar. La liste est longue. En cuisine, il apporte la note gastronomique aux préparations et aux flambages : soufflés, génoises, confitures, salades de fruits ou les fameuses crêpes Suzette.</p>
+                    <h2 className="OriginalCocktail__container__right__title">Conclusion gourmande</h2>
+                    <p className="OriginalCocktail__container__right__description">Evocateur des bords de Loire et de ses jardins parfumés, le Gin Meridor se déguste dans des cocktails classiques comme le White Lady, le Corpse Reviver.</p>
+                    <Link to="https://www.combier.fr/degustation/cocktail/347-white-lady.html">https://www.combier.fr/degustation/cocktail/347-white-lady.html</Link>
+                    <Link to="https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html">https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html</Link>
+                    <p>ou des créations maisons comme Le Jardin Secret, où fleurs de sureau et roses apportent une délicate note de litchi.</p> 
+                    <Link to=" https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html"> https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html</Link>
+                   
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
-                        <p >Découvrir un autre produit de la Distillerie </p>
+                        <p>Découvrir un autre produit de la Distillerie</p>
                         <img src={CocktailHand} alt="" />
                     </div>
                     <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
@@ -208,8 +209,13 @@ const Meridor = (props) => {
                 </div>
                 :
                 <div className="OriginalCocktail__container__right">
-                    <h2 className="OriginalCocktail__container__right__title">Savor it ...</h2>
-                    <p className="OriginalCocktail__container__right__description"> pure and smooth at the end of a meal or in one of the great cocktail classics where L'Original Combier contributes its essential lively zest: Margarita, Long Island, Cosmopolitan, Sidecar. The list is long. In the culinary arena, L'Original Combier adds a gastronomic accent to soufflés, pâtisseries, jams, fruit salads and flambées like the famous crêpes Suzette. </p>
+                    <h2 className="OriginalCocktail__container__right__title">Gourmet conclusion</h2>
+                    <p className="OriginalCocktail__container__right__description">Evocative of the banks of the Loire and its fragrant gardens, Gin Meridor can be enjoyed in classic cocktails like White Lady or Corpse Reviver.</p>
+                    <Link to="https://www.combier.fr/degustation/cocktail/347-white-lady.html">https://www.combier.fr/degustation/cocktail/347-white-lady.html</Link>
+                    <Link to="https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html">https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html</Link>
+                    <p> It also takes to the spotlight in Combier cocktail creations such as Le Jardin Secret, where the elderflowers and roses combine to introduce a delicate note of lychee.
+                    </p> 
+                    <Link to=" https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html"> https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html</Link>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p> Discover another product from the Distillery </p>
