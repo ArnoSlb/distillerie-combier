@@ -117,6 +117,12 @@ a:-webkit-any-link{
     align-items: center;
 }
 
+ a:-webkit-any-link.OriginalCocktail__container__right__description {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
 @media screen and (orientation:portrait) {
 
     .OriginalCocktail{
@@ -144,6 +150,7 @@ a:-webkit-any-link{
 
     .OriginalCocktail__container__right__title{
         font-size: 5vh;
+        text-align: center;
     }
 
     .OriginalCocktail__container__right__description{

@@ -35,7 +35,6 @@ const Meridor = (props) => {
                     console.log(entry.target.firstChild)
                     // console.log(delay)
                     entry.target.classList.add('slide-top-Meridor'),
-                    entry.target.firstChild.style.backgroundAttachment = "fixed"
                     entry.target.style.animationDelay = delay + "s"
                 } else {
                     // if we want the animation to play over and over again
@@ -73,21 +72,21 @@ const Meridor = (props) => {
         window.open('https://www.combier.fr/distillerie/boutique-et-contact/', "_blank") || window.location.replace('https://www.combier.fr/distillerie/boutique-et-contact/');
     }
 
+    const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+
+    const pixelToHub = 11750 +  (clientHeight * 3.23)
+
     const GotoBottleHub = () => {
 
-        const {scrollTop, scrollHeight, clientHeight} = document.documentElement
-
-        // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
-
-        
-
-        const pixelToHub = 11750 +  (clientHeight * 3.23)
-
-        window.scrollTo({
-            top: pixelToHub,
-            left: 0,
-            behavior: 'smooth'
-        });
+        if(isMobile == true){
+            window.location.replace("https://combier.blinkl.com/?s=")
+        } else {
+            scrollTo({
+                top: pixelToHub,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
     }
 
 
@@ -99,7 +98,12 @@ const Meridor = (props) => {
                 </div>
             </div>
             <div className="Meridor__First">
+                {isMobile ?
+                <div></div>
+                :
                 <div className="Meridor__empty__margin"></div>
+                }
+                
                 <div className="Meridor__First__text Meridor__anim">
                     <div className="Meridor__First__text__left">
                         {props.langSelected == 'FR' ?
@@ -194,10 +198,10 @@ const Meridor = (props) => {
                 <div className="OriginalCocktail__container__right">
                     <h2 className="OriginalCocktail__container__right__title">Conclusion gourmande</h2>
                     <p className="OriginalCocktail__container__right__description">Evocateur des bords de Loire et de ses jardins parfumés, le Gin Meridor se déguste dans des cocktails classiques comme le White Lady, le Corpse Reviver.</p>
-                    <Link to="https://www.combier.fr/degustation/cocktail/347-white-lady.html">https://www.combier.fr/degustation/cocktail/347-white-lady.html</Link>
-                    <Link to="https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html">https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html</Link>
-                    <p>ou des créations maisons comme Le Jardin Secret, où fleurs de sureau et roses apportent une délicate note de litchi.</p> 
-                    <Link to=" https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html"> https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html</Link>
+                    <Link className="OriginalCocktail__container__right__description" to="https://www.combier.fr/degustation/cocktail/347-white-lady.html">WHITE LADY</Link>
+                    <Link className="OriginalCocktail__container__right__description" to="https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html">CORPSE REVIVER N°2</Link>
+                    <p className="OriginalCocktail__container__right__description">ou des créations maisons comme Le Jardin Secret, où fleurs de sureau et roses apportent une délicate note de litchi.</p> 
+                    <Link className="OriginalCocktail__container__right__description" to=" https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html"> COCKTAIL GIN MERIDOR / SUREAU / CONCOMBRE</Link>
                    
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
@@ -212,11 +216,11 @@ const Meridor = (props) => {
                 <div className="OriginalCocktail__container__right">
                     <h2 className="OriginalCocktail__container__right__title">Gourmet conclusion</h2>
                     <p className="OriginalCocktail__container__right__description">Evocative of the banks of the Loire and its fragrant gardens, Gin Meridor can be enjoyed in classic cocktails like White Lady or Corpse Reviver.</p>
-                    <Link to="https://www.combier.fr/degustation/cocktail/347-white-lady.html">https://www.combier.fr/degustation/cocktail/347-white-lady.html</Link>
-                    <Link to="https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html">https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html</Link>
-                    <p> It also takes to the spotlight in Combier cocktail creations such as Le Jardin Secret, where the elderflowers and roses combine to introduce a delicate note of lychee.
+                    <Link className="OriginalCocktail__container__right__description" to="https://www.combier.fr/degustation/cocktail/347-white-lady.html">WHITE LADY</Link>
+                    <Link className="OriginalCocktail__container__right__description" to="https://www.combier.fr/degustation/cocktail/352-corpse-reviver-n2.html">CORPSE REVIVER N°2</Link>
+                    <p className="OriginalCocktail__container__right__description"> It also takes to the spotlight in Combier cocktail creations such as Le Jardin Secret, where the elderflowers and roses combine to introduce a delicate note of lychee.
                     </p> 
-                    <Link to=" https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html"> https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html</Link>
+                    <Link className="OriginalCocktail__container__right__description" to=" https://www.combier.fr/collections/cocktails/415-cocktail-gin-meridor-sureau-concombre-bib-3l.html"> COCKTAIL GIN MERIDOR / ELDERBERRY / CUCUMBER</Link>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p> Discover another product from the Distillery </p>

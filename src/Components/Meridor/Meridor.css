@@ -61,43 +61,38 @@
 }
 
 .Meridor__First__text__left{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     background-color: whitesmoke;
     border-radius: 10px;
-    background-attachment: fixed;
-    -webkit-background-attachment: fixed;
+    width: min-content;
 }
 
 .Meridor__First__text__left__title{
-    width: 100vw;
-    height: 100vh;
+    display: inline-block;
     font-size: 9vh;
-    background: url(../../../src/assets/Meridor420.jpg) no-repeat; 
-    background-position: 20% 55%;
-    -webkit-background-position: 20% 55%;
-    background-size: contain;
-    /* background-clip: text;
-    -webkit-background-clip: text;  */
+    background: url(../../../src/assets/Meridor424_HD.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text; 
     background-attachment: fixed;
     -webkit-background-attachment: fixed;
     color: transparent;
     text-transform: uppercase;
-    padding: 15px;
+    padding: 0 5vw;
 }
 
 .Meridor__Second__text__left__title{
-    font-size: 8vh;
-    background: url(../../../src/assets/Meridor420.jpg) no-repeat; 
-    background-attachment: fixed;
-    background-position: 20% 55%;
+    display: inline-block;
+    font-size: 9vh;
+    background: url(../../../src/assets/Meridor424_HD.jpg) no-repeat center center fixed; 
+    background-size: cover;
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; 
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     color: transparent;
     text-transform: uppercase;
+    padding: 0 5vw;
 }
 
 .Meridor__First__text__right{
@@ -194,7 +189,8 @@
     }
 
     .Meridor__First{
-        background: none;
+        background-attachment: scroll;
+        background-image: url(../../assets/Meridor_mobile.jpg);
         position: inherit;
     }
 
