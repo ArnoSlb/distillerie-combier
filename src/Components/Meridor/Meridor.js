@@ -10,6 +10,7 @@ import MeridorRoses from "../../assets/HD-Roses-05201.jpg"
 import MeridorAffiche from "../../assets/GC189.jpg"
 import MeridorCocktail from "../../assets/Meridor460.jpg"
 import CocktailHand from "../../../src/assets/vintage-hand.svg"
+import RoseVideo from "../../assets/Videos/Rose-Combier-Distillerie.mp4"
 
 
 const Meridor = (props) => {
@@ -162,7 +163,8 @@ const Meridor = (props) => {
                     <img className="MeridorRose" src={MeridorRoses} alt="photo rose" />
                 </div>
                 <div className="Meridor__video Meridor__anim">
-                    <iframe width="960" height="539" src="https://www.youtube.com/embed/KpyTMGKLNlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    {/* <iframe width="960" height="539" src="https://www.youtube.com/embed/KpyTMGKLNlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                    <video controls width="100%" src={RoseVideo} >Sorry, your browser doesn't support embedded videos.</video>
                 </div>
                 <div className="Meridor__First__text Meridor__anim">
                     <div className="Meridor__First__text__left">
