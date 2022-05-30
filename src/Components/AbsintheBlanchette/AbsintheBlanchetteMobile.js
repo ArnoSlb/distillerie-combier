@@ -8,7 +8,6 @@ import BlanchetteCoktailImg from "../../assets/E.Batz_1639_absinthe_HD.jpg"
 import AbsintheGrenier from "../../assets/absinthe-grenier.jpg"
 import FeaturetteAbsinthe from "../../assets/Videos/Featurette_Absynthe.mp4"
 import CocktailHand from "../../assets/vintage-hand.svg"
-import AbsintheBlanchetteMobile from "./AbsintheBlanchetteMobile";
 
 const AbsintheBlanchette = (props) => {
 
@@ -60,26 +59,20 @@ const AbsintheBlanchette = (props) => {
 
     return (
         <div className="AbsintheBlanchette">
-            {isMobile?
-            <AbsintheBlanchetteMobile langSelected={props.langSelected}/>
-            :
-            <Controller>
-                <Scene duration={'100%'} indicators={false} triggerElement={".event2"} triggerHook={"onEnter"} pin={'.event1 .pinSection'}>
-                        <div className="box event1">
-                            <div className="pinSection">
-                            {props.langSelected == 'FR' ?
-                                <div className="AbsintheBlanchette__bg">
-                                    <div className="AbsintheBlanchette__bg__part">L'Absinthe</div>
-                                </div>
-                            :
-                                <div className="AbsintheBlanchette__bg">
-                                    <div className="AbsintheBlanchette__bg__part">The Absinthe</div>
-                                </div>
-                            }
+                    <div className="box event1">
+                        <div className="pinSection">
+                        {props.langSelected == 'FR' ?
+                            <div className="AbsintheBlanchette__bg">
+                                <div className="AbsintheBlanchette__bg__part">L'Absinthe</div>
                             </div>
+                        :
+                            <div className="AbsintheBlanchette__bg">
+                                <div className="AbsintheBlanchette__bg__part">The Absinthe</div>
+                            </div>
+                        }
+                            
                         </div>
-                </Scene>
-                <Scene duration={'200%'} indicators={false} triggerElement={".event2"} triggerHook={"onEnter"} pin={'.event2 .pinSection'}>
+                    </div>
                     <div className="box event2">
                         <div className="pinSection">
                         {props.langSelected == 'FR' ?
@@ -113,8 +106,6 @@ const AbsintheBlanchette = (props) => {
                         }      
                         </div>
                     </div>
-                </Scene>
-                <Scene duration={'200%'} indicators={false} triggerElement={".event3"} triggerHook={"onEnter"} pin={'.event3 .pinSection'}>
                     <div className="box event3">
                         <div className="pinSection">
                         {props.langSelected == 'FR' ?
@@ -143,8 +134,6 @@ const AbsintheBlanchette = (props) => {
                         }      
                         </div>
                     </div>
-                </Scene>
-                <Scene duration={'200%'} indicators={false} triggerElement={".event4"} triggerHook={"onEnter"} pin={'.event4 .pinSection'}>
                     <div className="box event4">
                         <div className="pinSection">
                             <div className="bg black">
@@ -172,8 +161,6 @@ const AbsintheBlanchette = (props) => {
                             </div>    
                         </div>
                     </div>
-                </Scene>
-                <Scene duration={'200%'} indicators={false} triggerElement={".event5"} triggerHook={"onEnter"} pin={'.event5 .pinSection'}>
                     <div className="box event5">
                         <div className="pinSection">
                             <div className="bg">
@@ -209,8 +196,6 @@ const AbsintheBlanchette = (props) => {
                             </div> 
                         </div>
                     </div>
-                </Scene>
-                <Scene duration={'200%'} indicators={false} triggerElement={".event6"} triggerHook={"onEnter"} pin={'.event6 .pinSection'}>
                     <div className="box event6">
                         <div className="pinSection">
                             <div className="bg">
@@ -218,8 +203,6 @@ const AbsintheBlanchette = (props) => {
                             </div>
                         </div>
                     </div>
-                </Scene>
-                <Scene duration={'200%'} indicators={false} triggerElement={".event7"} triggerHook={"onEnter"} pin={'.event7 .pinSection'}>
                     <div className="box event7">
                         <div className="pinSection">
                         <div className="bg">
@@ -249,8 +232,6 @@ const AbsintheBlanchette = (props) => {
                             </div> 
                         </div>
                     </div>
-                </Scene>
-                <Scene duration={'100%'} indicators={false} triggerElement={".event8"} triggerHook={"onEnter"} pin={'.event8 .pinSection'}>
                     <div className="box event8">
                         <div className="pinSection">
                         <div className="bg">
@@ -282,76 +263,7 @@ const AbsintheBlanchette = (props) => {
                             </div> 
                         </div>
                     </div>
-                </Scene>
-            </Controller>
-}
-            <div className="BlanchetteCocktail">
-                <div className="OriginalCocktail__container">
-                    <div className="OriginalCocktail__container__left">
-                        <img className="BlanchetteCocktail__container__left__img" src={BlanchetteCoktailImg} alt="" />
-                    </div>
-                    {props.langSelected == 'FR' ?
-                    <div className="OriginalCocktail__container__right">
-                        <h2 className="OriginalCocktail__container__right__title">Conclusion gourmande</h2>
-                        <p className="OriginalCocktail__container__right__description">La Blanchette se consomme allongée d’eau fraîche. Si vous avez la chance d'être équipé d'une fontaine à absinthe, versez 3 cl d’absinthe dans un verre à pied puis ouvrez le robinet pour y faire couler l'eau goutte à goutte sur le sucre posée sur la traditionnelle cuillère à absinthe. Sans fontaine ? une carafe d’eau fraîche fait l'affaire. Vous pouvez aussi consommer Blanchette sans sucre car elle est peu amer.  Pour préparer l'un des plus vieux cocktails connus, le Sazerac, on utilise Blanchette pour lui donner un peps herbacé. L'absinthe se révèle un excellent arôme pour les crèmes glacées maison, les gâteaux et pour flamber gambas, filets de truite ou en gelée avec les huîtres ! </p>
-                        <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
-                            {/* <img src={CocktailHand} alt="" /> */}
-                            <p >Découvrir un autre produit de la Distillerie </p>
-                            <img src={CocktailHand} alt="" />
-                        </div>
-                        <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
-                            <p >Recettes et Boutique</p>
-                        </div>
-                    </div>
-                    :
-                    <div className="OriginalCocktail__container__right">
-                        <h2 className="OriginalCocktail__container__right__title">Gourmet conclusion</h2>
-                        <p className="OriginalCocktail__container__right__description">Blanchette is best appreciated diluted with cool fresh water. If you are lucky enough to have an absinthe fountain, pour 3 cl of absinthe into a stemmed glass, then turn on the tap to let the water run drop by drop onto the sugar placed on the traditional absinthe spoon. No fountain? A carafe of cool water will do the trick. Because of its lack of bitterness, you can also drink Blanchette without sugar. Absinthe is excellent for flavoring homemade ice cream, cakes, flambéing shellfish, or in a jelly to go with oysters! When preparing a Sazerac, one of the oldest known cocktails, a dash of Blanchette can be used to give it a herbaceous pep. </p>
-                        <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
-                            {/* <img src={CocktailHand} alt="" /> */}
-                            <p> Discover another product from the Distillery </p>
-                            <img src={CocktailHand} alt="" />
-                        </div>
-                        <div className="OriginalCoktail__container__right__linkRecipe" onClick={eshopRedirection}>
-                            <p>Recipes and Shop</p>
-                        </div>
-                    </div>
-                    }  
                 </div>
-                <div className="OriginalCocktail__footer">
-                <div className="OriginalCocktail__footer__links">
-                    {props.langSelected == 'FR' ?
-                    <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Accueil</div>
-                    :
-                    <div className="OriginalCocktail__footer__link" onClick={homeRedirection}>Home</div>
-                    }
-                    {props.langSelected == 'FR' ?
-                    <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>Boutique</div>
-                    :
-                    <div className="OriginalCocktail__footer__link" onClick={eshopRedirection}>E-shop</div>
-                    }
-                    
-                    <div className="OriginalCocktail__footer__link" onClick={instagramRedirection}>Instagram</div>
-                    <div className="OriginalCocktail__footer__link" onClick={contactRedirection}>Contact</div>
-                </div>
-                
-                {props.langSelected == 'FR' ?
-                <div className="OriginalCocktail__footer__signature " >
-                    {/* <p className="OriginalCocktail__footer__link" onClick={mentionslegalesRedirection}>mentions légales</p> */}
-                    <Link to="/mentionslegales">mentions légales</Link>
-                    <p>L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION</p>
-                    <p>© 2022 - Distillé avec amour par Combier et Blinkl</p>
-                </div> 
-                :
-                <div className="OriginalCocktail__footer__signature">
-                    <p className="OriginalCocktail__footer__link" >Legal Notice</p>
-                    <p>ALCOHOL ABUSE IS DANGEROUS FOR YOUR HEALTH, CONSUME WITH MODERATION</p>
-                    <p>© 2022 - Distilled with love by Combier and Blinkl</p>
-                </div>     
-                } 
-            </div>
-        </div>
-    </div>
     )
 }
 
