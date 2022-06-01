@@ -336,6 +336,7 @@ width: 100%;
 
     .AbsintheBlanchette__bg{
         background-attachment: scroll;
+        height: 120vh;
     }
 
     .bg{
@@ -348,6 +349,7 @@ width: 100%;
     .AbsintheBlanchette__bg__part{
         width: 80%;
         height: 45%;
+        font-size: 15vw;
     }
 
     .AbsintheBlanchette__bg__part--full{
@@ -365,6 +367,7 @@ width: 100%;
 
     .AbsintheBlanchette__whatisit__title__whitecontainer{
         padding: 5px;
+        font-size: 4vw;
     }
 
     .image{
@@ -381,6 +384,19 @@ width: 100%;
     }
 
     .box {
-        height: 120vh;
+        height: 110vh;
+    }
+
+    .event6 {
+        height: 50vh;
+    }
+
+    .event7 .image{
+        width: 100%;
+    }
+
+    .event2 .bg,  .event3 .bg, .event4 .bg, .event5 .bg,  .event6 .bg,  .event7 .bg,  .event8 .bg{
+        background-image: none;
+        background: linear-gradient(#178488, #131313, #178488 );
     }
   }
