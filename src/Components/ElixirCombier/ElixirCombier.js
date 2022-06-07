@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 import "./ElixirCombier.css"
+import ElixirSectionWipesDesktop from "./ElixirSectionWipesDesktop/ElixirSectionWipesDesktop"
+import ElixirHistory from './ElixirSectionWipesDesktop/ElixirHistory/ElixirHistory';
+import ElixirGallery from './ElixirSectionWipesDesktop/ElixirGallery/ElixirGallery';
 
 import ElixirTrain from "../../assets/affiche_joueur_carte_1887_6_2fi34.jpg"
 import ElixirRaspail from "../../assets/portrait_raspail.jpg"
@@ -14,6 +17,8 @@ import ElixirAffiche01 from "../../assets/affiche01_elixir.jpg"
 import ElixirAffiche02 from "../../assets/affiche02_elixir.jpg"
 import ElixirTestament from "../../assets/archive_petit_courrier_elixir_01-1912.jpg"
 import ElixirGigi from "../../assets/gigi-italian-movie-poster.jpeg"
+
+
 
 const ElixirCombier = (props) => {
 
@@ -34,10 +39,9 @@ const ElixirCombier = (props) => {
 
     React.useEffect(() => {
 
-        var delayInMilliseconds = 8000; //1 second
+        var delayInMilliseconds = 1000; //1 second
 
         const ElixirTransitionText = () => {
-            document.querySelector('.zoom-text').style.display = "none"
             document.querySelector('.ElixirCombier__WhatIsIt').style.display = "flex"
             document.querySelector('.ElixirCombier__WhatIsIt').classList.add('ElixirCombier__opacity__anim')
         }
@@ -86,24 +90,23 @@ const ElixirCombier = (props) => {
         // else overlowX: initial
         //Sinon le scroll passe en horizontal alors qu'on est pas rendu en bas de la page
 
-        const scrollToRight = () => {
+        // const scrollToRight = () => {
 
-            const {scrollTop, scrollHeight, clientHeight} = document.documentElement
+        //     const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-            // console.log(scrollTop, clientHeight, scrollHeight)
+        //     // console.log(scrollTop, clientHeight, scrollHeight)
 
-                if( scrollTop + clientHeight == scrollHeight){
-                    // console.log("je passe en scroll horizontal")
-                    document.querySelector('.ElixirCombier').style.overflowX = "hidden";
-                } else {
-                    document.querySelector('.ElixirCombier').style.overflowX = "initial";
-                }
-        }
+        //         if( scrollTop + clientHeight == scrollHeight){
+        //             // console.log("je passe en scroll horizontal")
+        //             document.querySelector('.ElixirCombier').style.overflowX = "hidden";
+        //         } else {
+        //             document.querySelector('.ElixirCombier').style.overflowX = "initial";
+        //         }
+        // }
 
-        window.addEventListener('scroll', scrollToRight)
+        // window.addEventListener('scroll', scrollToRight)
         
         return () => {
-            window.removeEventListener('scroll', scrollToRight);
             clearTimeout(myTimeOut)
             }
     },[]);
@@ -112,68 +115,29 @@ const ElixirCombier = (props) => {
         <div className="ElixirCombier">
             <div className="ElixirCombier__HorizontalBlock">
                 <div className="ElixirCombier__HorizontalBlock__slide one">
-                    <p className="ElixirCombier__WhatIsIt__Title ElixirCombier__firstslide__anim">ELIXIR COMBIER</p>
                     <div className="ElixirCombier__WhatIsIt">
                     {props.langSelected == 'FR' ?
                         <div className="ElixirCombier__WhatIsIt__Left">
                             <h4 className="ElixirCombier__WhatIsIt__Left__title">Qu'est ce que c'est ?</h4>
-                            <p className="ElixirCombier__WhatIsIt__Left__text">Cet élixir, liqueur hygiénique est composée d’une quinzaine d’épices et de plantes infusées avant distillation. Ses ingrédients proviennent de la vallée de la Loire et de contrées beaucoup plus lointaines telles que l’Afrique, l’Inde et l’Asie. Cardamome, muscade, myrrhe, girofle, cannelle, safran, aloès, orange, citron viennent combiner leurs saveurs pour offrir une incroyable persistance aromatique en bouche. </p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">Liqueur hygénique de dessert, l'Elixir Combier est composée d’une quinzaine d’épices et de plantes infusées avant distillation. Ses ingrédients proviennent autant de la vallée de la Loire que de contrées beaucoup plus lointaines telles que l’Afrique, l’Inde et l’Asie.</p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">Cardamome, muscade, myrrhe, girofle, cannelle, safran, aloès, orange, citron viennent combiner leurs saveurs pour offrir une incroyable persistance aromatique en bouche. D'une limpidité jaune dorée éclatante, sa complexité épicée peut rappeler, pour les amateurs du genre, celle d’une chartreuse.</p>
                         </div>
                     :
                         <div className="ElixirCombier__WhatIsIt__Left">
                             <h4 className="ElixirCombier__WhatIsIt__Left__title">What is it ?</h4>
-                            <p className="ElixirCombier__WhatIsIt__Left__text">This elixir, a hygienic liquor, is made up of around fifteen spices and plants infused before distillation. Its ingredients come from the Loire Valley and much further afield such as Africa, India and Asia. Cardamom, nutmeg, myrrh, cloves, cinnamon, saffron, aloe, orange, lemon combine their flavors to offer an incredible aromatic persistence in the mouth.</p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">A classic hygenic dessert liqueur, Elixir Combier comprises over fifteen spices and plants infused before distillation. Its ingredients are sourced both from the Loire Valley and more distant lands such as Africa, India and Asia.</p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">The combination of cardamom, nutmeg, myrrh, cloves, cinnamon, saffron, aloe, orange, and lemon flavors offer an incredible aromatic persistence in the mouth. A dazzling clear golden yellow, its spicy complexity will appeal to lovers of Chartreuse.</p>
                         </div>
                     }
                         <div className="ElixirCombier__WhatIsIt__Right">
-                            <img className="ElixirCombier__WhatIsIt__Right__Img" src={ElixirTrain} alt="Affiche Elixir Combier" />
+                            <img className="ElixirCombier__WhatIsIt__Right__Img" src={ElixirHD} alt="Affiche Elixir Combier" />
                         </div>
                     </div>
                 </div>
-                <div className="ElixirCombier__HorizontalBlock__slide two">
-                    <div className="ElixirCombier__WhatIsIt__Two">
-                        <div className="ElixirCombier__WhatIsIt__Two_container">
-                            <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirHD} alt="Photo Elixir" />
-                        </div>  
-                        {props.langSelected == 'FR' ?
-                            <div className="ElixirCombier__WhatIsIt__Two_container">
-                                <p className="ElixirCombier__WhatIsIt__Two__text"><strong>Allure : </strong>Une limpidité jaune dorée éclatante.</p>
-                                <p className="ElixirCombier__WhatIsIt__Two__text"><strong>En bouche : </strong>Sa complexité épicée offre une persistance en bouche, qui peut rappeler, pour les amateurs du genre, celle d’une chartreuse.</p>
-                            </div> 
-                        :
-                            <div className = "ElixirCombier__WhatIsIt__Two_container">
-                                <p className = "ElixirCombier__WhatIsIt__Two__text"> <strong> Allure: </strong> Bright golden yellow clarity. </p>
-                                <p className = "ElixirCombier__WhatIsIt__Two__text"> <strong> In the mouth: </strong> Its spicy complexity offers a persistence in the mouth, which for fans of the genre may recall that of a chartreuse. </p>
-                            </div>
-                        }
-                        
-                        <div className="ElixirCombier__WhatIsIt__Two_container">
-                            <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirCartonBleu} alt="Veille pancarte bleu Elixir" />
-                        </div>   
-                    </div>
-                </div>
-                <div className="ElixirCombier__HorizontalBlock__slide three">
-                {props.langSelected == 'FR' ?
-                    <div className="Elixir__Combier__Manufacturing">
-                        <h4 className="Elixir__Combier__Manufacturing__title">La Fabrication</h4>
-                        <div className="Elixir__Combier__Manufacturing__description">
-                            <p>1. Sélection et pesage des ingrédients avant macération en cuve.</p>
-                            <p>2. Les épices, plantes et agrumes vont infuser durant plusieurs semaines.</p>
-                            <p>3. L’ensemble est distillé pour obtenir un esprit des plus aromatiques.</p>
-                        </div>
-                    </div>
-                :
-                    <div className = "Elixir__Combier__Manufacturing">
-                        <h4 className = "Elixir__Combier__Manufacturing__title"> The Manufacturing </h4>
-                        <div className = "Elixir__Combier__Manufacturing__description">
-                            <p> 1. Selection and weighing of ingredients before maceration in the tank. </p>
-                            <p> 2. The spices, plants and citrus will infuse for several weeks. </p>
-                            <p> 3. The whole is distilled for the most aromatic spirit. </p>
-                        </div>
-                    </div>
-                }
-                </div>
-                <div className="ElixirCombier__HorizontalBlock__slide four">
+                <ElixirHistory langSelected={props.langSelected}/>
+                <ElixirGallery langSelected={props.langSelected}/>
+                {/* <ElixirSectionWipesDesktop/> */}
+                {/* <div className="ElixirCombier__HorizontalBlock__slide four">
                 {props.langSelected == 'FR' ?
                     <div className="ElixirCombier__History">
                         <h3 className="ElixirCombier__History__title">Un peu d'histoire</h3>
@@ -200,8 +164,8 @@ const ElixirCombier = (props) => {
                     </div>
                 }
     
-                </div>
-                <div className="ElixirCombier__HorizontalBlock__slide five">
+                </div> */}
+                {/* <div className="ElixirCombier__HorizontalBlock__slide five">
                     <div className="ElixirCombier__History__2">
                         <img className="ElixirCombier__History__2__Raspail board" src={ElixirRaspail} alt="Portrait de Raspail" />
                         <img className="ElixirCombier__History__2__Affiche board" src={ElixirAffiche} alt="Affiche Elixir" />
@@ -212,8 +176,8 @@ const ElixirCombier = (props) => {
                         <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirAffiche01} alt="Affiche Elixir" />
                         
                     </div>  
-                </div>
-                <div className="ElixirCombier__HorizontalBlock__slide six">
+                </div> */}
+                {/* <div className="ElixirCombier__HorizontalBlock__slide six">
                     <div className="ElixirCocktail">
                         <div className="ElixirCocktail__container">
                             <div className="ElixirCocktail__container__left">
@@ -237,7 +201,7 @@ const ElixirCombier = (props) => {
                         <div className = "ElixirCocktail__footer" onClick = {GotoBottleHub}> Discover another product from the Distillerie Combier </div>
                         }                              
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
