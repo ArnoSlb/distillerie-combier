@@ -20,13 +20,13 @@ const BottleBar = (props) => {
         ExpAvailable = true
     } else if (props.bottleSelected == 'elixir'){
         BottleIndex = 2
-        ExpAvailable = false
+        ExpAvailable = true
     } else if (props.bottleSelected == 'meridor'){
         BottleIndex = 1
         ExpAvailable = true
     } else if (props.bottleSelected == 'blanchette'){
         BottleIndex = 3
-        ExpAvailable = false
+        ExpAvailable = true
     }
     
     React.useEffect(() => {

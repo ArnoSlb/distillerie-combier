@@ -1,0 +1,122 @@
+.OriginalManufacturing2{
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(16, 16, 29, 0.993);
+}
+
+.OriginalManufacturing2__1{
+    margin-top: 10vh;
+    max-height: calc(26vw + 4em + 40px);
+}
+
+.OriginalManufacturing2__2{
+    margin-top: 18vh;
+    max-height: calc(22vw + 4em + 95px);
+}
+
+.OriginalManufacturing2__3{
+    margin-top: 30vh;
+    max-height: calc(23vw + 4em + 40px);
+}
+
+.OriginalManufacturing2__1, .OriginalManufacturing2__2, .OriginalManufacturing2__3{
+    width: 25%;
+    background: linear-gradient(#ffffffc9, #ffffff);
+    padding: 2em;
+    /* border-radius: 15px; */
+    opacity: 0;
+}
+
+.OriginalManufacturing2__1 img, .OriginalManufacturing2__2 img, .OriginalManufacturing2__3 img {
+    width: 90%;
+    background-color: grey;
+    opacity: 5%;
+    border: 1px solid grey;
+}
+
+.OriginalManufacturing2__1 p, .OriginalManufacturing2__2 p, .OriginalManufacturing2__3 p{
+
+    padding: 10px 5px;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.reveal {
+    -webkit-animation: reveal 11s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: reveal 11s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+@media screen and (min-height: 960px) {
+    .OriginalManufacturing2__1 img, .OriginalManufacturing2__2 img, .OriginalManufacturing2__3 img {
+        /* height: 50vh; */
+    }
+
+    .OriginalManufacturing2__1{
+        margin-top: 70px;
+        /* height: 60vh; */
+    }
+    
+    .OriginalManufacturing2__2{
+        margin-top: 16vh;
+        /* height: 66vh; */
+    }
+    
+    .OriginalManufacturing2__3{
+        margin-top: 31vh;
+        /* height: 61vh; */
+    }
+
+    .OriginalManufacturing2__1 p, .OriginalManufacturing2__2 p, .OriginalManufacturing2__3 p{
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (orientation:portrait) {
+    .OriginalManufacturing2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .OriginalManufacturing2__1, .OriginalManufacturing2__2, .OriginalManufacturing2__3{
+        display: flex;
+        width: 80vw;
+        max-width: 80vw;
+        align-items: center;
+        justify-content: center;
+        margin: 1vh 0;
+        padding: 3vw 4vw;
+    }
+
+    .OriginalManufacturing2__1 p, .OriginalManufacturing2__2 p, .OriginalManufacturing2__3 p {
+        font-size: 1.7vh;
+    }
+
+    .OriginalManufacturing2__1 img, .OriginalManufacturing2__2 img, .OriginalManufacturing2__3 img{
+        width: 30vw;
+        height: 30vw;
+        margin-right: 15px;
+    }
+}
+
+
+@-webkit-keyframes reveal {
+    0% {
+      opacity: 0.05;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes reveal {
+    0% {
+              opacity: 0.05;
+    }
+    100% {
+              opacity: 1;
+    }
+  }

@@ -1,13 +1,9 @@
 import React from "react";
-import { useEffect } from "react";
-import { Controller, Scene } from 'react-scrollmagic';
+
 import useDeviceDetect from '../../useDeviceDetect';
 
 import SectionWipesOriginal from "./SectionWipesOriginal/SectionWipesOriginal";
 import SectionWipesMobile from "./SectionWipesMobile/SectionWipesMobile";
-
-import originalCombierPresentation from "../../assets/LOriginalCombier652_HD.jpg"
-import OriginalCombierOrange from "../../assets/Orange_HD.png"
 
 import "./OriginalCombier.css";
 

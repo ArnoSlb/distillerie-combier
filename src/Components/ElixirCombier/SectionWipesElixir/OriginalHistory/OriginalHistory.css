@@ -1,0 +1,184 @@
+.OriginalHistory{
+    background-color: burlywood;
+    height: 100vh;
+    height: 100vh;
+    background: url(../../../../assets/1836-lithographie-edmond_savoure.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.OriginalHistory__title{
+    font-family: 'Abril Fatface', cursive;
+    margin-top: calc(60px + 2vh);
+    font-size: 5vh;
+    letter-spacing: .2rem;
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.OriginalHistory__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin-top: 40px;
+}
+
+.OriginalHistory__container__left{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8vw;
+    background-color: rgb(253, 251, 245);
+    padding: 20px 30px;
+}
+
+.OriginalHistory__container__left__title{
+    font-family: 'Special Elite', cursive;
+    font-size: 3vh;
+}
+
+.OriginalHistory__container__left__title1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 8vh;
+    margin: 0;
+    margin-bottom: 10px;
+    line-height: 8vh;
+}
+
+.OriginalHistory__container__left__title2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+    margin: 0;
+    margin-bottom: 10px;
+    line-height: 4vh;
+}
+
+.OriginalHistory__container__left__description{
+    font-family: 'Special Elite', cursive;
+    font-size: 2vh;
+    text-align: justify;
+}
+
+.OriginalHistory__container__right{
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.OriginalHistory__container__right_OriginalHistoryBottle{
+    /* position: absolute; */
+    width: 20vw;
+    /* right: 7vw; */
+    /* top: 5vh; */
+    border: 5px solid white;
+    z-index: 1;
+}
+
+.OriginalHistory__container__right_OriginalHistoryArchive{
+    /* position: absolute; */
+   height: 60vh;
+    /* right: 2vw; */
+    border: 5px solid white;
+    z-index: 2;
+    /* top: 10vh; */
+}
+
+.OriginalHistory__container__right_OriginalHistoryBeaurepaire{
+    /* position: absolute; */
+    width: 18vw;
+    /* right: 26vw; */
+    /* bottom: 0; */
+    border: 5px solid white;
+    z-index: 4;
+}
+
+.OriginalHistory__container__right_OriginalHistoryPub{
+    /* position: absolute; */
+    width: 16vw;
+    /* right: 23vw;
+    top: 1vh; */
+    /* border: 5px solid white; */
+    z-index: 2;
+}
+
+.reveal-history {
+    -webkit-animation: reveal-history 1.5s linear both;
+            animation: reveal-history 1.5s linear both;
+  }
+
+@media screen and (orientation:portrait) {
+
+    .OriginalHistory{
+        background-attachment: scroll;
+        height: 230vh;
+    }
+
+    .OriginalHistory__container{
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .OriginalHistory__container__left{
+        width: 85%;
+        max-width: 70vw;
+        margin-left: inherit;
+        margin-top: 40px;
+    }
+
+    .OriginalHistory__container__left__title1{
+        font-size: 6vh;
+        text-align: center;
+        margin: 0;
+    }
+    .OriginalHistory__container__left__title2{
+        font-size: 3vh;
+        text-align: center;
+        margin: 0;
+    }
+
+    .OriginalHistory__container__left__title{
+        font-size: 2.2vh;
+        text-align: center;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .OriginalHistory__container__right{
+        flex-direction: column;
+    }
+    
+    .OriginalHistory__container__right_OriginalHistoryPub{
+        width: 50vw;
+        margin: 7vh;
+    }
+
+    .reveal-history {
+        -webkit-animation: reveal-history 0.5s linear both;
+                animation: reveal-history 0.5s linear both;
+      }
+}
+
+  
+
+  @-webkit-keyframes reveal-history {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes reveal-history {
+    0% {
+              opacity: 0;
+    }
+    100% {
+              opacity: 1;
+    }
+  }
