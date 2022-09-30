@@ -14,6 +14,8 @@ import ElixirAffiche01 from "../../assets/affiche01_elixir.jpg"
 import ElixirAffiche02 from "../../assets/affiche02_elixir.jpg"
 import ElixirTestament from "../../assets/archive_petit_courrier_elixir_01-1912.jpg"
 import ElixirGigi from "../../assets/gigi-italian-movie-poster.jpeg"
+import ElixirFamille from "../../assets/elixir_combier_pour_toute_famille_1900_4bfi79.jpg"
+import CombierCarte from "../../assets/Distillerie-Combier-Cremede-fruit_060421-4.png"
 
 const ElixirCombier = (props) => {
 
@@ -34,11 +36,11 @@ const ElixirCombier = (props) => {
 
     React.useEffect(() => {
 
-        var delayInMilliseconds = 8000; //1 second
+        var delayInMilliseconds = 1000; //1 second
 
         const ElixirTransitionText = () => {
-            document.querySelector('.zoom-text').style.display = "none"
-            document.querySelector('.ElixirCombier__WhatIsIt').style.display = "flex"
+            // document.querySelector('.zoom-text').style.display = "none"
+            // document.querySelector('.ElixirCombier__WhatIsIt').style.display = "flex"
             document.querySelector('.ElixirCombier__WhatIsIt').classList.add('ElixirCombier__opacity__anim')
         }
 
@@ -104,7 +106,7 @@ const ElixirCombier = (props) => {
         
         return () => {
             window.removeEventListener('scroll', scrollToRight);
-            clearTimeout(myTimeOut)
+            // clearTimeout(myTimeOut)
             }
     },[]);
 
@@ -112,25 +114,28 @@ const ElixirCombier = (props) => {
         <div className="ElixirCombier">
             <div className="ElixirCombier__HorizontalBlock">
                 <div className="ElixirCombier__HorizontalBlock__slide one">
-                    <p className="ElixirCombier__WhatIsIt__Title ElixirCombier__firstslide__anim">ELIXIR COMBIER</p>
+                    {/* <p className="ElixirCombier__WhatIsIt__Title">ELIXIR COMBIER</p> */}
                     <div className="ElixirCombier__WhatIsIt">
                     {props.langSelected == 'FR' ?
                         <div className="ElixirCombier__WhatIsIt__Left">
                             <h4 className="ElixirCombier__WhatIsIt__Left__title">Qu'est ce que c'est ?</h4>
-                            <p className="ElixirCombier__WhatIsIt__Left__text">Cet élixir, liqueur hygiénique est composée d’une quinzaine d’épices et de plantes infusées avant distillation. Ses ingrédients proviennent de la vallée de la Loire et de contrées beaucoup plus lointaines telles que l’Afrique, l’Inde et l’Asie. Cardamome, muscade, myrrhe, girofle, cannelle, safran, aloès, orange, citron viennent combiner leurs saveurs pour offrir une incroyable persistance aromatique en bouche. </p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">Liqueur hygénique de dessert, l'Elixir Combier est composée d’une quinzaine d’épices et de plantes infusées avant distillation. Ses ingrédients proviennent autant de la vallée de la Loire que de contrées beaucoup plus lointaines telles que l’Afrique, l’Inde et l’Asie.</p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">Cardamome, muscade, myrrhe, girofle, cannelle, safran, aloès, orange, citron viennent combiner leurs saveurs pour offrir une incroyable persistance aromatique en bouche. D'une limpidité jaune dorée éclatante, sa complexité épicée peut rappeler, pour les amateurs du genre, celle d’une chartreuse.</p>
                         </div>
                     :
                         <div className="ElixirCombier__WhatIsIt__Left">
                             <h4 className="ElixirCombier__WhatIsIt__Left__title">What is it ?</h4>
-                            <p className="ElixirCombier__WhatIsIt__Left__text">This elixir, a hygienic liquor, is made up of around fifteen spices and plants infused before distillation. Its ingredients come from the Loire Valley and much further afield such as Africa, India and Asia. Cardamom, nutmeg, myrrh, cloves, cinnamon, saffron, aloe, orange, lemon combine their flavors to offer an incredible aromatic persistence in the mouth.</p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">A classic hygenic dessert liqueur, Elixir Combier comprises over fifteen spices and plants infused before distillation. Its ingredients are sourced both from the Loire Valley and more distant lands such as Africa, India and Asia.</p>
+                            <p className="ElixirCombier__WhatIsIt__Left__text">The combination of cardamom, nutmeg, myrrh, cloves, cinnamon, saffron, aloe, orange, and lemon flavors offer an incredible aromatic persistence in the mouth. A dazzling clear golden yellow, its spicy complexity will appeal to lovers of Chartreuse.</p>
+
                         </div>
                     }
                         <div className="ElixirCombier__WhatIsIt__Right">
-                            <img className="ElixirCombier__WhatIsIt__Right__Img" src={ElixirTrain} alt="Affiche Elixir Combier" />
+                            <img className="ElixirCombier__WhatIsIt__Right__Img" src={ElixirHD} alt="Affiche Elixir Combier" />
                         </div>
                     </div>
                 </div>
-                <div className="ElixirCombier__HorizontalBlock__slide two">
+                {/* <div className="ElixirCombier__HorizontalBlock__slide two">
                     <div className="ElixirCombier__WhatIsIt__Two">
                         <div className="ElixirCombier__WhatIsIt__Two_container">
                             <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirHD} alt="Photo Elixir" />
@@ -151,8 +156,8 @@ const ElixirCombier = (props) => {
                             <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirCartonBleu} alt="Veille pancarte bleu Elixir" />
                         </div>   
                     </div>
-                </div>
-                <div className="ElixirCombier__HorizontalBlock__slide three">
+                </div> */}
+                {/* <div className="ElixirCombier__HorizontalBlock__slide three">
                 {props.langSelected == 'FR' ?
                     <div className="Elixir__Combier__Manufacturing">
                         <h4 className="Elixir__Combier__Manufacturing__title">La Fabrication</h4>
@@ -172,30 +177,22 @@ const ElixirCombier = (props) => {
                         </div>
                     </div>
                 }
-                </div>
+                </div> */}
                 <div className="ElixirCombier__HorizontalBlock__slide four">
+                <img className='ElixirRaspail' src={ElixirRaspail}></img>
                 {props.langSelected == 'FR' ?
                     <div className="ElixirCombier__History">
-                        <h3 className="ElixirCombier__History__title">Un peu d'histoire</h3>
+                        <h3 className="ElixirCombier__History__title">Bref rappel historique</h3>
                         <p className="ElixirCombier__History__description">
-                            C’est en 1852 que Jean-Baptiste Combier met au point la recette de cet élixir inspiré des travaux du célèbre Docteur Raspail.
-                            Chimiste et botaniste, François-Vincent Raspail est un philanthrope qui veut œuvrer pour le bien de ses contemporains. Il rédige et publie en 1845 un « Manuel de la santé ». Parmi ses nombreuses recettes, une liqueur médicinale - « L’élixir hygiénique de dessert » - censé procurer une longue vie, apaiser les maux d’estomac et favoriser la digestion.
-    
-                            Sa recette contient du camphre, dont le botaniste use et abuse dans ses préparations. Thérapeutique certes, mais avec un goût prononcé qui ne plaît pas au plus grand nombre. Jean-Baptiste Combier cherche à conserver les vertus de ce breuvage, tout en le rendant délicieux. Fort de son expérience de confiseur et distillateur, il teste plusieurs recettes. Après de nombreux essais, il parvient à une composition exotique d’herbes et de plantes aromatiques, osé certes, mais l’alchimie fonctionne.
-    
-                            Le distillateur décide d’envoyer son élixir revu et modifié à Raspail. Opposant notoire au régime, ce dernier est alors emprisonné à la citadelle de Doullens. Il goûte la liqueur et répond aussitôt à Jean-Baptiste. Il la déclare fameuse. Sa lettre de louanges est conservée par la distillerie dans ses archives.
+                            C’est en 1852 que Jean-Baptiste Combier met au point la recette de cet élixir inspiré des travaux du célèbre Docteur Raspail. Parmi ses nombreuses recettes médicinales, celle d’une « Liqueur hygiénique de dessert » - censé procurer longue vie et favoriser la digestion. 
+                            Jean-Baptiste Combier cherche à conserver les vertus de ce breuvage tout en le rendant délicieux. Après de nombreux essais de distillation, l’alchimie fonctionne. Le distillateur décide d’envoyer son élixir amélioré à Raspail, qui la déclare fameuse. Sa lettre de louanges est conservée dans les archives de la distillerie
                         </p>
                     </div>
                 :
                     <div className = "ElixirCombier__History">
-                        <h3 className = "ElixirCombier__History__title"> A little history </h3>
+                        <h3 className = "ElixirCombier__History__title">Brief historical reminder</h3>
                         <p className = "ElixirCombier__History__description">
-                            It was in 1852 that Jean-Baptiste Combier finalized the recipe for this elixir, inspired by the work of the famous Doctor Raspail.
-                            Chemist and botanist, François-Vincent Raspail is a philanthropist who wants to work for the good of his contemporaries. He wrote and published in 1845 a "Manual of health". Among its many recipes, a medicinal liqueur - "The Hygienic Dessert Elixir" - believed to provide long life, soothe stomach aches and aid digestion.
-
-                            Its recipe contains camphor, which the botanist uses and abuses in his preparations. Therapeutic of course, but with a pronounced taste that does not appeal to the majority. Jean-Baptiste Combier seeks to preserve the virtues of this drink, while making it delicious. With his experience as a confectioner and distiller, he tested several recipes. After many attempts, he arrives at an exotic composition of herbs and aromatic plants, daring of course, but the alchemy works.
-
-                            The distiller decides to send his revised and modified elixir to Raspail. Notorious opponent of the regime, the latter was then imprisoned in the citadel of Doullens. He tastes the liquor and immediately responds to Jean-Baptiste. He declares it famous. His letter of praise is kept by the distillery in its archives.
+                            It was in 1852 that Jean-Baptiste Combier perfected the recipe for this elixir inspired by the work of the famous Doctor Raspail. Among his many medicinal recipes, that of a "Hygienic Dessert Liqueur" - supposed to provide long life and promote digestion. Jean-Baptiste Combier seeks to preserve the virtues of this beverage while making it delicious. After many distillation trials, the alchemy works. The distiller decides to send his improved elixir to Raspail, who declares it famous. His letter of praise is kept in the archives of the distillery.
                         </p>
                     </div>
                 }
@@ -203,13 +200,12 @@ const ElixirCombier = (props) => {
                 </div>
                 <div className="ElixirCombier__HorizontalBlock__slide five">
                     <div className="ElixirCombier__History__2">
-                        <img className="ElixirCombier__History__2__Raspail board" src={ElixirRaspail} alt="Portrait de Raspail" />
                         <img className="ElixirCombier__History__2__Affiche board" src={ElixirAffiche} alt="Affiche Elixir" />
                         <img className="ElixirCombier__History__2__Affiche board" src={ElixirAffiche02} alt="Affiche Elixir" />
-                        <img className="ElixirCombier__History__2__Testament board" src={ElixirTestament} alt="Testament Elixir" />
-                        <img className="ElixirCombier__History__2__Gigi board" src={ElixirGigi} alt="Elixir Gigi" />
-                        <img className="ElixirCombier__History__2__Colette board" src={ElixirColette} alt="Extrait Colette" />
+                        <img className="ElixirCombier__History__2__Affiche board" src={ElixirCartonBleu} alt="Affiche Elixir" />
                         <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirAffiche01} alt="Affiche Elixir" />
+                        <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirTrain} alt="Affiche Elixir" />
+                        <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirFamille} alt="Affiche Elixir" />
                         
                     </div>  
                 </div>

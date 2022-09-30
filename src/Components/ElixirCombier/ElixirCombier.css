@@ -18,7 +18,7 @@
     /* padding-top: 100px; */
     display: flex;
     flex-direction: row;
-    width: 750vw;
+    width: 600vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
@@ -57,10 +57,9 @@
 .ElixirCombier__WhatIsIt {
     height: 100%;
     width: 100%;
-    /* display: flex; */
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    display: none;
     opacity: 0;
 }
 
@@ -169,20 +168,26 @@
     margin: 0;
 }
 
+.ElixirRaspail{
+    height: 70%;
+}
+
 .four{
-    background-color: #8e8358;
-    background: url(../../../src/assets/elixir_combier_pour_toute_famille_1900_4bfi79.jpg) no-repeat center center; 
+    background: linear-gradient(#e9e3e3, #a49f86);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .ElixirCombier__History{
     background-color: rgba(255, 255, 255, 0.781);
+    border: 1px solid black;
     padding: 30px;
     width: 40%;
-    height: 50%;  
 }
 
 .ElixirCombier__History__title{
@@ -197,7 +202,7 @@
 
 .five{
     background: linear-gradient( rgb(235, 222, 188), #695d42);
-    width: 250vw;
+    width: 300vw;
 }
 
 .ElixirCombier__History__2{
