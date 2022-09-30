@@ -17,6 +17,8 @@ import ElixirGigi from "../../assets/gigi-italian-movie-poster.jpeg"
 import ElixirFamille from "../../assets/elixir_combier_pour_toute_famille_1900_4bfi79.jpg"
 import CombierCarte from "../../assets/Distillerie-Combier-Cremede-fruit_060421-4.png"
 
+import ElixirCocktail from "./ElixirCocktail/ElixirCocktail"
+
 const ElixirCombier = (props) => {
 
     const GotoBottleHub = () => {
@@ -209,7 +211,7 @@ const ElixirCombier = (props) => {
                         
                     </div>  
                 </div>
-                <div className="ElixirCombier__HorizontalBlock__slide six">
+                {/* <div className="ElixirCombier__HorizontalBlock__slide six">
                     <div className="ElixirCocktail">
                         <div className="ElixirCocktail__container">
                             <div className="ElixirCocktail__container__left">
@@ -233,7 +235,8 @@ const ElixirCombier = (props) => {
                         <div className = "ElixirCocktail__footer" onClick = {GotoBottleHub}> Discover another product from the Distillerie Combier </div>
                         }                              
                     </div>
-                </div>
+                </div> */}
+                <ElixirCocktail langSelected={props.langSelected}/>
             </div>
         </div>
     )

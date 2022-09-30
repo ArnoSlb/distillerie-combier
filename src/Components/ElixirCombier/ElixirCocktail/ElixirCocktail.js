@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import useDeviceDetect from '../../../../useDeviceDetect';
+import useDeviceDetect from '../../../useDeviceDetect';
 
-import "./OriginalCocktail.css"
+import "./ElixirCocktail.css"
 
-import OriginalCoktailImg from "../../../../assets/LOriginalCombier658_HD.jpg"
-import CocktailHand from "../../../../assets/vintage-hand.svg"
+import ElixirCoktailImg from "../../../assets/Exilir2482_HD.jpg"
+import CocktailHand from "../../../assets/vintage-hand.svg"
 
-const OriginalCocktail = (props) => {
+const ElixirCocktail = (props) => {
 
     const { isMobile } = useDeviceDetect();
 
@@ -27,7 +27,7 @@ const OriginalCocktail = (props) => {
         window.open('https://www.instagram.com/distilleriecombier/?hl=fr', "_blank") || window.location.replace('https://www.instagram.com/distilleriecombier/?hl=fr');
     }
     const eshopRedirection = () => {
-        window.open('https://www.combier.fr/signatures/original-combier/', "_blank") || window.location.replace('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/');
+        window.open('https://www.combier.fr/signatures/elixir-combier/', "_blank") || window.location.replace('https://www.facebook.com/pages/category/Company/Combier-Distillerie-152736078083339/');
     }
     const contactRedirection = () => {
         window.open('https://www.combier.fr/distillerie/boutique-et-contact/', "_blank") || window.location.replace('https://www.combier.fr/distillerie/boutique-et-contact/');
@@ -59,12 +59,12 @@ const OriginalCocktail = (props) => {
         <div className="OriginalCocktail">
             <div className="OriginalCocktail__container">
                 <div className="OriginalCocktail__container__left">
-                    <img className="OriginalCocktail__container__left__img" src={OriginalCoktailImg} alt="" />
+                    <img className="OriginalCocktail__container__left__img" src={ElixirCoktailImg} alt="" />
                 </div>
                 {props.langSelected == 'FR' ?
                 <div className="OriginalCocktail__container__right">
-                    <h2 className="OriginalCocktail__container__right__title">Savourez-le...</h2>
-                    <p className="OriginalCocktail__container__right__description">pur pour terminer un repas en douceur ou dans un des grands classiques du cocktail où l’Original Combier apporte toute sa vivacité : la Margarita, le Long Island, le Cosmopolitan, le Sidecar. La liste est longue. En cuisine, il apporte la note gastronomique aux préparations et aux flambages : soufflés, génoises, confitures, salades de fruits ou les fameuses crêpes Suzette.</p>
+                    <h2 className="OriginalCocktail__container__right__title">Pour savourer...</h2>
+                    <p className="OriginalCocktail__container__right__description">au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p >Découvrir un autre produit de la Distillerie </p>
@@ -76,8 +76,8 @@ const OriginalCocktail = (props) => {
                 </div>
                 :
                 <div className="OriginalCocktail__container__right">
-                    <h2 className="OriginalCocktail__container__right__title">Savor it ...</h2>
-                    <p className="OriginalCocktail__container__right__description"> pure and smooth at the end of a meal or in one of the great cocktail classics where L'Original Combier contributes its essential lively zest: Margarita, Long Island, Cosmopolitan, Sidecar. The list is long. In the culinary arena, L'Original Combier adds a gastronomic accent to soufflés, pâtisseries, jams, fruit salads and flambées like the famous crêpes Suzette. </p>
+                    <h2 className="OriginalCocktail__container__right__title">To savor...</h2>
+                    <p className="OriginalCocktail__container__right__description">at best all the qualities of Elixir Combier, serve it at the end of a meal, chilled or on ice, where it will reveal all its complexity. For the more adventurous, make good use of it to revisit and reinvigorate great cocktail classics: Crusta, Mule, Swizzle, Sazerac ... </p>
                     <div className="OriginalCoktail__container__right__linkhub" onClick={GotoBottleHub}>
                         {/* <img src={CocktailHand} alt="" /> */}
                         <p> Discover another product from the Distillery </p>
@@ -125,4 +125,4 @@ const OriginalCocktail = (props) => {
     )
 }
 
-export default OriginalCocktail
+export default ElixirCocktail
