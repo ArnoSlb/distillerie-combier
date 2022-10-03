@@ -77,8 +77,7 @@
     font-size: 7vh;
     padding: 0 35px ;
     color: rgb(255, 255, 255);
-    margin: 0;
-    
+    margin: 0; 
 }
 
 .ElixirCombier__WhatIsIt__Left__text{
@@ -308,6 +307,88 @@
 .ElixirCombier__opacity__anim {
     -webkit-animation: opacity-text 1.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
             animation: opacity-text 1.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
+}
+
+@media screen and (orientation: portrait){
+
+    .ElixirCombier{
+        height: 100vw;
+        width: 100vh;
+        position: relative;
+        transform: rotate(0) translateX(0);
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .ElixirCombier__HorizontalBlock{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        transform: rotate(0) translateY(0);
+    }
+
+    .ElixirCombier__WhatIsIt {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0;
+    }
+
+    .ElixirCombier__WhatIsIt__Left{
+        height: 100%;
+        width: 90vw;
+        background-color: rgba(0, 0, 0, 0.793);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 35vh;
+    }
+
+    .ElixirCombier__WhatIsIt__Left__title{
+        font-size: 5vh;
+        padding: 5vh 35px;
+        color: rgb(255, 255, 255);
+        margin: 0; 
+    }
+    
+    .ElixirCombier__WhatIsIt__Left__text{
+        font-size: 2vh;
+        padding: 0 35px;
+        font-family: 'Raleway', sans-serif; 
+        margin-bottom: 5vh;
+    }
+
+    .four{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 140vh;
+    }
+
+    .ElixirRaspail{
+        height: auto;
+        width: 90%;
+    }
+
+    .ElixirCombier__History{
+        padding: 5%;
+        width: 80%;
+    }
+
+    .ElixirCombier__History__title{
+        font-size: 5vh;
+        margin: 20px 0;
+        font-family: 'Crimson Pro', serif;
+    }
+    
+    .ElixirCombier__History__description{
+        font-size: 2vh;
+    }
+
 }
 
   @-webkit-keyframes zoom-text {

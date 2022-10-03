@@ -1,25 +1,23 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 
 import "./ElixirCombier.css"
 
 import ElixirTrain from "../../assets/affiche_joueur_carte_1887_6_2fi34.jpg"
 import ElixirRaspail from "../../assets/portrait_raspail.jpg"
 import ElixirHD from "../../assets/Exilir2485_HD.jpg"
-import Elixir2482HD from "../../assets/Exilir2482_HD.jpg"
 import ElixirCartonBleu from "../../assets/carton_bleu_elixir_4_2fi90.jpg"
-import ElixirColette from "../../assets/extrait_colette.jpg"
 import ElixirAffiche from "../../assets/affiche_elixir.jpg"
 import ElixirAffiche01 from "../../assets/affiche01_elixir.jpg"
 import ElixirAffiche02 from "../../assets/affiche02_elixir.jpg"
-import ElixirTestament from "../../assets/archive_petit_courrier_elixir_01-1912.jpg"
-import ElixirGigi from "../../assets/gigi-italian-movie-poster.jpeg"
 import ElixirFamille from "../../assets/elixir_combier_pour_toute_famille_1900_4bfi79.jpg"
-import CombierCarte from "../../assets/Distillerie-Combier-Cremede-fruit_060421-4.png"
 
 import ElixirCocktail from "./ElixirCocktail/ElixirCocktail"
 
+import useDeviceDetect from '../../useDeviceDetect';
+
 const ElixirCombier = (props) => {
+
+    const { isMobile } = useDeviceDetect();
 
     const GotoBottleHub = () => {
 
@@ -104,7 +102,8 @@ const ElixirCombier = (props) => {
                 }
         }
 
-        window.addEventListener('scroll', scrollToRight)
+        // {!isMobile && window.addEventListener('scroll', scrollToRight)}
+        {!isMobile && console.log("Desktop")}
         
         return () => {
             window.removeEventListener('scroll', scrollToRight);
@@ -116,7 +115,6 @@ const ElixirCombier = (props) => {
         <div className="ElixirCombier">
             <div className="ElixirCombier__HorizontalBlock">
                 <div className="ElixirCombier__HorizontalBlock__slide one">
-                    {/* <p className="ElixirCombier__WhatIsIt__Title">ELIXIR COMBIER</p> */}
                     <div className="ElixirCombier__WhatIsIt">
                     {props.langSelected == 'FR' ?
                         <div className="ElixirCombier__WhatIsIt__Left">
@@ -137,49 +135,6 @@ const ElixirCombier = (props) => {
                         </div>
                     </div>
                 </div>
-                {/* <div className="ElixirCombier__HorizontalBlock__slide two">
-                    <div className="ElixirCombier__WhatIsIt__Two">
-                        <div className="ElixirCombier__WhatIsIt__Two_container">
-                            <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirHD} alt="Photo Elixir" />
-                        </div>  
-                        {props.langSelected == 'FR' ?
-                            <div className="ElixirCombier__WhatIsIt__Two_container">
-                                <p className="ElixirCombier__WhatIsIt__Two__text"><strong>Allure : </strong>Une limpidité jaune dorée éclatante.</p>
-                                <p className="ElixirCombier__WhatIsIt__Two__text"><strong>En bouche : </strong>Sa complexité épicée offre une persistance en bouche, qui peut rappeler, pour les amateurs du genre, celle d’une chartreuse.</p>
-                            </div> 
-                        :
-                            <div className = "ElixirCombier__WhatIsIt__Two_container">
-                                <p className = "ElixirCombier__WhatIsIt__Two__text"> <strong> Allure: </strong> Bright golden yellow clarity. </p>
-                                <p className = "ElixirCombier__WhatIsIt__Two__text"> <strong> In the mouth: </strong> Its spicy complexity offers a persistence in the mouth, which for fans of the genre may recall that of a chartreuse. </p>
-                            </div>
-                        }
-                        
-                        <div className="ElixirCombier__WhatIsIt__Two_container">
-                            <img className="ElixirCombier__WhatIsIt__Two__Img" src={ElixirCartonBleu} alt="Veille pancarte bleu Elixir" />
-                        </div>   
-                    </div>
-                </div> */}
-                {/* <div className="ElixirCombier__HorizontalBlock__slide three">
-                {props.langSelected == 'FR' ?
-                    <div className="Elixir__Combier__Manufacturing">
-                        <h4 className="Elixir__Combier__Manufacturing__title">La Fabrication</h4>
-                        <div className="Elixir__Combier__Manufacturing__description">
-                            <p>1. Sélection et pesage des ingrédients avant macération en cuve.</p>
-                            <p>2. Les épices, plantes et agrumes vont infuser durant plusieurs semaines.</p>
-                            <p>3. L’ensemble est distillé pour obtenir un esprit des plus aromatiques.</p>
-                        </div>
-                    </div>
-                :
-                    <div className = "Elixir__Combier__Manufacturing">
-                        <h4 className = "Elixir__Combier__Manufacturing__title"> The Manufacturing </h4>
-                        <div className = "Elixir__Combier__Manufacturing__description">
-                            <p> 1. Selection and weighing of ingredients before maceration in the tank. </p>
-                            <p> 2. The spices, plants and citrus will infuse for several weeks. </p>
-                            <p> 3. The whole is distilled for the most aromatic spirit. </p>
-                        </div>
-                    </div>
-                }
-                </div> */}
                 <div className="ElixirCombier__HorizontalBlock__slide four">
                 <img className='ElixirRaspail' src={ElixirRaspail}></img>
                 {props.langSelected == 'FR' ?
@@ -198,7 +153,6 @@ const ElixirCombier = (props) => {
                         </p>
                     </div>
                 }
-    
                 </div>
                 <div className="ElixirCombier__HorizontalBlock__slide five">
                     <div className="ElixirCombier__History__2">
@@ -207,35 +161,9 @@ const ElixirCombier = (props) => {
                         <img className="ElixirCombier__History__2__Affiche board" src={ElixirCartonBleu} alt="Affiche Elixir" />
                         <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirAffiche01} alt="Affiche Elixir" />
                         <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirTrain} alt="Affiche Elixir" />
-                        <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirFamille} alt="Affiche Elixir" />
-                        
+                        <img className="ElixirCombier__History__2__Affiche01 board" src={ElixirFamille} alt="Affiche Elixir" /> 
                     </div>  
                 </div>
-                {/* <div className="ElixirCombier__HorizontalBlock__slide six">
-                    <div className="ElixirCocktail">
-                        <div className="ElixirCocktail__container">
-                            <div className="ElixirCocktail__container__left">
-                                <img className="ElixirCocktail__container__left__img" src={Elixir2482HD} alt="" />
-                            </div>
-                            {props.langSelected == 'FR' ?
-                            <div className="ElixirCocktail__container__right">
-                                <h2 className="ElixirCocktail__container__right__title">Pour savourer ...</h2>
-                                <p className="ElixirCocktail__container__right__description">au mieux toutes les qualités de l’Elixir Combier, servez-le en fin de repas, bien frais ou sur glace, où il dévoilera toute sa complexité. Pour ls plus aventureux, faites-en bon usage pour revisiter et revigorez des grands classiques du cocktail : Crusta, Mule, Swizzle, Sazerac...</p>
-                            </div>
-                            :
-                            <div className = "ElixirCocktail__container__right">
-                                <h2 className = "ElixirCocktail__container__right__title"> To savor ... </h2>
-                                <p className = "ElixirCocktail__container__right__description"> at best all the qualities of Elixir Combier, serve it at the end of a meal, chilled or on ice, where it will reveal all its complexity. For the more adventurous, make good use of it to revisit and reinvigorate great cocktail classics: Crusta, Mule, Swizzle, Sazerac ... </p>
-                            </div>
-                            }
-                        </div>  
-                        {props.langSelected == 'FR' ?
-                        <div className="ElixirCocktail__footer" onClick={GotoBottleHub}>Découvrir un autre produit de la Distillerie Combier</div>
-                        :           
-                        <div className = "ElixirCocktail__footer" onClick = {GotoBottleHub}> Discover another product from the Distillerie Combier </div>
-                        }                              
-                    </div>
-                </div> */}
                 <ElixirCocktail langSelected={props.langSelected}/>
             </div>
         </div>
