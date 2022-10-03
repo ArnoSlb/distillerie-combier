@@ -142,6 +142,7 @@ a:-webkit-any-link{
     .OriginalCocktail__container__left{
         height: 100vh;
         position: relative;
+        right: 47vw;
     }
 
     .OriginalCocktail__container__right{

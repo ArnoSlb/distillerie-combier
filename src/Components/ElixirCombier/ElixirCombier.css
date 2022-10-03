@@ -352,6 +352,7 @@
         padding: 5vh 35px;
         color: rgb(255, 255, 255);
         margin: 0; 
+        text-align: center;
     }
     
     .ElixirCombier__WhatIsIt__Left__text{
@@ -383,6 +384,7 @@
         font-size: 5vh;
         margin: 20px 0;
         font-family: 'Crimson Pro', serif;
+        text-align: center;
     }
     
     .ElixirCombier__History__description{
