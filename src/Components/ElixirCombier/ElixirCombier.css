@@ -367,7 +367,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        height: 140vh;
+        height: 135vh;
     }
 
     .ElixirRaspail{
@@ -389,6 +389,34 @@
     
     .ElixirCombier__History__description{
         font-size: 2vh;
+    }
+
+
+    .five{
+        background: linear-gradient( rgb(235, 222, 188), #695d42);
+        width: 100vw;
+        height: 330vh;
+    }
+
+    .ElixirCombier__History__2{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .ElixirCombier__History__2__Affiche{
+        height: auto;
+        width: 70%;
+    }
+
+    .ElixirCombier__History__2__Affiche01{
+        height: auto;
+        width: 70%;
     }
 
 }
