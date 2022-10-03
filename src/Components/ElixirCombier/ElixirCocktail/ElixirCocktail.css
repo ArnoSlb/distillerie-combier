@@ -139,7 +139,7 @@ a:-webkit-any-link{
         flex-direction: column-reverse;
     }
 
-    .OriginalCocktail__container__left{
+    .ElixirCombier .OriginalCocktail__container__left{
         height: 100vh;
         position: relative;
         right: 47vw;
