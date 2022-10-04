@@ -102,11 +102,11 @@ const ElixirCombier = (props) => {
                 }
         }
 
-        {isMobile ? 
-            console.log("mobile detected")
-            : 
-            window.addEventListener('scroll', scrollToRight)
-        }
+        // {isMobile ? 
+        //     console.log("mobile detected")
+        //     : 
+        //     window.addEventListener('scroll', scrollToRight)
+        // }
         
         return () => {
             window.removeEventListener('scroll', scrollToRight);
