@@ -98,8 +98,8 @@ const ElixirCombier = (props) => {
 
             const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-            console.log(mobileAndTabletCheck())
-            console.log(scrollHeight, clientHeight, scrollTop)
+            // console.log(mobileAndTabletCheck())
+            // console.log(scrollHeight, clientHeight, scrollTop)
 
             if(mobileAndTabletCheck() == true){
                 document.querySelector('.ElixirCombier').style.overflowX = "initial";
