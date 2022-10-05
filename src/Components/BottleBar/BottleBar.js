@@ -13,20 +13,15 @@ const BottleBar = (props) => {
     const { isMobile } = useDeviceDetect();
 
     let BottleIndex 
-    let ExpAvailable = false
 
     if(props.bottleSelected == 'original'){
         BottleIndex = 0
-        ExpAvailable = true
     } else if (props.bottleSelected == 'elixir'){
         BottleIndex = 2
-        ExpAvailable = false
     } else if (props.bottleSelected == 'meridor'){
         BottleIndex = 1
-        ExpAvailable = true
     } else if (props.bottleSelected == 'blanchette'){
         BottleIndex = 3
-        ExpAvailable = false
     }
     
     React.useEffect(() => {
@@ -41,8 +36,6 @@ const BottleBar = (props) => {
             document.querySelector('.targetCardTitle--selected').style.color = "rgb(255, 165, 47)"
         }
         document.querySelector('.BottleBar__Picture').classList.add('slide-right-bar')
-
-
     })
    
 
@@ -52,10 +45,18 @@ const BottleBar = (props) => {
                 <div className="BottleBar__container">
                     <h3 className="BottleBar__title targetCardTitle--selected ">{props.data[BottleIndex].title}</h3>
                     <p className="BottleCard__description targetCardDescription--selected">{props.data[BottleIndex].description}</p>
-                    {ExpAvailable == true ?
+                    {props.bottleSelected == 'original' ?
                     <div className=" BottleBar__scroll__container">
+                        {isMobile == true ?
                         <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
+                        :
+                        <p className="BottleBar__scroll__description">Scrollez vers le bas pour découvrir sa fabrication</p>
+                        }
+                        {isMobile == true ?
                         <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+                        :
+                        <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
+                        }
                     </div>
                     :
                     <div className=" BottleBar__scroll__container">
@@ -69,7 +70,7 @@ const BottleBar = (props) => {
                         <img className="BottleBar__scroll__img rotate slide-top" src={ArrowUp} alt="" />
                         :
                         <p></p>
-                    }
+                        }
                     </div>
                     }    
                 </div>
@@ -77,7 +78,7 @@ const BottleBar = (props) => {
                 <div className="BottleBar__container">
                     <h3 className="BottleBar__title targetCardTitle--selected ">{props.data[BottleIndex].titleEn}</h3>
                     <p className="BottleCard__description targetCardDescription--selected">{props.data[BottleIndex].descriptionEn}</p>
-                    {ExpAvailable == true ?
+                    {props.bottleSelected == 'original' ?
                     <div className=" BottleBar__scroll__container">
                         <p className="BottleBar__scroll__description">Scroll down to find out all about it</p>
                         <img className="BottleBar__scroll__img slide-bottom" src={ArrowDown} alt="" />
