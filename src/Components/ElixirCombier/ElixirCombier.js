@@ -98,6 +98,9 @@ const ElixirCombier = (props) => {
 
             const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
+            console.log(mobileAndTabletCheck())
+            console.log(scrollHeight, clientHeight, scrollTop)
+
             if(mobileAndTabletCheck() == true){
                 document.querySelector('.ElixirCombier').style.overflowX = "initial";
             } else {
@@ -143,23 +146,23 @@ const ElixirCombier = (props) => {
                     </div>
                 </div>
                 <div className="ElixirCombier__HorizontalBlock__slide four">
-                <img className='ElixirRaspail' src={ElixirRaspail}></img>
-                {props.langSelected == 'FR' ?
-                    <div className="ElixirCombier__History">
-                        <h3 className="ElixirCombier__History__title">Bref rappel historique</h3>
-                        <p className="ElixirCombier__History__description">
-                            C’est en 1852 que Jean-Baptiste Combier met au point la recette de cet élixir inspiré des travaux du célèbre Docteur Raspail. Parmi ses nombreuses recettes médicinales, celle d’une « Liqueur hygiénique de dessert » - censé procurer longue vie et favoriser la digestion. 
-                            Jean-Baptiste Combier cherche à conserver les vertus de ce breuvage tout en le rendant délicieux. Après de nombreux essais de distillation, l’alchimie fonctionne. Le distillateur décide d’envoyer son élixir amélioré à Raspail, qui la déclare fameuse. Sa lettre de louanges est conservée dans les archives de la distillerie
-                        </p>
-                    </div>
-                :
-                    <div className = "ElixirCombier__History">
-                        <h3 className = "ElixirCombier__History__title">Brief historical reminder</h3>
-                        <p className = "ElixirCombier__History__description">
-                            It was in 1852 that Jean-Baptiste Combier perfected the recipe for this elixir inspired by the work of the famous Doctor Raspail. Among his many medicinal recipes, that of a "Hygienic Dessert Liqueur" - supposed to provide long life and promote digestion. Jean-Baptiste Combier seeks to preserve the virtues of this beverage while making it delicious. After many distillation trials, the alchemy works. The distiller decides to send his improved elixir to Raspail, who declares it famous. His letter of praise is kept in the archives of the distillery.
-                        </p>
-                    </div>
-                }
+                    <img className='ElixirRaspail' src={ElixirRaspail}></img>
+                    {props.langSelected == 'FR' ?
+                        <div className="ElixirCombier__History">
+                            <h3 className="ElixirCombier__History__title">Bref rappel historique</h3>
+                            <p className="ElixirCombier__History__description">
+                                C’est en 1852 que Jean-Baptiste Combier met au point la recette de cet élixir inspiré des travaux du célèbre Docteur Raspail. Parmi ses nombreuses recettes médicinales, celle d’une « Liqueur hygiénique de dessert » - censé procurer longue vie et favoriser la digestion. 
+                                Jean-Baptiste Combier cherche à conserver les vertus de ce breuvage tout en le rendant délicieux. Après de nombreux essais de distillation, l’alchimie fonctionne. Le distillateur décide d’envoyer son élixir amélioré à Raspail, qui la déclare fameuse. Sa lettre de louanges est conservée dans les archives de la distillerie
+                            </p>
+                        </div>
+                    :
+                        <div className = "ElixirCombier__History">
+                            <h3 className = "ElixirCombier__History__title">Brief historical reminder</h3>
+                            <p className = "ElixirCombier__History__description">
+                                It was in 1852 that Jean-Baptiste Combier perfected the recipe for this elixir inspired by the work of the famous Doctor Raspail. Among his many medicinal recipes, that of a "Hygienic Dessert Liqueur" - supposed to provide long life and promote digestion. Jean-Baptiste Combier seeks to preserve the virtues of this beverage while making it delicious. After many distillation trials, the alchemy works. The distiller decides to send his improved elixir to Raspail, who declares it famous. His letter of praise is kept in the archives of the distillery.
+                            </p>
+                        </div>
+                    }
                 </div>
                 <div className="ElixirCombier__HorizontalBlock__slide five">
                     <div className="ElixirCombier__History__2">
