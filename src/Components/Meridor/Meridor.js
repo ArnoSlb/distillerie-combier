@@ -11,7 +11,6 @@ import MeridorAffiche from "../../assets/GC189.jpg"
 import MeridorCocktail from "../../assets/Meridor460.jpg"
 import CocktailHand from "../../../src/assets/vintage-hand.svg"
 import RoseVideo from "../../assets/Videos/Rose-Combier-Distillerie.mp4"
-import FleurDeSureau from "../../assets/fleur-de-sureau.jpg"
 
 
 const Meridor = (props) => {
@@ -152,7 +151,8 @@ const Meridor = (props) => {
                     <div className = "Meridor__First__text__right__content">
                     <p> Authentic, artisanal methods contribute to making Gin Meridor unique. Each small batch produces only 360 bottles, distilled in rare 19th-century stills from the famous Egrot company (1780). The copper stills with their long swan necks are perfectly adapted to this type of spirit, extracting a maximum of flavors from the eight carefully selected botanicals.</p>
                     </div>
-                    }                  
+                    }
+                    
                 </div>
                 <div className="Meridor__First__text Meridor__anim">
                     <img className="MeridorRose" src={MeridorRose} alt="photo rose" />
@@ -162,23 +162,8 @@ const Meridor = (props) => {
                     <div className="Meridor__First__empty"></div>
                     <img className="MeridorRose" src={MeridorRoses} alt="photo rose" />
                 </div>
-                <div className="Meridor__First__text Meridor__anim">
-                    {props.langSelected == 'FR' ?
-                    <div className="Meridor__First__text__right__content">
-                    <p>La Distillerie Combier a développé un savoir-faire spécifique autour de la distillation de fleurs aux extraits précieux et fragiles. Chaque été, l'équipe se mobilise pour sélectionner et cueillir les variétés les plus aromatiques, signatures du Gin Meridor.</p>
-                    </div> 
-                    :
-                    <div className = "Meridor__First__text__right__content">
-                    <p>The Combier Distillery has developed specific know-how around the distillation of flowers, extracting their precious and fragile aromas. Every summer, the Combier team gathers to select and pick the most aromatic varieties which contribute to Gin Meridor's signature taste.</p>
-                    </div>
-                    }     
-                    <div className="Meridor__First__empty"></div>
-                </div>
-                <div className="Meridor__First__text__right Meridor__anim">
-                    <div className="Meridor__First__empty"></div>
-                    <img className="MeridorRose" src={FleurDeSureau} alt="photo rose" />
-                </div>
                 <div className="Meridor__video Meridor__anim">
+                    {/* <iframe width="960" height="539" src="https://www.youtube.com/embed/KpyTMGKLNlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                     <video controls width="100%" src={RoseVideo} >Sorry, your browser doesn't support embedded videos.</video>
                 </div>
                 <div className="Meridor__First__text Meridor__anim">
