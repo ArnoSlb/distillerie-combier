@@ -104,7 +104,7 @@ const ElixirCombier = (props) => {
             if(mobileAndTabletCheck() == true){
                 document.querySelector('.ElixirCombier').style.overflowX = "initial";
             } else {
-                if( scrollTop + clientHeight == scrollHeight){
+                if( scrollHeight - scrollTop  - clientHeight < 1){
                     document.querySelector('.ElixirCombier').style.overflowX = "hidden";
                 } else {
                     document.querySelector('.ElixirCombier').style.overflowX = "initial";
