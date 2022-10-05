@@ -346,11 +346,23 @@ width: 100%;
         justify-content: center;
     }
 
+    .bg:first-child{
+        justify-content: space-evenly;
+    }
+
     .AbsintheBlanchette__bg__part{
         width: 80%;
         height: 45%;
         font-size: 15vw;
     }
+
+    .AbsintheBlanchette__bg__part:first-child{
+        height: auto;
+    }
+
+    /* .AbsintheBlanchette__bg__part__description{
+        margin-top: 15vh;
+    } */
 
     .AbsintheBlanchette__bg__part--full{
         padding: 0;
@@ -362,12 +374,12 @@ width: 100%;
     }
 
     .AbsintheBlanchette__whatisit__description__whitecontainer{
-        font-size: 3.5vw;
+        font-size: 2vh;
     }
 
     .AbsintheBlanchette__whatisit__title__whitecontainer{
         padding: 5px;
-        font-size: 4vw;
+        font-size: 3vh;
     }
 
     .image{
@@ -375,16 +387,21 @@ width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        /* margin-top: 15vh; */
     }
 
     .AbsintheBlanchette__whatisit__descritpion, .AbsintheBlanchette__whatisit__title{
-        font-size: 2.5vh;
+        font-size: 2vh;
         background: none;
         color: white;
     }
 
     .box {
-        height: 110vh;
+        height: 120vh;
+    }
+
+    .event2 {
+        height: 60vh;
     }
 
     .event6 {
@@ -398,5 +415,9 @@ width: 100%;
     .event2 .bg,  .event3 .bg, .event4 .bg, .event5 .bg,  .event6 .bg,  .event7 .bg,  .event8 .bg{
         background-image: none;
         background: linear-gradient(#178488, #131313, #178488 );
+    }
+
+    .AbsintheBlanchette video{
+        width: 90vw;
     }
   }

@@ -18,7 +18,7 @@
     /* padding-top: 100px; */
     display: flex;
     flex-direction: row;
-    width: 750vw;
+    width: 600vw;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
@@ -57,10 +57,9 @@
 .ElixirCombier__WhatIsIt {
     height: 100%;
     width: 100%;
-    /* display: flex; */
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    display: none;
     opacity: 0;
 }
 
@@ -78,8 +77,7 @@
     font-size: 7vh;
     padding: 0 35px ;
     color: rgb(255, 255, 255);
-    margin: 0;
-    
+    margin: 0; 
 }
 
 .ElixirCombier__WhatIsIt__Left__text{
@@ -169,20 +167,26 @@
     margin: 0;
 }
 
+.ElixirRaspail{
+    height: 70%;
+}
+
 .four{
-    background-color: #8e8358;
-    background: url(../../../src/assets/elixir_combier_pour_toute_famille_1900_4bfi79.jpg) no-repeat center center; 
+    background: linear-gradient(#e9e3e3, #a49f86);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .ElixirCombier__History{
     background-color: rgba(255, 255, 255, 0.781);
+    border: 1px solid black;
     padding: 30px;
     width: 40%;
-    height: 50%;  
 }
 
 .ElixirCombier__History__title{
@@ -197,7 +201,7 @@
 
 .five{
     background: linear-gradient( rgb(235, 222, 188), #695d42);
-    width: 250vw;
+    width: 300vw;
 }
 
 .ElixirCombier__History__2{
@@ -205,9 +209,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    margin-top: 60px;
 }
 
 .ElixirCombier__History__2__Raspail{
@@ -303,6 +306,129 @@
 .ElixirCombier__opacity__anim {
     -webkit-animation: opacity-text 1.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
             animation: opacity-text 1.5s cubic-bezier(0.420, 0.160, 0.750, 0.740) both;
+}
+
+@media screen and (orientation: portrait){
+
+    .ElixirCombier{
+        height: 100vw;
+        width: 100vh;
+        position: relative;
+        transform: rotate(0) translateX(0);
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .ElixirCombier__HorizontalBlock{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        transform: rotate(0) translateY(0);
+    }
+
+    .one{
+        max-height: none;
+        height: 150vh;
+    }
+
+    .ElixirCombier__WhatIsIt {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0;
+    }
+
+    .ElixirCombier__WhatIsIt__Right{
+        height: auto;
+        width: 80vw;
+        margin-top: 5vh;
+    }
+
+    .ElixirCombier__WhatIsIt__Left{
+        height: 100%;
+        width: 90vw;
+        background-color: rgba(0, 0, 0, 0.793);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 5vh;
+    }
+
+    .ElixirCombier__WhatIsIt__Left__title{
+        font-size: 5vh;
+        padding: 5vh 35px;
+        color: rgb(255, 255, 255);
+        margin: 0; 
+        text-align: center;
+    }
+    
+    .ElixirCombier__WhatIsIt__Left__text{
+        font-size: 2vh;
+        padding: 0 35px;
+        font-family: 'Raleway', sans-serif; 
+        margin-bottom: 5vh;
+    }
+
+    .four{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 135vh;
+    }
+
+    .ElixirRaspail{
+        height: auto;
+        width: 90%;
+    }
+
+    .ElixirCombier__History{
+        padding: 5%;
+        width: 80%;
+    }
+
+    .ElixirCombier__History__title{
+        font-size: 5vh;
+        margin: 20px 0;
+        font-family: 'Crimson Pro', serif;
+        text-align: center;
+    }
+    
+    .ElixirCombier__History__description{
+        font-size: 2vh;
+    }
+
+
+    .five{
+        background: linear-gradient( rgb(235, 222, 188), #695d42);
+        width: 100vw;
+        height: 400vh;
+    }
+
+    .ElixirCombier__History__2{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .ElixirCombier__History__2__Affiche{
+        height: auto;
+        width: 70%;
+    }
+
+    .ElixirCombier__History__2__Affiche01{
+        height: auto;
+        width: 70%;
+    }
+
 }
 
   @-webkit-keyframes zoom-text {

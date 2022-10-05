@@ -7,14 +7,6 @@ import "./OriginalCocktail.css"
 
 import OriginalCoktailImg from "../../../../assets/LOriginalCombier658_HD.jpg"
 import CocktailHand from "../../../../assets/vintage-hand.svg"
-import Instagram from "../../../../assets/icons/instagram.png"
-import Facebook from "../../../../assets/icons/facebook.png"
-import Home from "../../../../assets/icons/home.png"
-import Contact from "../../../../assets/icons/contact.png"
-import InstagramW from "../../../../assets/icons/instagram_white.png"
-import FacebookW from "../../../../assets/icons/facebook_white.png"
-import HomeW from "../../../../assets/icons/home_white.png"
-import ContactW from "../../../../assets/icons/contact_white.png"
 
 const OriginalCocktail = (props) => {
 
