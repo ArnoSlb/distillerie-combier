@@ -38,7 +38,7 @@ const ElixirCocktail = (props) => {
 
     const {scrollTop, scrollHeight, clientHeight} = document.documentElement
 
-    console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
+    // console.log(scrollTop, clientHeight, scrollHeight, window.screen.availHeight)
 
     const pixelToHub = 11750 +  (clientHeight * 3.23)
 
