@@ -431,6 +431,26 @@
 
 }
 
+@media (orientation: landscape) and (width < 1600px) {
+    .ElixirCombier__WhatIsIt__Left__text{
+        font-size: 1.5vw;
+    }
+
+    .ElixirCombier__WhatIsIt__Left__title{
+        font-size: 3.5vw;
+    }
+
+    .ElixirCombier__History__2__Affiche{
+        height: auto;
+        width: 30vw;
+    }
+
+    .ElixirCombier__History__2__Affiche01{
+        height: auto;
+        width: 30vw;
+    }
+}
+
   @-webkit-keyframes zoom-text {
     0% {
       -webkit-transform: scale(1);

@@ -124,6 +124,17 @@ a:-webkit-any-link{
     display: block;
 }
 
+@media (orientation: landscape) and (width < 1600px) {
+    .OriginalCocktail__container__left__img{
+        height: auto;
+        width: 40vw;
+    }
+
+    .OriginalCocktail__container__left{
+        align-items: center;
+    }
+}
+
 @media screen and (orientation:portrait) {
 
     .OriginalCocktail{

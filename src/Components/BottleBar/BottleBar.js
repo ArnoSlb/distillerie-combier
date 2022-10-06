@@ -26,7 +26,7 @@ const BottleBar = (props) => {
         ExpAvailable = true
     } else if (props.bottleSelected == 'blanchette'){
         BottleIndex = 3
-        ExpAvailable = true
+        ExpAvailable = false
     }
     
     React.useEffect(() => {
